@@ -146,5 +146,17 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+    font-weight: 300;
   }
 }
+
+@utility plate {
+  box-shadow: var(--shadow-plate-value);
+}
+
