@@ -10,33 +10,63 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BiographyRouteImport } from './routes/biography'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ExhibitionsRouteImport } from './routes/exhibitions'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BiographyRoute = BiographyRouteImport.update({
+  id: '/biography',
+  path: '/biography',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExhibitionsRoute = ExhibitionsRouteImport.update({
+  id: '/exhibitions',
+  path: '/exhibitions',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/biography': typeof BiographyRoute
+  '/contact': typeof ContactRoute
+  '/exhibitions': typeof ExhibitionsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/biography': typeof BiographyRoute
+  '/contact': typeof ContactRoute
+  '/exhibitions': typeof ExhibitionsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/biography': typeof BiographyRoute
+  '/contact': typeof ContactRoute
+  '/exhibitions': typeof ExhibitionsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/biography' | '/contact' | '/exhibitions'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/biography' | '/contact' | '/exhibitions'
+  id: '__root__' | '/' | '/biography' | '/contact' | '/exhibitions'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BiographyRoute: typeof BiographyRoute
+  ContactRoute: typeof ContactRoute
+  ExhibitionsRoute: typeof ExhibitionsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,12 +78,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/biography': {
+      id: '/biography'
+      path: '/biography'
+      fullPath: '/biography'
+      preLoaderRoute: typeof BiographyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/exhibitions': {
+      id: '/exhibitions'
+      path: '/exhibitions'
+      fullPath: '/exhibitions'
+      preLoaderRoute: typeof ExhibitionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BiographyRoute: BiographyRoute,
+  ContactRoute: ContactRoute,
+  ExhibitionsRoute: ExhibitionsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
