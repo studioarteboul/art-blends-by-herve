@@ -67,7 +67,13 @@ Expositions et collections privées à l'international.`;
             {t("Biography", "Biographie")}
           </p>
           <h1 className="mt-6 font-display text-4xl leading-tight md:text-6xl">Hervé Teboul</h1>
-          <p className="mt-10 text-lg leading-relaxed text-foreground/85">{t(bioEn, bioFr)}</p>
+          <div className="mt-10 space-y-6 text-lg leading-relaxed text-foreground/85">
+            {t(bioEn, bioFr)
+              .split("\n\n")
+              .map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+          </div>
 
           <dl className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-2">
             {facts.map((f) => (
