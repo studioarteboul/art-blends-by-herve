@@ -10,13 +10,13 @@ export const Route = createFileRoute("/biography")({
       {
         name: "description",
         content:
-          "Born in France and based in Montreal since 2001, Hervé Teboul is a contemporary painter whose career spans over three decades.",
+          "French artist based in Montreal since 2001, working in post-impressionist and contemporary mixed media.",
       },
       { property: "og:title", content: "Biography | Biographie — Hervé Teboul" },
       {
         property: "og:description",
         content:
-          "Three decades of practice, from Provençal post-impressionism to contemporary mixed media.",
+          "From Provençal post-impressionism to contemporary mixed media: gold leaf, silver leaf, acrylic, and epoxy.",
       },
     ],
   }),
