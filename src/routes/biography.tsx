@@ -26,19 +26,35 @@ export const Route = createFileRoute("/biography")({
 function Biography() {
   const { t } = useLang();
 
-  const bioEn = `Born in France and based in Montreal since 2001, Hervé Teboul is a contemporary painter whose career spans over three decades. Initially inspired by the vibrant landscapes and Mediterranean light of Provence, his early work rooted itself in a colorful post-impressionist style. Over time, his practice has evolved into a bold contemporary exploration. Teboul synthesizes his classical foundations with modern textures, utilizing acrylics, palette knife structures, gold or silver leaf, and epoxy resin layers. Celebrated by international collectors across North America and Europe, his work harmonizes structure and metallic brilliance to capture elegance and timeless forms.`;
+  const bioEn = `Hervé Teboul is a French artist who has lived in Montreal, Canada, since 2001.
 
-  const bioFr = `Né en France et établi à Montréal depuis 2001, Hervé Teboul est un peintre contemporain dont la carrière s'étend sur plus de trois décennies. Initialement inspiré par les paysages vibrants et la lumière méditerranéenne de la Provence, ses débuts s'inscrivent dans un style post-impressionniste coloré. Au fil du temps, sa démarche a évolué vers une pratique contemporaine audacieuse. Teboul synthétise ses fondations classiques avec des textures modernes, utilisant l'acrylique, le travail au couteau, les feuilles d'or ou d'argent, et la résine époxy. Prisé par les collectionneurs en Amérique du Nord et en Europe, son travail harmonise la structure et la brillance métallique pour capturer des formes élégantes et intemporelles.`;
+Passionate about art since childhood, he attended workshops in Nice around the age of 18, perfecting his technique and exploring painting in the south of France, where he lived until his thirties.
+
+Gardens, the countryside, and bodies of water were his main sources of inspiration. A Post-Impressionist painter since 1998, he has produced several collections of paintings in which the light and Mediterranean colors have captivated numerous art lovers and collectors in Europe, Canada, and the United States, who have visited his studio-galleries and art schools to acquire his highly sought-after works.
+
+After various periods, he now paints in a contemporary style on a variety of themes that interest him, using acrylics, gold or silver leaf, and epoxy.
+
+Exhibitions and private collections internationally.`;
+
+  const bioFr = `Hervé Teboul est un artiste français qui vit à Montréal, Canada, depuis 2001.
+
+Passionné par l'art depuis son enfance, il a fréquenté des ateliers à Nice vers l'âge de 18 ans, perfectionnant sa technique et explorant la peinture dans le sud de la France, où il a vécu jusqu'à sa trentaine.
+
+Les jardins, la campagne et les plans d'eau ont été ses principales sources d'inspiration. Peintre post-impressionniste depuis 1998, il a produit plusieurs collections de peintures dans lesquelles la lumière et les couleurs méditerranéennes ont captivé de nombreux amateurs d'art et collectionneurs en Europe, au Canada et aux États-Unis, qui ont visité ses ateliers-galeries et ses écoles d'art pour acquérir ses œuvres très recherchées.
+
+Après différentes périodes, il peint désormais dans un style contemporain sur une variété de thèmes qui l'intéressent, en utilisant l'acrylique, les feuilles d'or ou d'argent et l'époxy.
+
+Expositions et collections privées à l'international.`;
 
   const facts = [
     { k: t("Born", "Naissance"), v: t("France", "France") },
     { k: t("Based", "Établi à"), v: t("Montreal, since 2001", "Montréal, depuis 2001") },
-    { k: t("Practice", "Pratique"), v: t("Over three decades", "Plus de trois décennies") },
+    { k: t("Practice", "Pratique"), v: t("Post-Impressionist since 1998", "Post-impressionniste depuis 1998") },
     {
       k: t("Media", "Médiums"),
       v: t(
-        "Acrylic, palette knife, gold & silver leaf, epoxy",
-        "Acrylique, couteau, feuilles d'or et d'argent, époxy",
+        "Acrylic, gold & silver leaf, epoxy",
+        "Acrylique, feuilles d'or et d'argent, époxy",
       ),
     },
   ];
