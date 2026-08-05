@@ -27,6 +27,24 @@ type Entry = { year: string; en: string; fr: string; place: string };
 
 const exhibitions: Entry[] = [
   {
+    year: "2026",
+    en: "Museum MEAM Barcelona with Artio Gallery",
+    fr: "Musée MEAM Barcelone avec Artio Gallery",
+    place: "Barcelona, Spain",
+  },
+  {
+    year: "2026",
+    en: "Le Louvre Paris with Artio Gallery",
+    fr: "Le Louvre Paris avec Artio Gallery",
+    place: "Paris, France",
+  },
+  {
+    year: "2025",
+    en: "Expo New York with Artio Gallery at One Art Space",
+    fr: "Expo New York avec Artio Gallery au One Art Space",
+    place: "New York, USA",
+  },
+  {
     year: "2024",
     en: "Art Shopping — Carrousel du Louvre",
     fr: "Art Shopping — Carrousel du Louvre",
@@ -51,10 +69,34 @@ const exhibitions: Entry[] = [
     place: "Outremont, Montréal",
   },
   {
+    year: "2006",
+    en: "Art Expo — Javits Center",
+    fr: "Art Expo — Javits Center",
+    place: "New York, USA",
+  },
+  {
+    year: "2001–2025",
+    en: "Studio-Galerie Arteboul",
+    fr: "Studio-Galerie Arteboul",
+    place: "Montréal, Canada",
+  },
+  {
     year: "2001",
     en: "Solo Exhibition — Mediterranean Light",
     fr: "Exposition individuelle — Lumière méditerranéenne",
     place: "Provence, France",
+  },
+  {
+    year: "2000",
+    en: "Galerie Brigitte Desroches",
+    fr: "Galerie Brigitte Desroches",
+    place: "Montréal, Canada",
+  },
+  {
+    year: "1999",
+    en: "Festival Provence — Hôtel Bonne Aventure",
+    fr: "Festival Provence — Hôtel Bonne Aventure",
+    place: "Montréal, Canada",
   },
 ];
 
@@ -106,12 +148,29 @@ function Exhibitions() {
         </Block>
 
         <Block title={t("Distinctions", "Reconnaissances")}>
-          <p className="border-b border-border pb-6 font-display text-xl md:text-2xl">
-            {t(
-              "Listed in several international art dictionaries since 2001.",
-              "Répertorié dans plusieurs dictionnaires d'art internationaux depuis 2001.",
-            )}
-          </p>
+          <ul className="divide-y divide-border">
+            <li className="py-6 font-display text-xl md:text-2xl">
+              {t(
+                "2nd prize winner of the International Art Talent 2025",
+                "2e prix du International Art Talent 2025",
+              )}
+            </li>
+            <li className="py-6">
+              <p className="font-display text-xl md:text-2xl">
+                {t(
+                  "Listed since 2001 in several art dictionaries:",
+                  "Répertorié depuis 2001 dans plusieurs dictionnaires d'art :",
+                )}
+              </p>
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-foreground/85">
+                <li>
+                  DROUOT internationale cotation des artistes modernes et contemporains, LAROUSSE
+                </li>
+                <li>Guide de Roussan, Marché de l'art au Québec</li>
+                <li>REPERTOIRE BIENNAL des artistes Canadiens en galeries, MAGAZIN'art</li>
+              </ul>
+            </li>
+          </ul>
         </Block>
 
         <Block title={t("Collections", "Collections")}>
