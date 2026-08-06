@@ -65,7 +65,7 @@ function Contact() {
             </div>
             <div>
               <dt className={labelClass}>{t("Available works", "Œuvres disponibles")}</dt>
-              <dd className="mt-2 font-display text-xl">
+              <dd className="mt-2 flex flex-col gap-1 font-display text-xl">
                 <a
                   href="https://artelaguna.world/artist/teboul-herve/"
                   target="_blank"
@@ -73,6 +73,14 @@ function Contact() {
                   className="transition-colors hover:text-accent"
                 >
                   Arte Laguna World
+                </a>
+                <a
+                  href="https://www.artiogallery.com/herv-teboul"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition-colors hover:text-accent"
+                >
+                  Artio Gallery
                 </a>
               </dd>
             </div>
