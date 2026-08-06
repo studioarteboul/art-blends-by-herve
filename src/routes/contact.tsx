@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Contact Studio ARTeboul in Montreal for appointments, artwork pricing inquiries, and available inventory via Artsy (Artio Gallery).",
+          "Contact Studio ARTeboul in Montreal for appointments, artwork pricing inquiries, and available inventory via Arte Laguna World.",
       },
       { property: "og:title", content: "Contact & Studio — Hervé Teboul" },
       {
