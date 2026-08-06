@@ -191,7 +191,7 @@ function Works() {
     <>
       <section className="relative">
         <img
-          src={hero}
+          src="/supercar.jpg"
           alt={t(
             "Supercar — contemporary mixed media painting with silver leaf and epoxy",
             "Supercar — peinture contemporaine technique mixte à la feuille d'argent et époxy",
