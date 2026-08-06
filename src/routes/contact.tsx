@@ -56,7 +56,7 @@ function Contact() {
             <div>
               <dt className={labelClass}>{t("Studio", "Atelier")}</dt>
               <dd className="mt-2 font-display text-xl">
-                Studio ARTeboul — Outremont, Montréal, QC
+                Studio ARTeboul — Montréal, QC
               </dd>
             </div>
             <div>
