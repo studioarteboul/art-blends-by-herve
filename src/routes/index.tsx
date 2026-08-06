@@ -1,12 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
-import hero from "@/assets/hero-chic-soiree.jpg";
-import workScent from "@/assets/work-scent.jpg";
-import workGold from "@/assets/work-gold.jpg";
-import workTexture from "@/assets/work-texture.jpg";
-import workPond from "@/assets/work-pond.jpg";
-import workVillage from "@/assets/work-village.jpg";
+import lumiereAsset from "@/assets/lumiere-de-soie.webp.asset.json";
+import parfumAsset from "@/assets/parfum-de-femme.webp.asset.json";
+import petitMatinAsset from "@/assets/petit-matin-damour.webp.asset.json";
+import rockyAsset from "@/assets/rocky-victory.webp.asset.json";
+import rondeursAsset from "@/assets/rondeurs-dorees.webp.asset.json";
+import roseGalaAsset from "@/assets/rose-gala.webp.asset.json";
+import supercarAsset from "@/assets/supercar.jpg.asset.json";
+import pinsAsset from "@/assets/pins-dores.jpg.asset.json";
+import baieAsset from "@/assets/baie-mediterraneenne.jpg.asset.json";
+
+const hero = supercarAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
