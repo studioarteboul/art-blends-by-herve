@@ -213,10 +213,10 @@ function Works() {
                 )}
               </h1>
               <p className="mt-5 text-sm uppercase tracking-[0.18em] text-primary-foreground/75">
-                Chic soirée, 2023 —{" "}
+                Supercar, 2025 —{" "}
                 {t(
-                  "Mixed Media (Acrylic, Gold Leaf, Epoxy)",
-                  "Technique mixte (Acrylique, Feuille d'or, Époxy)",
+                  "Acrylic, silver leaf and epoxy",
+                  "Acrylique, feuille d'argent et époxy",
                 )}
               </p>
             </div>
