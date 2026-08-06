@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Contact Studio ARTeboul in Montreal for appointments, artwork pricing inquiries, and available inventory via Artsy (Artio Gallery).",
+          "Contact Studio ARTeboul in Montreal for appointments, artwork pricing inquiries, and available inventory via Arte Laguna World.",
       },
       { property: "og:title", content: "Contact & Studio — Hervé Teboul" },
       {
@@ -47,8 +47,8 @@ function Contact() {
           <h1 className="mt-6 font-display text-4xl leading-tight md:text-6xl">Studio ARTeboul</h1>
           <p className="mt-8 max-w-md text-lg leading-relaxed text-muted-foreground">
             {t(
-              "Studio visits are available by appointment in Montreal, where the practice has kept its creative roots in neighbourhoods such as Outremont. Active inventory is also listed on Artsy through Artio Gallery.",
-              "Les visites d'atelier se font sur rendez-vous à Montréal, où la démarche conserve ses racines créatives dans des quartiers comme Outremont. L'inventaire actif est également présenté sur Artsy via Artio Gallery.",
+              "Studio visits are available by appointment in Montreal, where the practice has kept its creative roots. Active inventory is also listed on Arte Laguna World.",
+              "Les visites d'atelier se font sur rendez-vous à Montréal, où la démarche conserve ses racines créatives. L'inventaire actif est également présenté sur Arte Laguna World.",
             )}
           </p>
 
@@ -56,16 +56,25 @@ function Contact() {
             <div>
               <dt className={labelClass}>{t("Studio", "Atelier")}</dt>
               <dd className="mt-2 font-display text-xl">
-                Studio ARTeboul — Outremont, Montréal, QC
+                Studio ARTeboul — Montréal, QC
               </dd>
             </div>
             <div>
               <dt className={labelClass}>{t("Email", "Courriel")}</dt>
-              <dd className="mt-2 font-display text-xl">studio@arteboul.com</dd>
+              <dd className="mt-2 font-display text-xl">studioarteboul@gmail.com</dd>
             </div>
             <div>
               <dt className={labelClass}>{t("Available works", "Œuvres disponibles")}</dt>
-              <dd className="mt-2 font-display text-xl">Artsy — Artio Gallery</dd>
+              <dd className="mt-2 font-display text-xl">
+                <a
+                  href="https://artelaguna.world/artist/teboul-herve/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition-colors hover:text-accent"
+                >
+                  Arte Laguna World
+                </a>
+              </dd>
             </div>
           </dl>
         </div>
