@@ -135,7 +135,7 @@ function WorkCard({ work }: { work: Work }) {
   return (
     <figure className="group relative overflow-hidden bg-card plate">
       <img
-        src={work.image}
+        src={`/${work.image.split('/').pop()?.replace('.asset.json', '')}`}
         alt={t(work.titleEn, work.titleFr)}
         loading="lazy"
         className="max-w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
