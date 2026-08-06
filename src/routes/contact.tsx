@@ -47,8 +47,8 @@ function Contact() {
           <h1 className="mt-6 font-display text-4xl leading-tight md:text-6xl">Studio ARTeboul</h1>
           <p className="mt-8 max-w-md text-lg leading-relaxed text-muted-foreground">
             {t(
-              "Studio visits are available by appointment in Montreal, where the practice has kept its creative roots. Active inventory is also listed on Arte Laguna World.",
-              "Les visites d'atelier se font sur rendez-vous à Montréal, où la démarche conserve ses racines créatives. L'inventaire actif est également présenté sur Arte Laguna World.",
+              "Studio visits are available by appointment in Montreal, where the practice has kept its creative roots. Active inventory is also listed on Arte Laguna World and Artio Gallery.",
+              "Les visites d'atelier se font sur rendez-vous à Montréal, où la démarche conserve ses racines créatives. L'inventaire actif est également présenté sur Arte Laguna World et Artio Gallery.",
             )}
           </p>
 
