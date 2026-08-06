@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
-import portrait from "@/assets/work-texture.jpg";
+import portrait from "@/assets/herve-teboul-portrait.jpg.asset.json";
 
 export const Route = createFileRoute("/biography")({
   head: () => ({
@@ -89,10 +89,10 @@ Expositions et collections privées à l'international.`;
 
         <div className="lg:pt-24">
           <img
-            src={portrait}
+            src={portrait.url}
             alt={t(
-              "Detail of a mixed media canvas by Hervé Teboul",
-              "Détail d'une toile technique mixte de Hervé Teboul",
+              "Portrait of Hervé Teboul",
+              "Portrait de Hervé Teboul",
             )}
             loading="lazy"
             width={1024}
@@ -100,7 +100,7 @@ Expositions et collections privées à l'international.`;
             className="w-full object-cover plate"
           />
           <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            {t("Studio detail — Montreal", "Détail d'atelier — Montréal")}
+            {t("Hervé Teboul in his studio — Montreal", "Hervé Teboul dans son atelier — Montréal")}
           </p>
         </div>
       </div>
