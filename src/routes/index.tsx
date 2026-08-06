@@ -193,11 +193,11 @@ function Works() {
         <img
           src={hero}
           alt={t(
-            "Chic soirée — contemporary mixed media painting with gold leaf",
-            "Chic soirée — peinture contemporaine technique mixte à la feuille d'or",
+            "Supercar — contemporary mixed media painting with silver leaf and epoxy",
+            "Supercar — peinture contemporaine technique mixte à la feuille d'argent et époxy",
           )}
           width={1920}
-          height={1088}
+          height={1152}
           className="h-[68vh] w-full object-cover md:h-[82vh]"
         />
         <div className="absolute inset-0 flex items-end bg-gradient-to-t from-primary/70 to-transparent">
