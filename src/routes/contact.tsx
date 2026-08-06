@@ -61,11 +61,20 @@ function Contact() {
             </div>
             <div>
               <dt className={labelClass}>{t("Email", "Courriel")}</dt>
-              <dd className="mt-2 font-display text-xl">studio@arteboul.com</dd>
+              <dd className="mt-2 font-display text-xl">studioarteboul@gmail.com</dd>
             </div>
             <div>
               <dt className={labelClass}>{t("Available works", "Œuvres disponibles")}</dt>
-              <dd className="mt-2 font-display text-xl">Artsy — Artio Gallery</dd>
+              <dd className="mt-2 font-display text-xl">
+                <a
+                  href="https://artelaguna.world/artist/teboul-herve/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition-colors hover:text-accent"
+                >
+                  Arte Laguna World
+                </a>
+              </dd>
             </div>
           </dl>
         </div>
