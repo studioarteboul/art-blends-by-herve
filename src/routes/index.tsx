@@ -1,12 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
-import hero from "@/assets/hero-chic-soiree.jpg";
-import workScent from "@/assets/work-scent.jpg";
-import workGold from "@/assets/work-gold.jpg";
-import workTexture from "@/assets/work-texture.jpg";
-import workPond from "@/assets/work-pond.jpg";
-import workVillage from "@/assets/work-village.jpg";
+import lumiereAsset from "@/assets/lumiere-de-soie.webp.asset.json";
+import parfumAsset from "@/assets/parfum-de-femme.webp.asset.json";
+import petitMatinAsset from "@/assets/petit-matin-damour.webp.asset.json";
+import rockyAsset from "@/assets/rocky-victory.webp.asset.json";
+import rondeursAsset from "@/assets/rondeurs-dorees.webp.asset.json";
+import roseGalaAsset from "@/assets/rose-gala.webp.asset.json";
+import supercarAsset from "@/assets/supercar.jpg.asset.json";
+import pinsAsset from "@/assets/pins-dores.jpg.asset.json";
+import baieAsset from "@/assets/baie-mediterraneenne.jpg.asset.json";
+
+const hero = supercarAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -40,61 +45,88 @@ type Work = {
 
 const contemporary: Work[] = [
   {
-    image: hero,
-    titleEn: "Chic soirée",
-    titleFr: "Chic soirée",
-    year: "2023",
-    mediumEn: "Mixed Media (Acrylic, Gold Leaf, Epoxy)",
-    mediumFr: "Technique mixte (Acrylique, Feuille d'or, Époxy)",
-    dimensions: "152 × 102 cm",
-  },
-  {
-    image: workScent,
-    titleEn: "Scent of a Woman",
-    titleFr: "Scent of a Woman",
-    year: "2022",
-    mediumEn: "Mixed Media (Acrylic, Silver Leaf, Epoxy)",
-    mediumFr: "Technique mixte (Acrylique, Feuille d'argent, Époxy)",
+    image: lumiereAsset.url,
+    titleEn: "Lumière de Soie",
+    titleFr: "Lumière de Soie",
+    year: "2025",
+    mediumEn: "Acrylic, gold leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'or et époxy",
     dimensions: "122 × 91 cm",
   },
   {
-    image: workGold,
-    titleEn: "Vertical Gold",
-    titleFr: "Or vertical",
-    year: "2021",
-    mediumEn: "Mixed Media (Acrylic, Palette Knife, Gold Leaf)",
-    mediumFr: "Technique mixte (Acrylique, Couteau, Feuille d'or)",
-    dimensions: "100 × 80 cm",
+    image: parfumAsset.url,
+    titleEn: "Parfum de Femme",
+    titleFr: "Parfum de Femme",
+    year: "2025",
+    mediumEn: "Acrylic, gold and silver leaf and epoxy",
+    mediumFr: "Acrylique, feuilles d'or et d'argent et époxy",
+    dimensions: "122 × 91 cm",
   },
   {
-    image: workTexture,
-    titleEn: "Éclats",
-    titleFr: "Éclats",
-    year: "2024",
-    mediumEn: "Mixed Media (Acrylic, Copper Leaf, Epoxy)",
-    mediumFr: "Technique mixte (Acrylique, Feuille de cuivre, Époxy)",
-    dimensions: "91 × 76 cm",
+    image: roseGalaAsset.url,
+    titleEn: "Rose Gala",
+    titleFr: "Rose Gala",
+    year: "2025",
+    mediumEn: "Acrylic, rose gold leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'or rose et époxy",
+    dimensions: "122 × 91 cm",
+  },
+  {
+    image: petitMatinAsset.url,
+    titleEn: "Petit matin d'amour",
+    titleFr: "Petit matin d'amour",
+    year: "2025",
+    mediumEn: "Acrylic, silver leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'argent et époxy",
+    dimensions: "91 × 91 cm",
+  },
+  {
+    image: rockyAsset.url,
+    titleEn: "Rocky — Victory in Silence",
+    titleFr: "Rocky — Victoire en silence",
+    year: "2025",
+    mediumEn: "Acrylic, silver leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'argent et époxy",
+    dimensions: "122 × 100 cm",
+  },
+  {
+    image: rondeursAsset.url,
+    titleEn: "Rondeurs Dorées",
+    titleFr: "Rondeurs Dorées",
+    year: "2025",
+    mediumEn: "Acrylic, gold leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'or et époxy",
+    dimensions: "122 × 91 cm",
+  },
+  {
+    image: supercarAsset.url,
+    titleEn: "Supercar",
+    titleFr: "Supercar",
+    year: "2025",
+    mediumEn: "Acrylic, silver leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'argent et époxy",
+    dimensions: "150 × 90 cm",
   },
 ];
 
 const mediterranean: Work[] = [
   {
-    image: workPond,
-    titleEn: "Water Pond, Provence",
-    titleFr: "Bassin d'eau, Provence",
-    year: "2004",
-    mediumEn: "Oil on canvas",
-    mediumFr: "Huile sur toile",
-    dimensions: "81 × 65 cm",
+    image: pinsAsset.url,
+    titleEn: "Pines over the Bay",
+    titleFr: "Pins sur la baie",
+    year: "2024",
+    mediumEn: "Acrylic and gold leaf on canvas",
+    mediumFr: "Acrylique et feuille d'or sur toile",
+    dimensions: "100 × 73 cm",
   },
   {
-    image: workVillage,
-    titleEn: "Southern Light",
-    titleFr: "Lumière du Sud",
-    year: "1999",
-    mediumEn: "Oil on canvas",
-    mediumFr: "Huile sur toile",
-    dimensions: "92 × 73 cm",
+    image: baieAsset.url,
+    titleEn: "Mediterranean Bay",
+    titleFr: "Baie méditerranéenne",
+    year: "2024",
+    mediumEn: "Acrylic and gold leaf on canvas",
+    mediumFr: "Acrylique et feuille d'or sur toile",
+    dimensions: "116 × 89 cm",
   },
 ];
 
@@ -161,11 +193,11 @@ function Works() {
         <img
           src={hero}
           alt={t(
-            "Chic soirée — contemporary mixed media painting with gold leaf",
-            "Chic soirée — peinture contemporaine technique mixte à la feuille d'or",
+            "Supercar — contemporary mixed media painting with silver leaf and epoxy",
+            "Supercar — peinture contemporaine technique mixte à la feuille d'argent et époxy",
           )}
           width={1920}
-          height={1088}
+          height={1152}
           className="h-[68vh] w-full object-cover md:h-[82vh]"
         />
         <div className="absolute inset-0 flex items-end bg-gradient-to-t from-primary/70 to-transparent">
@@ -181,10 +213,10 @@ function Works() {
                 )}
               </h1>
               <p className="mt-5 text-sm uppercase tracking-[0.18em] text-primary-foreground/75">
-                Chic soirée, 2023 —{" "}
+                Supercar, 2025 —{" "}
                 {t(
-                  "Mixed Media (Acrylic, Gold Leaf, Epoxy)",
-                  "Technique mixte (Acrylique, Feuille d'or, Époxy)",
+                  "Acrylic, silver leaf and epoxy",
+                  "Acrylique, feuille d'argent et époxy",
                 )}
               </p>
             </div>
