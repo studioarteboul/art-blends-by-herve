@@ -1,17 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
-import lumiereAsset from "@/assets/lumiere-de-soie.webp.asset.json";
-import parfumAsset from "@/assets/parfum-de-femme.webp.asset.json";
-import petitMatinAsset from "@/assets/petit-matin-damour.webp.asset.json";
-import rockyAsset from "@/assets/rocky-victory.webp.asset.json";
-import rondeursAsset from "@/assets/rondeurs-dorees.webp.asset.json";
-import roseGalaAsset from "@/assets/rose-gala.webp.asset.json";
-import supercarAsset from "@/assets/supercar.jpg.asset.json";
-import pinsAsset from "@/assets/pins-dores.jpg.asset.json";
-import baieAsset from "@/assets/baie-mediterraneenne.jpg.asset.json";
 
-const hero = supercarAsset.url;
+const hero = "/supercar.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -45,7 +36,7 @@ type Work = {
 
 const contemporary: Work[] = [
   {
-    image: lumiereAsset.url,
+    image: "/lumiere-de-soie.jpg",
     titleEn: "Lumière de Soie",
     titleFr: "Lumière de Soie",
     year: "2025",
@@ -54,7 +45,7 @@ const contemporary: Work[] = [
     dimensions: "122 × 91 cm",
   },
   {
-    image: parfumAsset.url,
+    image: "/parfum-de-femme.jpg",
     titleEn: "Parfum de Femme",
     titleFr: "Parfum de Femme",
     year: "2025",
@@ -63,16 +54,16 @@ const contemporary: Work[] = [
     dimensions: "122 × 91 cm",
   },
   {
-    image: roseGalaAsset.url,
-    titleEn: "Rose Gala",
-    titleFr: "Rose Gala",
+    image: "/la-vie-en-rose.jpg",
+    titleEn: "La Vie en Rose",
+    titleFr: "La Vie en Rose",
     year: "2025",
     mediumEn: "Acrylic, rose gold leaf and epoxy",
     mediumFr: "Acrylique, feuille d'or rose et époxy",
     dimensions: "122 × 91 cm",
   },
   {
-    image: petitMatinAsset.url,
+    image: "/petit-matin-damour.jpg",
     titleEn: "Petit matin d'amour",
     titleFr: "Petit matin d'amour",
     year: "2025",
@@ -81,27 +72,54 @@ const contemporary: Work[] = [
     dimensions: "91 × 91 cm",
   },
   {
-    image: rockyAsset.url,
-    titleEn: "Rocky — Victory in Silence",
-    titleFr: "Rocky — Victoire en silence",
-    year: "2025",
-    mediumEn: "Acrylic, silver leaf and epoxy",
-    mediumFr: "Acrylique, feuille d'argent et époxy",
-    dimensions: "122 × 100 cm",
-  },
-  {
-    image: rondeursAsset.url,
-    titleEn: "Rondeurs Dorées",
-    titleFr: "Rondeurs Dorées",
+    image: "/chic-soiree.jpg",
+    titleEn: "Chic Soirée",
+    titleFr: "Chic Soirée",
     year: "2025",
     mediumEn: "Acrylic, gold leaf and epoxy",
     mediumFr: "Acrylique, feuille d'or et époxy",
     dimensions: "122 × 91 cm",
   },
   {
-    image: supercarAsset.url,
+    image: "/elegance-nuit.jpg",
+    titleEn: "Élégance de Nuit",
+    titleFr: "Élégance de Nuit",
+    year: "2025",
+    mediumEn: "Acrylic, silver leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'argent et époxy",
+    dimensions: "122 × 91 cm",
+  },
+  {
+    image: "/rouge-delice.jpg",
+    titleEn: "Rouge Délice",
+    titleFr: "Rouge Délice",
+    year: "2025",
+    mediumEn: "Acrylic, gold leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'or et époxy",
+    dimensions: "122 × 91 cm",
+  },
+  {
+    image: "/metamorphose.jpg",
+    titleEn: "Métamorphose",
+    titleFr: "Métamorphose",
+    year: "2025",
+    mediumEn: "Acrylic, gold and silver leaf and epoxy",
+    mediumFr: "Acrylique, feuilles d'or et d'argent et époxy",
+    dimensions: "100 × 100 cm",
+  },
+  {
+    image: "/supercar.jpg",
     titleEn: "Supercar",
     titleFr: "Supercar",
+    year: "2025",
+    mediumEn: "Acrylic, silver leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'argent et époxy",
+    dimensions: "150 × 90 cm",
+  },
+  {
+    image: "/supercar-maserati.jpg",
+    titleEn: "Supercar — Maserati",
+    titleFr: "Supercar — Maserati",
     year: "2025",
     mediumEn: "Acrylic, silver leaf and epoxy",
     mediumFr: "Acrylique, feuille d'argent et époxy",
@@ -111,7 +129,7 @@ const contemporary: Work[] = [
 
 const mediterranean: Work[] = [
   {
-    image: pinsAsset.url,
+    image: "/pine-over-the-bay.jpeg",
     titleEn: "Pines over the Bay",
     titleFr: "Pins sur la baie",
     year: "2024",
@@ -120,13 +138,22 @@ const mediterranean: Work[] = [
     dimensions: "100 × 73 cm",
   },
   {
-    image: baieAsset.url,
+    image: "/mediterranean-bay.jpeg",
     titleEn: "Mediterranean Bay",
     titleFr: "Baie méditerranéenne",
     year: "2024",
     mediumEn: "Acrylic and gold leaf on canvas",
     mediumFr: "Acrylique et feuille d'or sur toile",
     dimensions: "116 × 89 cm",
+  },
+  {
+    image: "/promenade-au-bord-de-l-eau.jpg",
+    titleEn: "Promenade au bord de l'eau",
+    titleFr: "Promenade au bord de l'eau",
+    year: "2024",
+    mediumEn: "Acrylic and gold leaf on canvas",
+    mediumFr: "Acrylique et feuille d'or sur toile",
+    dimensions: "100 × 81 cm",
   },
 ];
 
@@ -135,7 +162,7 @@ function WorkCard({ work }: { work: Work }) {
   return (
     <figure className="group relative overflow-hidden bg-card plate">
       <img
-        src={`/${work.image.split('/').pop()?.replace('.asset.json', '')}`}
+        src={work.image}
         alt={t(work.titleEn, work.titleFr)}
         loading="lazy"
         className="max-w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
@@ -191,7 +218,7 @@ function Works() {
     <>
       <section className="relative">
         <img
-          src="/supercar.jpg"
+          src={hero}
           alt={t(
             "Supercar — contemporary mixed media painting with silver leaf and epoxy",
             "Supercar — peinture contemporaine technique mixte à la feuille d'argent et époxy",
