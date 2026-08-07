@@ -204,7 +204,7 @@ function Series({
         </div>
         <p className="max-w-md text-sm leading-relaxed text-muted-foreground">{description}</p>
       </div>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid items-start gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {works.map((w) => (
           <WorkCard key={w.titleEn + w.year} work={w} />
         ))}
