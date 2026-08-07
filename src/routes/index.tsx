@@ -160,13 +160,14 @@ const mediterranean: Work[] = [
 function WorkCard({ work }: { work: Work }) {
   const { t } = useLang();
   return (
-    <figure className="group relative aspect-[4/5] overflow-hidden bg-card plate">
+    <figure className="group relative overflow-hidden bg-card plate">
       <img
         src={work.image}
         alt={t(work.titleEn, work.titleFr)}
         loading="lazy"
-        className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+        className="w-full h-auto object-contain transition-transform duration-700 ease-out group-hover:scale-[1.03]"
       />
+
 
       <figcaption className="pointer-events-none absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-primary/85 via-primary/25 to-transparent p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
         <p className="font-display text-2xl text-primary-foreground">
