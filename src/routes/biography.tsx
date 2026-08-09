@@ -89,7 +89,7 @@ Expositions et collections privées à l'international.`;
 
         <div className="lg:pt-24">
           <img
-            src={portrait.url}
+            src={portrait}
             alt={t(
               "Portrait of Hervé Teboul",
               "Portrait de Hervé Teboul",
