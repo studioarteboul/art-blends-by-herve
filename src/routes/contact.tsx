@@ -22,9 +22,17 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
 });
 
+const SPLITFORMS_ENDPOINT = "https://splitforms.com";
+const SPLITFORMS_ACCESS_KEY = "15c641663fad4ac59758cbbb09037223";
+
+const emptyForm = { name: "", email: "", subject: "", work: "", message: "" };
+
 function Contact() {
   const { t } = useLang();
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [sending, setSending] = useState(false);
+  const [form, setForm] = useState(emptyForm);
 
   const subjects = [
     t("Studio appointment", "Rendez-vous à l'atelier"),
@@ -33,9 +41,43 @@ function Contact() {
     t("Press or exhibition", "Presse ou exposition"),
   ];
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSending(true);
+    setError(null);
+    setSent(false);
+    try {
+      const res = await fetch(SPLITFORMS_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: SPLITFORMS_ACCESS_KEY,
+          name: form.name,
+          email: form.email,
+          subject: form.subject || subjects[0],
+          work: form.work,
+          message: form.message,
+        }),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      setForm(emptyForm);
+      setSent(true);
+    } catch {
+      setError(
+        t(
+          "Something went wrong. Please email studioarteboul@gmail.com directly.",
+          "Une erreur est survenue. Écrivez directement à studioarteboul@gmail.com.",
+        ),
+      );
+    } finally {
+      setSending(false);
+    }
+  };
+
   const fieldClass =
     "w-full border-b border-border bg-transparent py-3 text-base outline-none transition-colors focus:border-accent";
   const labelClass = "text-[0.65rem] uppercase tracking-[0.28em] text-muted-foreground";
+
 
   return (
     <Container>
@@ -87,30 +129,42 @@ function Contact() {
           </dl>
         </div>
 
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            setSent(true);
-          }}
-          className="space-y-8"
-        >
+        <form onSubmit={handleSubmit} className="space-y-8">
           <div>
             <label className={labelClass} htmlFor="name">
               {t("Name", "Nom")}
             </label>
-            <input id="name" required className={fieldClass} />
+            <input
+              id="name"
+              required
+              value={form.name}
+              onChange={(e) => setForm({ ...form, name: e.target.value })}
+              className={fieldClass}
+            />
           </div>
           <div>
             <label className={labelClass} htmlFor="email">
               {t("Email", "Courriel")}
             </label>
-            <input id="email" type="email" required className={fieldClass} />
+            <input
+              id="email"
+              type="email"
+              required
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
+              className={fieldClass}
+            />
           </div>
           <div>
             <label className={labelClass} htmlFor="subject">
               {t("Subject", "Objet")}
             </label>
-            <select id="subject" className={fieldClass}>
+            <select
+              id="subject"
+              value={form.subject || subjects[0]}
+              onChange={(e) => setForm({ ...form, subject: e.target.value })}
+              className={fieldClass}
+            >
               {subjects.map((s) => (
                 <option key={s}>{s}</option>
               ))}
@@ -120,29 +174,53 @@ function Contact() {
             <label className={labelClass} htmlFor="work">
               {t("Work of interest (optional)", "Œuvre concernée (facultatif)")}
             </label>
-            <input id="work" className={fieldClass} />
+            <input
+              id="work"
+              value={form.work}
+              onChange={(e) => setForm({ ...form, work: e.target.value })}
+              className={fieldClass}
+            />
           </div>
           <div>
             <label className={labelClass} htmlFor="message">
               Message
             </label>
-            <textarea id="message" rows={5} required className={fieldClass} />
+            <textarea
+              id="message"
+              rows={5}
+              required
+              value={form.message}
+              onChange={(e) => setForm({ ...form, message: e.target.value })}
+              className={fieldClass}
+            />
           </div>
           <button
             type="submit"
-            className="border border-foreground px-8 py-4 text-[0.7rem] uppercase tracking-[0.28em] transition-colors hover:bg-primary hover:text-primary-foreground"
+            disabled={sending}
+            className="border border-foreground px-8 py-4 text-[0.7rem] uppercase tracking-[0.28em] transition-colors hover:bg-primary hover:text-primary-foreground disabled:opacity-50"
           >
-            {t("Send inquiry", "Envoyer la demande")}
+            {sending
+              ? t("Sending…", "Envoi…")
+              : t("Send inquiry", "Envoyer la demande")}
           </button>
-          {sent && (
-            <p className="text-sm text-accent">
-              {t(
-                "Thank you — your message has been noted. The studio will reply shortly.",
-                "Merci — votre message a été enregistré. L'atelier vous répondra sous peu.",
-              )}
-            </p>
-          )}
+          <div
+            aria-live="polite"
+            className={`overflow-hidden transition-all duration-500 ease-out ${
+              sent || error ? "max-h-24 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-1"
+            }`}
+          >
+            {sent && (
+              <p className="text-sm text-accent">
+                {t(
+                  "Thank you — your message has been sent. The studio will reply shortly.",
+                  "Merci — votre message a été envoyé. L'atelier vous répondra sous peu.",
+                )}
+              </p>
+            )}
+            {error && <p className="text-sm text-destructive">{error}</p>}
+          </div>
         </form>
+
       </div>
     </Container>
   );
