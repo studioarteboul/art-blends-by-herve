@@ -22,9 +22,17 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
 });
 
+const SPLITFORMS_ENDPOINT = "https://splitforms.com";
+const SPLITFORMS_ACCESS_KEY = "15c641663fad4ac59758cbbb09037223";
+
+const emptyForm = { name: "", email: "", subject: "", work: "", message: "" };
+
 function Contact() {
   const { t } = useLang();
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [sending, setSending] = useState(false);
+  const [form, setForm] = useState(emptyForm);
 
   const subjects = [
     t("Studio appointment", "Rendez-vous à l'atelier"),
@@ -33,9 +41,43 @@ function Contact() {
     t("Press or exhibition", "Presse ou exposition"),
   ];
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSending(true);
+    setError(null);
+    setSent(false);
+    try {
+      const res = await fetch(SPLITFORMS_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: SPLITFORMS_ACCESS_KEY,
+          name: form.name,
+          email: form.email,
+          subject: form.subject || subjects[0],
+          work: form.work,
+          message: form.message,
+        }),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      setForm(emptyForm);
+      setSent(true);
+    } catch {
+      setError(
+        t(
+          "Something went wrong. Please email studioarteboul@gmail.com directly.",
+          "Une erreur est survenue. Écrivez directement à studioarteboul@gmail.com.",
+        ),
+      );
+    } finally {
+      setSending(false);
+    }
+  };
+
   const fieldClass =
     "w-full border-b border-border bg-transparent py-3 text-base outline-none transition-colors focus:border-accent";
   const labelClass = "text-[0.65rem] uppercase tracking-[0.28em] text-muted-foreground";
+
 
   return (
     <Container>
