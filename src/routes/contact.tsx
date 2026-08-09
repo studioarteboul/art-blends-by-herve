@@ -22,7 +22,7 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
 });
 
-const SPLITFORMS_ENDPOINT = "https://splitforms.com";
+const SPLITFORMS_ENDPOINT = "https://splitforms.com/api/submit";
 const SPLITFORMS_ACCESS_KEY = "15c641663fad4ac59758cbbb09037223";
 
 const emptyForm = { name: "", email: "", subject: "", work: "", message: "" };
@@ -59,15 +59,22 @@ function Contact() {
           message: form.message,
         }),
       });
-      if (!res.ok) throw new Error(String(res.status));
+      const payload = (await res.json().catch(() => null)) as
+        | { success?: boolean; message?: string }
+        | null;
+      if (!res.ok || payload?.success === false) {
+        throw new Error(payload?.message || String(res.status));
+      }
       setForm(emptyForm);
       setSent(true);
-    } catch {
+    } catch (err) {
+      const serviceMessage = err instanceof Error && /\D/.test(err.message) ? err.message : "";
       setError(
-        t(
-          "Something went wrong. Please email studioarteboul@gmail.com directly.",
-          "Une erreur est survenue. Écrivez directement à studioarteboul@gmail.com.",
-        ),
+        serviceMessage ||
+          t(
+            "Something went wrong. Please email studioarteboul@gmail.com directly.",
+            "Une erreur est survenue. Écrivez directement à studioarteboul@gmail.com.",
+          ),
       );
     } finally {
       setSending(false);
