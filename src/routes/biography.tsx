@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
-import portrait from "@/assets/herve-teboul-portrait.jpg.asset.json";
+const portrait = "/herve-teboul-portrait.jpg";
 
 export const Route = createFileRoute("/biography")({
   head: () => ({
@@ -89,7 +89,7 @@ Expositions et collections privées à l'international.`;
 
         <div className="lg:pt-24">
           <img
-            src={portrait.url}
+            src={portrait}
             alt={t(
               "Portrait of Hervé Teboul",
               "Portrait de Hervé Teboul",
