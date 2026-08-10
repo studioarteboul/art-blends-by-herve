@@ -94,8 +94,8 @@ const exhibitions: Entry[] = [
   },
   {
     year: "1999",
-    en: "Festival Provence — Hôtel Bonne Aventure",
-    fr: "Festival Provence — Hôtel Bonne Aventure",
+    en: "Festival Provence — Hôtel Bonaventure",
+    fr: "Festival Provence — Hôtel Bonaventure",
     place: "Montréal, Canada",
   },
 ];
