@@ -186,9 +186,11 @@ function WorkCard({ work }: { work: Work }) {
         <p className="mt-2 text-xs uppercase tracking-[0.18em] text-primary-foreground/80">
           {t(work.mediumEn, work.mediumFr)}
         </p>
-        <p className="mt-1 text-xs uppercase tracking-[0.18em] text-primary-foreground/70">
-          {work.dimensions}
-        </p>
+        {work.dimensions && (
+          <p className="mt-1 text-xs uppercase tracking-[0.18em] text-primary-foreground/70">
+            {work.dimensions}
+          </p>
+        )}
       </figcaption>
     </figure>
   );
