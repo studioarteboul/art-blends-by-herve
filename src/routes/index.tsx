@@ -370,7 +370,7 @@ function Works() {
             "Art contemporain et techniques mixtes",
           )}
           description={t(
-            "Acrylics built with the palette knife, gold and silver leaf, and poured epoxy finishes — high-contrast surfaces where light moves with the viewer.",
+            "Acrylics built with gold and silver leaf, and epoxy finishes — high-contrast surfaces where light moves with the viewer.",
             "Acryliques travaillées au couteau, feuilles d'or et d'argent et finitions époxy coulées — des surfaces à fort contraste où la lumière se déplace avec le regard.",
           )}
           works={contemporary}
