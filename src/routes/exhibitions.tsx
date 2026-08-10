@@ -45,12 +45,6 @@ const exhibitions: Entry[] = [
     place: "New York, USA",
   },
   {
-    year: "2024",
-    en: "Art Shopping — Carrousel du Louvre",
-    fr: "Art Shopping — Carrousel du Louvre",
-    place: "Paris, France",
-  },
-  {
     year: "2023",
     en: "Inaugural Exhibition, Studio ARTeboul",
     fr: "Exposition inaugurale, Studio ARTeboul",
