@@ -23,7 +23,7 @@ Note on framing: the hero is a wide band and most of these canvases are tall por
 ## Technical detail
 
 - Copy the two new uploads into `public/` as `rose-gala.jpg` and `rocky-victory-in-silence.jpg`.
-- In `src/routes/index.tsx`, add a `heroSlides` array (image path + bilingual alt text only) and a `HeroCarousel` component: `useState` index + `useEffect` interval (6s), stacked absolutely-positioned `<img>`s with `opacity` transitions, `object-cover`, first slide eager with `fetchPriority="high"` and the rest lazy.
+- In `src/routes/index.tsx`, add a `heroSlides` array (image path + bilingual alt text only) and a `HeroCarousel` component: `useState` index + `useEffect` interval of **8 seconds** (5 seconds visible + 3 seconds transition), stacked absolutely-positioned `<img>`s with a **3-second** `opacity` transition, `object-cover`, first slide eager with `fetchPriority="high"` and the rest lazy.
 - Keep the existing gradient overlay, `Container`, eyebrow, and `<h1>`; delete the caption paragraph.
 - Pause on `mouseenter`/focus; respect `prefers-reduced-motion`.
 - Leave route `head()` metadata unchanged.
