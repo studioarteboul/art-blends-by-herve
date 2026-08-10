@@ -301,20 +301,27 @@ function WorkCard({ work }: { work: Work }) {
 function Series({
   index,
   title,
+  subtitle,
   description,
   works,
 }: {
   index: string;
   title: string;
+  subtitle?: string;
   description: string;
   works: Work[];
 }) {
   return (
     <section className="py-20">
       <div className="mb-12 flex flex-col gap-4 border-t border-border pt-8 md:flex-row md:items-start md:justify-between">
-        <div className="flex items-baseline gap-6">
-          <span className="text-[0.7rem] uppercase tracking-[0.3em] text-accent">{index}</span>
-          <h2 className="font-display text-3xl leading-tight md:text-4xl">{title}</h2>
+        <div className="flex flex-col gap-1">
+          <div className="flex items-baseline gap-6">
+            <span className="text-[0.7rem] uppercase tracking-[0.3em] text-accent">{index}</span>
+            <h2 className="font-display text-3xl leading-tight md:text-4xl">{title}</h2>
+          </div>
+          {subtitle && (
+            <p className="ml-[2.4rem] text-sm text-muted-foreground md:text-base">{subtitle}</p>
+          )}
         </div>
         <p className="max-w-md text-sm leading-relaxed text-muted-foreground">{description}</p>
       </div>
@@ -355,6 +362,10 @@ function Works() {
         <Series
           index="I"
           title={t(
+            "Brilliance & Symbolism",
+            "Brillance et symbolisme",
+          )}
+          subtitle={t(
             "Contemporary & Mixed Media",
             "Art contemporain et techniques mixtes",
           )}
