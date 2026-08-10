@@ -171,18 +171,18 @@ const contemporary: Work[] = [
 
 const mediterranean: Work[] = [
   {
-    image: "/pine-over-the-bay.jpeg",
-    titleEn: "Balcon en Méditerranée",
-    titleFr: "Balcon en Méditerranée",
+    image: "/mediterranean-bay.jpeg",
+    titleEn: "Trésor Côte d’Azur",
+    titleFr: "Trésor Côte d’Azur",
     year: "2026",
     mediumEn: "Acrylic and gold leaf on canvas",
     mediumFr: "Acrylique et feuille d'or sur toile",
     dimensions: "91 × 122 cm",
   },
   {
-    image: "/mediterranean-bay.jpeg",
-    titleEn: "Trésor Côte d’Azur",
-    titleFr: "Trésor Côte d’Azur",
+    image: "/pine-over-the-bay.jpeg",
+    titleEn: "Balcon en Méditerranée",
+    titleFr: "Balcon en Méditerranée",
     year: "2026",
     mediumEn: "Acrylic and gold leaf on canvas",
     mediumFr: "Acrylique et feuille d'or sur toile",
