@@ -76,9 +76,9 @@ const exhibitions: Entry[] = [
   },
   {
     year: "2001",
-    en: "Solo Exhibition — Mediterranean Light",
-    fr: "Exposition individuelle — Lumière méditerranéenne",
-    place: "Provence, France",
+    en: "Solo Exhibition — Aux Couleurs de Provence",
+    fr: "Exposition individuelle — Aux Couleurs de Provence",
+    place: "Montréal, Canada",
   },
   {
     year: "2000",
