@@ -1,8 +1,50 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useCallback, useEffect, useState } from "react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 
-const hero = "/supercar.jpg";
+const heroSlides = [
+  {
+    image: "/lumiere-de-soie.jpg",
+    altEn: "Lumière de Soie — contemporary mixed media painting",
+    altFr: "Lumière de Soie — peinture contemporaine en technique mixte",
+  },
+  {
+    image: "/chic-soiree.jpg",
+    altEn: "Chic Soirée — contemporary mixed media painting",
+    altFr: "Chic Soirée — peinture contemporaine en technique mixte",
+  },
+  {
+    image: "/elegance-nuit.jpg",
+    altEn: "Élégance de Nuit — contemporary mixed media painting",
+    altFr: "Élégance de Nuit — peinture contemporaine en technique mixte",
+  },
+  {
+    image: "/rose-gala.jpg",
+    altEn: "Rose Gala — contemporary mixed media painting",
+    altFr: "Rose Gala — peinture contemporaine en technique mixte",
+  },
+  {
+    image: "/rocky-victory-in-silence.jpg",
+    altEn: "Rocky, Victory in Silence — contemporary mixed media painting",
+    altFr: "Rocky, Victory in Silence — peinture contemporaine en technique mixte",
+  },
+  {
+    image: "/mediterranean-bay.jpeg",
+    altEn: "Mediterranean Bay — post-impressionist landscape painting",
+    altFr: "Baie méditerranéenne — peinture de paysage post-impressionniste",
+  },
+  {
+    image: "/pine-over-the-bay.jpeg",
+    altEn: "Pines over the Bay — post-impressionist landscape painting",
+    altFr: "Pins sur la baie — peinture de paysage post-impressionniste",
+  },
+  {
+    image: "/promenade-au-bord-de-l-eau.jpg",
+    altEn: "Promenade au bord de l'eau — post-impressionist landscape painting",
+    altFr: "Promenade au bord de l'eau — peinture de paysage post-impressionniste",
+  },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -167,6 +209,67 @@ const japon: Work[] = Array.from({ length: 7 }, (_, i) => ({
   dimensions: "",
 }));
 
+function HeroCarousel() {
+  const { t } = useLang();
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReducedMotion(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  const next = useCallback(() => {
+    setIndex((i) => (i + 1) % heroSlides.length);
+  }, []);
+
+  useEffect(() => {
+    if (reducedMotion || paused) return;
+    const id = setInterval(next, 8000);
+    return () => clearInterval(id);
+  }, [reducedMotion, paused, next]);
+
+  return (
+    <div
+      className="absolute inset-0"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      {heroSlides.map((slide, i) => (
+        <img
+          key={slide.image}
+          src={slide.image}
+          alt={t(slide.altEn, slide.altFr)}
+          fetchPriority={i === 0 ? "high" : undefined}
+          loading={i === 0 ? "eager" : "lazy"}
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[3000ms] ease-in-out ${
+            i === index ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
+      <div className="absolute bottom-6 right-6 z-20 flex gap-2">
+        {heroSlides.map((slide, i) => (
+          <button
+            key={slide.image}
+            type="button"
+            aria-label={`${t("Go to slide", "Aller à la diapositive")} ${i + 1}`}
+            onClick={() => setIndex(i)}
+            className={`h-2 w-2 rounded-full transition-colors ${
+              i === index
+                ? "bg-primary-foreground"
+                : "bg-primary-foreground/40 hover:bg-primary-foreground/70"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function WorkCard({ work }: { work: Work }) {
   const { t } = useLang();
   return (
@@ -177,7 +280,6 @@ function WorkCard({ work }: { work: Work }) {
         loading="lazy"
         className="w-full h-auto object-contain transition-transform duration-700 ease-out group-hover:scale-[1.03]"
       />
-
 
       <figcaption className="pointer-events-none absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-primary/85 via-primary/25 to-transparent p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
         <p className="font-display text-2xl text-primary-foreground">
@@ -230,17 +332,8 @@ function Works() {
 
   return (
     <>
-      <section className="relative">
-        <img
-          src={hero}
-          alt={t(
-            "Supercar — contemporary mixed media painting with silver leaf and epoxy",
-            "Supercar — peinture contemporaine technique mixte à la feuille d'argent et époxy",
-          )}
-          width={1920}
-          height={1152}
-          className="h-[68vh] w-full object-cover md:h-[82vh]"
-        />
+      <section className="relative h-[68vh] md:h-[82vh]">
+        <HeroCarousel />
         <div className="absolute inset-0 flex items-end bg-gradient-to-t from-primary/70 to-transparent">
           <Container>
             <div className="pb-12 md:pb-20">
@@ -253,13 +346,6 @@ function Works() {
                   "Structure, texture et brillance métallique.",
                 )}
               </h1>
-              <p className="mt-5 text-sm uppercase tracking-[0.18em] text-primary-foreground/75">
-                Supercar, 2025 —{" "}
-                {t(
-                  "Acrylic, silver leaf and epoxy",
-                  "Acrylique, feuille d'argent et époxy",
-                )}
-              </p>
             </div>
           </Container>
         </div>
