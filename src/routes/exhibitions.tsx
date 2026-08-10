@@ -173,7 +173,7 @@ function Exhibitions() {
           </ul>
         </Block>
 
-        <Block title={t("For Collectors", "Pour les collectionneurs")}>
+        <Block title={t("Quotation", "Cotation")}>
           <p className="border-b border-border pb-6 font-display text-xl md:text-2xl">
             {t(
               "Works range from $5,000 to $25,000 CAD. Pricing is shared on request.",
