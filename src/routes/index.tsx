@@ -290,6 +290,15 @@ function Works() {
           )}
           works={mediterranean}
         />
+        <Series
+          index="III"
+          title="Inspiration Japon"
+          description={t(
+            "A series drawn from Japanese imagery: dancers, samurai and blossoms, painted in acrylic with a restrained, contemplative palette.",
+            "Une série inspirée de l'imaginaire japonais : danseuses, samouraïs et floraisons, peints à l'acrylique dans une palette retenue et contemplative.",
+          )}
+          works={japon}
+        />
 
         <section className="border-t border-border py-20 text-center">
           <p className="mx-auto max-w-2xl font-display text-3xl leading-snug md:text-4xl">
