@@ -157,6 +157,16 @@ const mediterranean: Work[] = [
   },
 ];
 
+const japon: Work[] = Array.from({ length: 7 }, (_, i) => ({
+  image: `/ij${i + 1}.jpg`,
+  titleEn: `IJ${i + 1}`,
+  titleFr: `IJ${i + 1}`,
+  year: "2025",
+  mediumEn: "Acrylic on canvas",
+  mediumFr: "Acrylique sur toile",
+  dimensions: "",
+}));
+
 function WorkCard({ work }: { work: Work }) {
   const { t } = useLang();
   return (
