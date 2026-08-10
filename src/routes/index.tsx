@@ -30,14 +30,14 @@ const heroSlides = [
     altFr: "Rocky, Victory in Silence — peinture contemporaine en technique mixte",
   },
   {
-    image: "/pine-over-the-bay.jpeg",
-    altEn: "Balcon en Méditerranée — post-impressionist landscape painting",
-    altFr: "Balcon en Méditerranée — peinture de paysage post-impressionniste",
-  },
-  {
     image: "/mediterranean-bay.jpeg",
     altEn: "Trésor Côte d’Azur — post-impressionist landscape painting",
     altFr: "Trésor Côte d’Azur — peinture de paysage post-impressionniste",
+  },
+  {
+    image: "/pine-over-the-bay.jpeg",
+    altEn: "Balcon en Méditerranée — post-impressionist landscape painting",
+    altFr: "Balcon en Méditerranée — peinture de paysage post-impressionniste",
   },
   {
     image: "/promenade-au-bord-de-l-eau.jpg",
