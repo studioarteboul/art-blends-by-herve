@@ -45,9 +45,9 @@ const exhibitions: Entry[] = [
     place: "New York, USA",
   },
   {
-    year: "2023",
-    en: "Inaugural Exhibition, Studio ARTeboul",
-    fr: "Exposition inaugurale, Studio ARTeboul",
+    year: "2016",
+    en: "Inaugural Exhibition, Studio Gallery ARTeboul",
+    fr: "Exposition inaugurale, Studio Gallery ARTeboul",
     place: "Montréal, Canada",
   },
   {
