@@ -192,10 +192,10 @@ const mediterranean: Work[] = [
     image: "/promenade-au-bord-de-l-eau.jpg",
     titleEn: "Promenade au bord de l'eau",
     titleFr: "Promenade au bord de l'eau",
-    year: "2024",
+    year: "2026",
     mediumEn: "Acrylic and gold leaf on canvas",
     mediumFr: "Acrylique et feuille d'or sur toile",
-    dimensions: "100 × 81 cm",
+    dimensions: "91 × 91 cm",
   },
 ];
 
