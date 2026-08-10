@@ -8,7 +8,7 @@ Replace the single Supercar hero image with an automatic slideshow that cycles t
 
 - The hero area keeps its current size and dark gradient overlay.
 - Each painting fades in, holds for about 6 seconds, then cross-fades to the next; it loops forever.
-- The caption under the headline updates with each slide (title, year, medium) in English or French.
+- No titles or captions on the hero: the existing "Supercar, 2025 — Acrylic, silver leaf and epoxy" line is removed, leaving only the eyebrow and headline.
 - Small dots at the bottom right let a visitor jump to a specific painting; hovering pauses the rotation.
 - On devices set to "reduce motion", the slideshow stays on the first image.
 
