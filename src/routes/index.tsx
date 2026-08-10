@@ -381,6 +381,10 @@ function Works() {
             "French Riviera — Côte d’Azur",
             "French Riviera — Côte d’Azur",
           )}
+          subtitle={t(
+            "Contemporary & Mixed Media",
+            "Art contemporain et techniques mixtes",
+          )}
           description={t(
             "A tribute to early influences: the Mediterranean, Provence landscapes and the vivid light of Southern France that still governs today's palette.",
             "Un hommage aux influences des débuts : la Méditerranée, les paysages de Provence et la lumière vive du sud de la France qui gouverne encore la palette d'aujourd'hui.",
