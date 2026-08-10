@@ -161,7 +161,7 @@ const japon: Work[] = Array.from({ length: 7 }, (_, i) => ({
   image: `/ij${i + 1}.jpg`,
   titleEn: `IJ${i + 1}`,
   titleFr: `IJ${i + 1}`,
-  year: "2025",
+  year: "2021",
   mediumEn: "Acrylic on canvas",
   mediumFr: "Acrylique sur toile",
   dimensions: "",
