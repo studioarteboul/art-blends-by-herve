@@ -292,7 +292,7 @@ function Works() {
         />
         <Series
           index="III"
-          title="Inspiration Japon"
+          title={t("Japan Inspired", "Inspiration Japon")}
           description={t(
             "A series drawn from Japanese imagery: dancers, samurai and blossoms, painted in acrylic with a restrained, contemplative palette.",
             "Une série inspirée de l'imaginaire japonais : danseuses, samouraïs et floraisons, peints à l'acrylique dans une palette retenue et contemplative.",
