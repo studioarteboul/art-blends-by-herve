@@ -45,15 +45,15 @@ const exhibitions: Entry[] = [
     place: "New York, USA",
   },
   {
-    year: "2016",
-    en: "Inaugural Exhibition, Studio Gallery ARTeboul",
-    fr: "Exposition inaugurale, Studio Gallery ARTeboul",
-    place: "Montréal, Canada",
-  },
-  {
     year: "2019",
     en: "Group Exhibition — Contemporary Mixed Media",
     fr: "Exposition collective — Techniques mixtes contemporaines",
+    place: "Montréal, Canada",
+  },
+  {
+    year: "2016",
+    en: "Inaugural Exhibition, Studio Gallery ARTeboul",
+    fr: "Exposition inaugurale, Studio Gallery ARTeboul",
     place: "Montréal, Canada",
   },
   {
