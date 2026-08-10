@@ -31,8 +31,8 @@ const heroSlides = [
   },
   {
     image: "/mediterranean-bay.jpeg",
-    altEn: "Mediterranean Bay — post-impressionist landscape painting",
-    altFr: "Baie méditerranéenne — peinture de paysage post-impressionniste",
+    altEn: "Trésor Côte d’Azur — post-impressionist landscape painting",
+    altFr: "Trésor Côte d’Azur — peinture de paysage post-impressionniste",
   },
   {
     image: "/pine-over-the-bay.jpeg",
@@ -181,12 +181,12 @@ const mediterranean: Work[] = [
   },
   {
     image: "/mediterranean-bay.jpeg",
-    titleEn: "Mediterranean Bay",
-    titleFr: "Baie méditerranéenne",
-    year: "2024",
+    titleEn: "Trésor Côte d’Azur",
+    titleFr: "Trésor Côte d’Azur",
+    year: "2026",
     mediumEn: "Acrylic and gold leaf on canvas",
     mediumFr: "Acrylique et feuille d'or sur toile",
-    dimensions: "116 × 89 cm",
+    dimensions: "91 × 122 cm",
   },
   {
     image: "/promenade-au-bord-de-l-eau.jpg",
