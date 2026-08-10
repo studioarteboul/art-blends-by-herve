@@ -378,8 +378,8 @@ function Works() {
         <Series
           index="II"
           title={t(
-            "Mediterranean Landscapes & Post-Impressionism",
-            "Paysages méditerranéens et post-impressionnisme",
+            "French Riviera — Côte d’Azur",
+            "French Riviera — Côte d’Azur",
           )}
           description={t(
             "A tribute to early influences: water ponds, olive hillsides and the vivid light of Southern France that still governs the palette today.",
