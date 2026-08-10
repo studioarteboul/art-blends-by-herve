@@ -157,6 +157,16 @@ const mediterranean: Work[] = [
   },
 ];
 
+const japon: Work[] = Array.from({ length: 7 }, (_, i) => ({
+  image: `/ij${i + 1}.jpg`,
+  titleEn: `IJ${i + 1}`,
+  titleFr: `IJ${i + 1}`,
+  year: "2025",
+  mediumEn: "Acrylic on canvas",
+  mediumFr: "Acrylique sur toile",
+  dimensions: "",
+}));
+
 function WorkCard({ work }: { work: Work }) {
   const { t } = useLang();
   return (
@@ -176,9 +186,11 @@ function WorkCard({ work }: { work: Work }) {
         <p className="mt-2 text-xs uppercase tracking-[0.18em] text-primary-foreground/80">
           {t(work.mediumEn, work.mediumFr)}
         </p>
-        <p className="mt-1 text-xs uppercase tracking-[0.18em] text-primary-foreground/70">
-          {work.dimensions}
-        </p>
+        {work.dimensions && (
+          <p className="mt-1 text-xs uppercase tracking-[0.18em] text-primary-foreground/70">
+            {work.dimensions}
+          </p>
+        )}
       </figcaption>
     </figure>
   );
@@ -277,6 +289,15 @@ function Works() {
             "Un hommage aux influences des débuts : bassins d'eau, collines d'oliviers et lumière vive du sud de la France qui gouverne encore la palette aujourd'hui.",
           )}
           works={mediterranean}
+        />
+        <Series
+          index="III"
+          title="Inspiration Japon"
+          description={t(
+            "A series drawn from Japanese imagery: dancers, samurai and blossoms, painted in acrylic with a restrained, contemplative palette.",
+            "Une série inspirée de l'imaginaire japonais : danseuses, samouraïs et floraisons, peints à l'acrylique dans une palette retenue et contemplative.",
+          )}
+          works={japon}
         />
 
         <section className="border-t border-border py-20 text-center">
