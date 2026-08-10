@@ -36,8 +36,8 @@ const heroSlides = [
   },
   {
     image: "/pine-over-the-bay.jpeg",
-    altEn: "Pines over the Bay — post-impressionist landscape painting",
-    altFr: "Pins sur la baie — peinture de paysage post-impressionniste",
+    altEn: "Balcon en Méditerranée — post-impressionist landscape painting",
+    altFr: "Balcon en Méditerranée — peinture de paysage post-impressionniste",
   },
   {
     image: "/promenade-au-bord-de-l-eau.jpg",
@@ -172,12 +172,12 @@ const contemporary: Work[] = [
 const mediterranean: Work[] = [
   {
     image: "/pine-over-the-bay.jpeg",
-    titleEn: "Pines over the Bay",
-    titleFr: "Pins sur la baie",
-    year: "2024",
+    titleEn: "Balcon en Méditerranée",
+    titleFr: "Balcon en Méditerranée",
+    year: "2026",
     mediumEn: "Acrylic and gold leaf on canvas",
     mediumFr: "Acrylique et feuille d'or sur toile",
-    dimensions: "100 × 73 cm",
+    dimensions: "91 × 122 cm",
   },
   {
     image: "/mediterranean-bay.jpeg",
