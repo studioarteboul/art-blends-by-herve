@@ -1,22 +1,23 @@
-# Music at page load — closest achievable behaviour
-
-## The constraint
-
-Every modern browser blocks audible sound until the visitor interacts with the page. No code can start audible music at load. The only playback always permitted at load is **muted autoplay**.
+# Add "Caseisme Collection" to Works
 
 ## What will change
 
-- The track begins playing the instant the homepage loads — silently, already running and buffered, so there is no delay or restart when it becomes audible.
-- The header speaker icon is elevated into a clear, understated "Sound on" affordance on arrival: icon plus a small caption and a gentle pulse, styled to match the minimal art-forward design. It stops calling attention once the visitor engages.
-- Any first interaction — click, tap, scroll, key press — unmutes the already-running track, so it becomes audible mid-phrase rather than starting over.
-- If the visitor mutes it, that choice sticks for the whole session; navigating between pages never re-prompts or restarts the track.
-- Music stays homepage-only and loops.
+A fourth collection is added to the Works page, below "Inspiration Japon":
 
-Net effect: sound is present from the first moment and reaches nearly every visitor within a second, with a visible cue for anyone who does not interact right away.
+- Title: **Caseisme Collection** (same in English and French), numbered Series IV.
+- Ten paintings from the uploaded images, titled **CC1** through **CC10** in the order they were provided: the blue-green foliage over water, the bearded figure in a hat, the white-robed figure, the elder in a blue hat, the figure in a black hat on gold, the still life with bowls, the lavender path, the trees over turquoise water, the orchard, and the archway of flowers.
+- Each is captioned "Oil on canvas / Huile sur toile" in the visitor's chosen language, matching the caption pattern used by the other collections.
+- A short bilingual introduction describing the collection's signature mosaic of thick palette-knife strokes, where each small block of colour builds the whole image.
+
+The gallery layout, spacing and aspect-ratio handling stay exactly as they are in the existing collections, so the new works display uncropped at their true proportions.
+
+## Notes
+
+- No year or dimensions are shown for these works, since none were provided. Send them and captions can be filled in.
+- Nothing is added to the homepage hero slideshow; it keeps its current eight images.
 
 ## Technical notes
 
-- `src/lib/audio.tsx` — mount the audio element with `muted` and `autoPlay` so playback starts at load; on first gesture set `muted = false` instead of calling `play()`, unless the visitor already chose silence. Track `muted` alongside `isPlaying` in context; persist the preference to `sessionStorage` (read inside `useEffect`, never during render).
-- `src/components/SiteHeader.tsx` — drive the icon from `isPlaying && !muted`; render the first-visit "Sound on" hint until the visitor interacts, then retire it.
-- `src/routes/index.tsx` — unchanged; keeps the GitHub-hosted audio URL.
-- Publish afterwards so the live site reflects the new behaviour.
+- Upload the ten images through Lovable Assets and reference the resulting CDN pointers, matching how project media is served.
+- In `src/routes/index.tsx`: add a `caseisme: Work[]` array of ten entries (`titleEn`/`titleFr` = `CC1`–`CC10`, `mediumEn: "Oil on canvas"`, `mediumFr: "Huile sur toile"`, empty `year` and `dimensions`), then render a fourth `<Series index="IV" ... works={caseisme} />` after the Series III block.
+- Confirm the `WorkCard` caption renders cleanly when `year` is empty; adjust the caption join so no stray comma appears.
