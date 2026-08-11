@@ -24,7 +24,7 @@ export const Route = createFileRoute("/exhibitions")({
   component: Exhibitions,
 });
 
-type Entry = { year: string; en: string; fr: string; place: string; photos?: string[] };
+type Entry = { year: string; en: string; fr: string; place: string; placeFr?: string; photos?: string[] };
 
 const louvrePhotos = Array.from({ length: 10 }, (_, i) => `/louvre${i + 1}.jpg`);
 const meamPhotos = Array.from({ length: 9 }, (_, i) => `/meam${i + 1}.jpg`);
@@ -35,6 +35,7 @@ const exhibitions: Entry[] = [
     en: "Museum MEAM Barcelona with Artio Gallery",
     fr: "Musée MEAM Barcelone avec Artio Gallery",
     place: "Barcelona, Spain",
+    placeFr: "Barcelone, Espagne",
     photos: meamPhotos,
   },
   {
