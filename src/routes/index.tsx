@@ -276,6 +276,27 @@ const impressionism: Work[] = [ir1, ir2, ir3, ir4, ir5].map((asset, i) => ({
   dimensions: "",
 }));
 
+const provence: Work[] = [
+  pr1,
+  pr2,
+  pr3,
+  pr4,
+  pr5,
+  pr6,
+  pr7,
+  pr8,
+  pr9,
+  pr10,
+].map((asset, i) => ({
+  image: asset.url,
+  titleEn: `PR${i + 1}`,
+  titleFr: `PR${i + 1}`,
+  year: "",
+  mediumEn: "Oil on canvas",
+  mediumFr: "Huile sur toile",
+  dimensions: "",
+}));
+
 
 function HeroCarousel() {
   const { t } = useLang();
