@@ -254,23 +254,8 @@ const japon: Work[] = Array.from({ length: 7 }, (_, i) => ({
   dimensions: "",
 }));
 
-const caseismeImages = [
-  cc1,
-  cc2,
-  cc3,
-  cc4,
-  cc5,
-  cc6,
-  cc7,
-  cc8,
-  cc9,
-  cc10,
-  cc11,
-  cc12,
-];
-
-const caseisme: Work[] = caseismeImages.map((asset, i) => ({
-  image: asset.url,
+const caseisme: Work[] = Array.from({ length: 12 }, (_, i) => ({
+  image: `/cc${i + 1}.jpg`,
   titleEn: `CC${i + 1}`,
   titleFr: `CC${i + 1}`,
   year: "",
@@ -279,8 +264,8 @@ const caseisme: Work[] = caseismeImages.map((asset, i) => ({
   dimensions: "",
 }));
 
-const impressionism: Work[] = [ir1, ir2, ir3, ir4, ir5].map((asset, i) => ({
-  image: asset.url,
+const impressionism: Work[] = Array.from({ length: 5 }, (_, i) => ({
+  image: `/ir${i + 1}.jpg`,
   titleEn: `IR${i + 1}`,
   titleFr: `IR${i + 1}`,
   year: "",
@@ -289,32 +274,8 @@ const impressionism: Work[] = [ir1, ir2, ir3, ir4, ir5].map((asset, i) => ({
   dimensions: "",
 }));
 
-const provence: Work[] = [
-  pr1,
-  pr2,
-  pr3,
-  pr4,
-  pr5,
-  pr6,
-  pr7,
-  pr8,
-  pr9,
-  pr10,
-  pr11,
-  pr12,
-  pr13,
-  pr14,
-  pr15,
-  pr16,
-  pr17,
-  pr18,
-  pr19,
-  pr20,
-  pr21,
-  pr22,
-  pr23,
-].map((asset, i) => ({
-  image: asset.url,
+const provence: Work[] = Array.from({ length: 23 }, (_, i) => ({
+  image: `/pr${i + 1}.jpg`,
   titleEn: `PR${i + 1}`,
   titleFr: `PR${i + 1}`,
   year: "",
@@ -322,6 +283,7 @@ const provence: Work[] = [
   mediumFr: "Huile sur toile",
   dimensions: "",
 }));
+
 
 
 function HeroCarousel() {
