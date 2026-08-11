@@ -101,7 +101,6 @@ export function AudioPlayer({ src }: { src: string }) {
       loop
       playsInline
       preload="auto"
-      crossOrigin="anonymous"
       className="hidden"
       aria-label="Background music"
     />
