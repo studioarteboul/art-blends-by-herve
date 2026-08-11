@@ -443,6 +443,17 @@ function Works() {
           )}
           works={japon}
         />
+        <Series
+          index="IV"
+          title={t("Caseisme Collection", "Caseisme Collection")}
+          description={t(
+            "A mosaic of thick palette-knife strokes: each small block of colour is laid down whole, and the image assembles itself from the accumulation.",
+            "Une mosaïque de touches épaisses au couteau : chaque petit bloc de couleur est posé entier, et l'image se compose par accumulation.",
+          )}
+          works={caseisme}
+        />
+
+
 
         <section className="border-t border-border py-20 text-center">
           <p className="mx-auto max-w-2xl font-display text-3xl leading-snug md:text-4xl">
