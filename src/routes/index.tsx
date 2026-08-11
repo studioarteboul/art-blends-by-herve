@@ -344,7 +344,7 @@ function Works() {
 
   return (
     <>
-      <AudioPlayer src={audioAsset.url} />
+      <AudioPlayer src={AUDIO_URL} />
       <section className="relative h-[68vh] md:h-[82vh]">
         <HeroCarousel />
         <div className="absolute inset-0 flex items-end bg-gradient-to-t from-primary/70 to-transparent">
@@ -365,11 +365,8 @@ function Works() {
       </section>
 
       <Container>
-        <div className="pt-10">
-          <AudioPlayerBar title="Cielo Ardent — Oia at Sunset" />
-        </div>
-
         <Series
+
           index="I"
           title={t(
             "Brilliance & Symbolism",
