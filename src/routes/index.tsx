@@ -151,8 +151,8 @@ const contemporary: Work[] = [
   },
   {
     image: "/supercar.jpg",
-    titleEn: "Supercar",
-    titleFr: "Supercar",
+    titleEn: "Supercar Ferrari",
+    titleFr: "Supercar Ferrari",
     year: "2025",
     mediumEn: "Acrylic, silver leaf and epoxy",
     mediumFr: "Acrylique, feuille d'argent et époxy",
