@@ -363,6 +363,10 @@ function Works() {
       </section>
 
       <Container>
+        <div className="pt-10">
+          <AudioPlayerBar title="Cielo Ardent — Oia at Sunset" />
+        </div>
+
         <Series
           index="I"
           title={t(
