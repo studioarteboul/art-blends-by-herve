@@ -69,7 +69,7 @@ const exhibitions: Entry[] = [
     place: "New York, USA",
   },
   {
-    year: "2001–2025",
+    year: "2001 - Present",
     en: "Studio-Galerie Arteboul",
     fr: "Studio-Galerie Arteboul",
     place: "Montréal, Canada",
