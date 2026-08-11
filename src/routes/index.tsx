@@ -3,46 +3,6 @@ import { useCallback, useEffect, useState } from "react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { AudioPlayer } from "@/lib/audio";
-import cc1 from "@/assets/cc1.jpg.asset.json";
-import cc2 from "@/assets/cc2.jpg.asset.json";
-import cc3 from "@/assets/cc3.jpg.asset.json";
-import cc4 from "@/assets/cc4.jpg.asset.json";
-import cc5 from "@/assets/cc5.jpg.asset.json";
-import cc6 from "@/assets/cc6.jpg.asset.json";
-import cc7 from "@/assets/cc7.jpg.asset.json";
-import cc8 from "@/assets/cc8.jpg.asset.json";
-import cc9 from "@/assets/cc9.jpg.asset.json";
-import cc10 from "@/assets/cc10.jpg.asset.json";
-import cc11 from "@/assets/cc11.jpg.asset.json";
-import cc12 from "@/assets/cc12.jpg.asset.json";
-import ir1 from "@/assets/ir1.jpg.asset.json";
-import ir2 from "@/assets/ir2.jpg.asset.json";
-import ir3 from "@/assets/ir3.jpg.asset.json";
-import ir4 from "@/assets/ir4.jpg.asset.json";
-import ir5 from "@/assets/ir5.jpg.asset.json";
-import pr1 from "@/assets/pr1.jpg.asset.json";
-import pr2 from "@/assets/pr2.jpg.asset.json";
-import pr3 from "@/assets/pr3.jpg.asset.json";
-import pr4 from "@/assets/pr4.jpg.asset.json";
-import pr5 from "@/assets/pr5.jpg.asset.json";
-import pr6 from "@/assets/pr6.jpg.asset.json";
-import pr7 from "@/assets/pr7.jpg.asset.json";
-import pr8 from "@/assets/pr8.jpg.asset.json";
-import pr9 from "@/assets/pr9.jpg.asset.json";
-import pr10 from "@/assets/pr10.jpg.asset.json";
-import pr11 from "@/assets/pr11.jpg.asset.json";
-import pr12 from "@/assets/pr12.jpg.asset.json";
-import pr13 from "@/assets/pr13.jpg.asset.json";
-import pr14 from "@/assets/pr14.jpg.asset.json";
-import pr15 from "@/assets/pr15.jpg.asset.json";
-import pr16 from "@/assets/pr16.jpg.asset.json";
-import pr17 from "@/assets/pr17.jpg.asset.json";
-import pr18 from "@/assets/pr18.jpg.asset.json";
-import pr19 from "@/assets/pr19.jpg.asset.json";
-import pr20 from "@/assets/pr20.jpg.asset.json";
-import pr21 from "@/assets/pr21.jpg.asset.json";
-import pr22 from "@/assets/pr22.jpg.asset.json";
-import pr23 from "@/assets/pr23.jpg.asset.json";
 
 const AUDIO_URL =
   "https://raw.githubusercontent.com/studioarteboul/art-blends-by-herve/fc0048e069226aca210dc750cb846853e7481ec5/public/Cielo%20Ardent%20-%20Oia%20at%20Sunset%201.mp3";
@@ -254,23 +214,8 @@ const japon: Work[] = Array.from({ length: 7 }, (_, i) => ({
   dimensions: "",
 }));
 
-const caseismeImages = [
-  cc1,
-  cc2,
-  cc3,
-  cc4,
-  cc5,
-  cc6,
-  cc7,
-  cc8,
-  cc9,
-  cc10,
-  cc11,
-  cc12,
-];
-
-const caseisme: Work[] = caseismeImages.map((asset, i) => ({
-  image: asset.url,
+const caseisme: Work[] = Array.from({ length: 12 }, (_, i) => ({
+  image: `/cc${i + 1}.jpg`,
   titleEn: `CC${i + 1}`,
   titleFr: `CC${i + 1}`,
   year: "",
@@ -279,8 +224,8 @@ const caseisme: Work[] = caseismeImages.map((asset, i) => ({
   dimensions: "",
 }));
 
-const impressionism: Work[] = [ir1, ir2, ir3, ir4, ir5].map((asset, i) => ({
-  image: asset.url,
+const impressionism: Work[] = Array.from({ length: 5 }, (_, i) => ({
+  image: `/ir${i + 1}.jpg`,
   titleEn: `IR${i + 1}`,
   titleFr: `IR${i + 1}`,
   year: "",
@@ -289,32 +234,8 @@ const impressionism: Work[] = [ir1, ir2, ir3, ir4, ir5].map((asset, i) => ({
   dimensions: "",
 }));
 
-const provence: Work[] = [
-  pr1,
-  pr2,
-  pr3,
-  pr4,
-  pr5,
-  pr6,
-  pr7,
-  pr8,
-  pr9,
-  pr10,
-  pr11,
-  pr12,
-  pr13,
-  pr14,
-  pr15,
-  pr16,
-  pr17,
-  pr18,
-  pr19,
-  pr20,
-  pr21,
-  pr22,
-  pr23,
-].map((asset, i) => ({
-  image: asset.url,
+const provence: Work[] = Array.from({ length: 23 }, (_, i) => ({
+  image: `/pr${i + 1}.jpg`,
   titleEn: `PR${i + 1}`,
   titleFr: `PR${i + 1}`,
   year: "",
@@ -322,6 +243,7 @@ const provence: Work[] = [
   mediumFr: "Huile sur toile",
   dimensions: "",
 }));
+
 
 
 function HeroCarousel() {
@@ -393,7 +315,7 @@ function WorkCard({ work }: { work: Work }) {
         src={work.image}
         alt={t(work.titleEn, work.titleFr)}
         loading="lazy"
-        className="w-full h-auto object-contain transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+        className="max-w-full h-auto object-cover w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]"
       />
 
       <figcaption className="pointer-events-none absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-primary/85 via-primary/25 to-transparent p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
