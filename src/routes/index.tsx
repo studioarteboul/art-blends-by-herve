@@ -471,6 +471,15 @@ function Works() {
           )}
           works={caseisme}
         />
+        <Series
+          index="V"
+          title={t("Impressionism Revisited", "Impressionnisme Revisité")}
+          description={t(
+            "Gardens, water and shifting light revisited through a contemporary lens: dense impasto touches that dissolve the motif into pure colour and vibration.",
+            "Jardins, eau et lumière changeante revisités par un regard contemporain : des touches épaisses en impasto qui dissolvent le motif en couleur et vibration pures.",
+          )}
+          works={impressionism}
+        />
 
 
 
