@@ -40,6 +40,9 @@ import pr17 from "@/assets/pr17.jpg.asset.json";
 import pr18 from "@/assets/pr18.jpg.asset.json";
 import pr19 from "@/assets/pr19.jpg.asset.json";
 import pr20 from "@/assets/pr20.jpg.asset.json";
+import pr21 from "@/assets/pr21.jpg.asset.json";
+import pr22 from "@/assets/pr22.jpg.asset.json";
+import pr23 from "@/assets/pr23.jpg.asset.json";
 
 const AUDIO_URL =
   "https://raw.githubusercontent.com/studioarteboul/art-blends-by-herve/fc0048e069226aca210dc750cb846853e7481ec5/public/Cielo%20Ardent%20-%20Oia%20at%20Sunset%201.mp3";
@@ -307,6 +310,9 @@ const provence: Work[] = [
   pr18,
   pr19,
   pr20,
+  pr21,
+  pr22,
+  pr23,
 ].map((asset, i) => ({
   image: asset.url,
   titleEn: `PR${i + 1}`,
