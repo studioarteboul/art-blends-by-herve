@@ -24,7 +24,9 @@ export const Route = createFileRoute("/exhibitions")({
   component: Exhibitions,
 });
 
-type Entry = { year: string; en: string; fr: string; place: string };
+type Entry = { year: string; en: string; fr: string; place: string; photos?: string[] };
+
+const louvrePhotos = Array.from({ length: 10 }, (_, i) => `/louvre${i + 1}.jpg`);
 
 const exhibitions: Entry[] = [
   {
@@ -38,6 +40,7 @@ const exhibitions: Entry[] = [
     en: "Le Louvre Paris with Artio Gallery",
     fr: "Le Louvre Paris avec Artio Gallery",
     place: "Paris, France",
+    photos: louvrePhotos,
   },
   {
     year: "2025",
