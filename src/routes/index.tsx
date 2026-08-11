@@ -511,6 +511,15 @@ function Works() {
           )}
           works={impressionism}
         />
+        <Series
+          index="VI"
+          title={t("Period of Provence", "Période de Provence")}
+          description={t(
+            "Early Provençal works: vineyards, shaded courtyards, blue shutters and flowering gardens, painted in oil with a warm Southern light.",
+            "Œuvres provençales des débuts : vignes, cours ombragées, volets bleus et jardins fleuris, peints à l'huile dans la lumière chaude du Sud.",
+          )}
+          works={provence}
+        />
 
 
 
