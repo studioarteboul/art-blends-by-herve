@@ -1,10 +1,15 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouter } from "@tanstack/react-router";
 import { useState } from "react";
+import { Volume2, VolumeX } from "lucide-react";
 import { useLang } from "@/lib/lang";
+import { useAudio } from "@/lib/audio";
 
 export function SiteHeader() {
   const { lang, setLang, t } = useLang();
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+  const isHome = router.state.location.pathname === "/";
+  const { muted, toggleMuted, isPlaying } = useAudio();
 
   const links = [
     { to: "/", label: t("Works", "Œuvres") },
@@ -40,6 +45,25 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-4">
+          {isHome && (
+            <button
+              type="button"
+              onClick={toggleMuted}
+              aria-label={
+                muted
+                  ? t("Turn music on", "Activer la musique")
+                  : t("Turn music off", "Couper la musique")
+              }
+              className="flex items-center justify-center text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+              {!muted && isPlaying && (
+                <span className="ml-2 hidden text-[0.65rem] uppercase tracking-[0.2em] md:inline">
+                  {t("Playing", "Lecture")}
+                </span>
+              )}
+            </button>
+          )}
           <div className="flex items-center gap-2 text-[0.7rem] uppercase tracking-[0.22em]">
             <button
               onClick={() => setLang("en")}
