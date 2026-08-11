@@ -3,7 +3,7 @@
 ## What will change
 
 ### 1. Clickable exhibition with photos
-On the Exhibitions & Collections page, the entry **Museum MEAM Barcelona with Artio Gallery (2026)** becomes clickable:
+On the Exhibitions & Collections page, the entry **Le Louvre Paris with Artio Gallery (2026)** becomes clickable:
 
 - The title gets a subtle hover state and a small "Photos" indicator so visitors know it opens.
 - Clicking it expands a photo strip directly under the row: a responsive grid of the 10 uploaded photos, uncropped, with generous spacing to match the site's minimal look.
