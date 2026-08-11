@@ -214,6 +214,30 @@ const japon: Work[] = Array.from({ length: 7 }, (_, i) => ({
   dimensions: "",
 }));
 
+const caseismeImages = [
+  cc1,
+  cc2,
+  cc3,
+  cc4,
+  cc5,
+  cc6,
+  cc7,
+  cc8,
+  cc9,
+  cc10,
+];
+
+const caseisme: Work[] = caseismeImages.map((asset, i) => ({
+  image: asset.url,
+  titleEn: `CC${i + 1}`,
+  titleFr: `CC${i + 1}`,
+  year: "",
+  mediumEn: "Oil on canvas",
+  mediumFr: "Huile sur toile",
+  dimensions: "",
+}));
+
+
 function HeroCarousel() {
   const { t } = useLang();
   const [index, setIndex] = useState(0);
