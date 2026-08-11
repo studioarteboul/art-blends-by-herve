@@ -45,6 +45,12 @@ const exhibitions: Entry[] = [
     place: "New York, USA",
   },
   {
+    year: "2021",
+    en: "Gallery BOA — Contemporary Mixed Media",
+    fr: "Galerie BOA — Techniques mixtes contemporaines",
+    place: "Montréal, Canada",
+  },
+  {
     year: "2019",
     en: "Group Exhibition — Contemporary Mixed Media",
     fr: "Exposition collective — Techniques mixtes contemporaines",
