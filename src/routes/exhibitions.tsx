@@ -104,15 +104,134 @@ const exhibitions: Entry[] = [
   },
 ];
 
+function Lightbox({
+  photos,
+  index,
+  onClose,
+  onChange,
+  label,
+}: {
+  photos: string[];
+  index: number;
+  onClose: () => void;
+  onChange: (i: number) => void;
+  label: string;
+}) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowRight") onChange((index + 1) % photos.length);
+      if (e.key === "ArrowLeft") onChange((index - 1 + photos.length) % photos.length);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [index, photos.length, onClose, onChange]);
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 p-6 backdrop-blur"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+    >
+      <button
+        type="button"
+        onClick={onClose}
+        aria-label="Close"
+        className="absolute right-6 top-6 text-muted-foreground transition-colors hover:text-foreground"
+      >
+        <X className="h-6 w-6" />
+      </button>
+      <button
+        type="button"
+        aria-label="Previous"
+        onClick={(e) => {
+          e.stopPropagation();
+          onChange((index - 1 + photos.length) % photos.length);
+        }}
+        className="absolute left-4 text-muted-foreground transition-colors hover:text-foreground md:left-10"
+      >
+        <ChevronLeft className="h-8 w-8" />
+      </button>
+      <img
+        src={photos[index]}
+        alt={`${label} — ${index + 1}`}
+        onClick={(e) => e.stopPropagation()}
+        className="max-h-[85vh] max-w-full object-contain"
+      />
+      <button
+        type="button"
+        aria-label="Next"
+        onClick={(e) => {
+          e.stopPropagation();
+          onChange((index + 1) % photos.length);
+        }}
+        className="absolute right-4 text-muted-foreground transition-colors hover:text-foreground md:right-10"
+      >
+        <ChevronRight className="h-8 w-8" />
+      </button>
+    </div>
+  );
+}
+
 function Row({ entry }: { entry: Entry }) {
   const { t } = useLang();
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState<number | null>(null);
+  const photos = entry.photos;
+  const label = t(entry.en, entry.fr);
+
   return (
     <li className="grid grid-cols-[4rem_1fr] gap-6 border-b border-border py-6 md:grid-cols-[6rem_1fr_16rem]">
       <span className="text-[0.7rem] uppercase tracking-[0.24em] text-accent">{entry.year}</span>
-      <span className="font-display text-xl md:text-2xl">{t(entry.en, entry.fr)}</span>
+      {photos ? (
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          className="text-left font-display text-xl transition-colors hover:text-accent md:text-2xl"
+        >
+          {label}
+          <span className="ml-3 align-middle text-[0.6rem] uppercase tracking-[0.24em] text-muted-foreground">
+            {t("Photos", "Photos")}
+          </span>
+        </button>
+      ) : (
+        <span className="font-display text-xl md:text-2xl">{label}</span>
+      )}
       <span className="col-start-2 text-xs uppercase tracking-[0.2em] text-muted-foreground md:col-start-3 md:text-right">
         {entry.place}
       </span>
+
+      {photos && open && (
+        <div className="col-span-full mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
+          {photos.map((src, i) => (
+            <button
+              key={src}
+              type="button"
+              onClick={() => setActive(i)}
+              className="block overflow-hidden"
+            >
+              <img
+                src={src}
+                alt={`${label} — ${t("exhibition photo", "photo d'exposition")} ${i + 1}`}
+                loading="lazy"
+                className="max-w-full h-auto object-contain transition-opacity hover:opacity-80"
+              />
+            </button>
+          ))}
+        </div>
+      )}
+
+      {photos && active !== null && (
+        <Lightbox
+          photos={photos}
+          index={active}
+          label={label}
+          onClose={() => setActive(null)}
+          onChange={setActive}
+        />
+      )}
     </li>
   );
 }
