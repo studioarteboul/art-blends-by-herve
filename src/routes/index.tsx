@@ -30,6 +30,16 @@ import pr7 from "@/assets/pr7.jpg.asset.json";
 import pr8 from "@/assets/pr8.jpg.asset.json";
 import pr9 from "@/assets/pr9.jpg.asset.json";
 import pr10 from "@/assets/pr10.jpg.asset.json";
+import pr11 from "@/assets/pr11.jpg.asset.json";
+import pr12 from "@/assets/pr12.jpg.asset.json";
+import pr13 from "@/assets/pr13.jpg.asset.json";
+import pr14 from "@/assets/pr14.jpg.asset.json";
+import pr15 from "@/assets/pr15.jpg.asset.json";
+import pr16 from "@/assets/pr16.jpg.asset.json";
+import pr17 from "@/assets/pr17.jpg.asset.json";
+import pr18 from "@/assets/pr18.jpg.asset.json";
+import pr19 from "@/assets/pr19.jpg.asset.json";
+import pr20 from "@/assets/pr20.jpg.asset.json";
 
 const AUDIO_URL =
   "https://raw.githubusercontent.com/studioarteboul/art-blends-by-herve/fc0048e069226aca210dc750cb846853e7481ec5/public/Cielo%20Ardent%20-%20Oia%20at%20Sunset%201.mp3";
