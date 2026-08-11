@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 
