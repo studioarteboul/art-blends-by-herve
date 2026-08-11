@@ -16,14 +16,10 @@ The 10 photos are saved into `/public` with simple lowercase names — `louvre1.
 
 All artwork on the Works page already loads from `/public` with lowercase names (`/supercar.jpg`, `/cc1.jpg`, `/ir1.jpg`, `/pr1.jpg`, …) and no CDN pointer files remain in `src/assets`, so nothing there needs changing.
 
-## One thing to confirm
-
-Several of the uploaded photos show the Art Shopping / Carrousel du Louvre booth signage ("art SHOPPING — ARTIO GALLERY — B15 — CANADA") and the Louvre exterior, not Barcelona. They will be attached to the MEAM Barcelona entry as requested — say the word if some belong under a different exhibition instead.
-
 ## Technical notes
 
 - Files touched: `src/routes/exhibitions.tsx`, plus 10 new files in `public/`.
-- Add an optional `photos?: string[]` field to the `Entry` type; only the MEAM entry populates it.
+- Add an optional `photos?: string[]` field to the `Entry` type; only the Le Louvre Paris entry populates it.
 - `Row` gains local open/closed state; the lightbox is a small local component in the same file (fixed overlay, keyboard handlers, no new dependency).
 - Photos use `loading="lazy"` and descriptive alt text.
 - Verify with a production build after the change.
