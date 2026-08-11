@@ -1,6 +1,8 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouter } from "@tanstack/react-router";
 import { useState } from "react";
+import { Volume2, VolumeX } from "lucide-react";
 import { useLang } from "@/lib/lang";
+import { useAudio } from "@/lib/audio";
 
 export function SiteHeader() {
   const { lang, setLang, t } = useLang();
