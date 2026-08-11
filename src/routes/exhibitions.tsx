@@ -203,7 +203,7 @@ function Row({ entry }: { entry: Entry }) {
         <span className="font-display text-xl md:text-2xl">{label}</span>
       )}
       <span className="col-start-2 text-xs uppercase tracking-[0.2em] text-muted-foreground md:col-start-3 md:text-right">
-        {entry.place}
+        {t(entry.place, entry.placeFr || entry.place)}
       </span>
 
       {photos && open && (
