@@ -160,8 +160,8 @@ const contemporary: Work[] = [
   },
   {
     image: "/supercar-maserati.jpg",
-    titleEn: "Supercar — Maserati",
-    titleFr: "Supercar — Maserati",
+    titleEn: "Supercar Maserati",
+    titleFr: "Supercar Maserati",
     year: "2025",
     mediumEn: "Acrylic, silver leaf and epoxy",
     mediumFr: "Acrylique, feuille d'argent et époxy",
