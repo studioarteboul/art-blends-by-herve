@@ -3,6 +3,16 @@ import { useCallback, useEffect, useState } from "react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { AudioPlayer } from "@/lib/audio";
+import cc1 from "@/assets/cc1.jpg.asset.json";
+import cc2 from "@/assets/cc2.jpg.asset.json";
+import cc3 from "@/assets/cc3.jpg.asset.json";
+import cc4 from "@/assets/cc4.jpg.asset.json";
+import cc5 from "@/assets/cc5.jpg.asset.json";
+import cc6 from "@/assets/cc6.jpg.asset.json";
+import cc7 from "@/assets/cc7.jpg.asset.json";
+import cc8 from "@/assets/cc8.jpg.asset.json";
+import cc9 from "@/assets/cc9.jpg.asset.json";
+import cc10 from "@/assets/cc10.jpg.asset.json";
 
 const AUDIO_URL =
   "https://raw.githubusercontent.com/studioarteboul/art-blends-by-herve/fc0048e069226aca210dc750cb846853e7481ec5/public/Cielo%20Ardent%20-%20Oia%20at%20Sunset%201.mp3";
