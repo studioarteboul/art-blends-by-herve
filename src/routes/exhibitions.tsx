@@ -75,7 +75,7 @@ const exhibitions: Entry[] = [
     place: "Montréal, Canada",
   },
   {
-    year: "2001",
+    year: "2021",
     en: "Gallery BOA — Contemporary Mixed Media",
     fr: "Galerie BOA — Techniques mixtes contemporaines",
     place: "Montréal, Canada",
