@@ -315,7 +315,7 @@ function WorkCard({ work }: { work: Work }) {
         src={work.image}
         alt={t(work.titleEn, work.titleFr)}
         loading="lazy"
-        className="w-full h-auto object-contain transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+        className="max-w-full h-auto object-cover w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]"
       />
 
       <figcaption className="pointer-events-none absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-primary/85 via-primary/25 to-transparent p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
