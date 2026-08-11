@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
+import { Instagram, Facebook } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

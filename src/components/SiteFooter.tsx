@@ -1,4 +1,5 @@
 import { useLang } from "@/lib/lang";
+import { Instagram, Facebook } from "lucide-react";
 
 export function SiteFooter() {
   const { t } = useLang();
