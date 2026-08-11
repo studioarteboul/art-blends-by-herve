@@ -13,6 +13,8 @@ import cc7 from "@/assets/cc7.jpg.asset.json";
 import cc8 from "@/assets/cc8.jpg.asset.json";
 import cc9 from "@/assets/cc9.jpg.asset.json";
 import cc10 from "@/assets/cc10.jpg.asset.json";
+import cc11 from "@/assets/cc11.jpg.asset.json";
+import cc12 from "@/assets/cc12.jpg.asset.json";
 
 const AUDIO_URL =
   "https://raw.githubusercontent.com/studioarteboul/art-blends-by-herve/fc0048e069226aca210dc750cb846853e7481ec5/public/Cielo%20Ardent%20-%20Oia%20at%20Sunset%201.mp3";
@@ -235,6 +237,8 @@ const caseismeImages = [
   cc8,
   cc9,
   cc10,
+  cc11,
+  cc12,
 ];
 
 const caseisme: Work[] = caseismeImages.map((asset, i) => ({
