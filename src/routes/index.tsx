@@ -20,6 +20,16 @@ import ir2 from "@/assets/ir2.jpg.asset.json";
 import ir3 from "@/assets/ir3.jpg.asset.json";
 import ir4 from "@/assets/ir4.jpg.asset.json";
 import ir5 from "@/assets/ir5.jpg.asset.json";
+import pr1 from "@/assets/pr1.jpg.asset.json";
+import pr2 from "@/assets/pr2.jpg.asset.json";
+import pr3 from "@/assets/pr3.jpg.asset.json";
+import pr4 from "@/assets/pr4.jpg.asset.json";
+import pr5 from "@/assets/pr5.jpg.asset.json";
+import pr6 from "@/assets/pr6.jpg.asset.json";
+import pr7 from "@/assets/pr7.jpg.asset.json";
+import pr8 from "@/assets/pr8.jpg.asset.json";
+import pr9 from "@/assets/pr9.jpg.asset.json";
+import pr10 from "@/assets/pr10.jpg.asset.json";
 
 const AUDIO_URL =
   "https://raw.githubusercontent.com/studioarteboul/art-blends-by-herve/fc0048e069226aca210dc750cb846853e7481ec5/public/Cielo%20Ardent%20-%20Oia%20at%20Sunset%201.mp3";
@@ -266,6 +276,27 @@ const impressionism: Work[] = [ir1, ir2, ir3, ir4, ir5].map((asset, i) => ({
   dimensions: "",
 }));
 
+const provence: Work[] = [
+  pr1,
+  pr2,
+  pr3,
+  pr4,
+  pr5,
+  pr6,
+  pr7,
+  pr8,
+  pr9,
+  pr10,
+].map((asset, i) => ({
+  image: asset.url,
+  titleEn: `PR${i + 1}`,
+  titleFr: `PR${i + 1}`,
+  year: "",
+  mediumEn: "Oil on canvas",
+  mediumFr: "Huile sur toile",
+  dimensions: "",
+}));
+
 
 function HeroCarousel() {
   const { t } = useLang();
@@ -479,6 +510,15 @@ function Works() {
             "Jardins, eau et lumière changeante revisités par un regard contemporain : des touches épaisses en impasto qui dissolvent le motif en couleur et vibration pures.",
           )}
           works={impressionism}
+        />
+        <Series
+          index="VI"
+          title={t("Period of Provence", "Période de Provence")}
+          description={t(
+            "Early Provençal works: vineyards, shaded courtyards, blue shutters and flowering gardens, painted in oil with a warm Southern light.",
+            "Œuvres provençales des débuts : vignes, cours ombragées, volets bleus et jardins fleuris, peints à l'huile dans la lumière chaude du Sud.",
+          )}
+          works={provence}
         />
 
 
