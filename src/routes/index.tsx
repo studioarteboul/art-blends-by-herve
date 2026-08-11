@@ -310,6 +310,9 @@ const provence: Work[] = [
   pr18,
   pr19,
   pr20,
+  pr21,
+  pr22,
+  pr23,
 ].map((asset, i) => ({
   image: asset.url,
   titleEn: `PR${i + 1}`,
