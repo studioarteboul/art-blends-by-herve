@@ -133,6 +133,35 @@ function Contact() {
                 </a>
               </dd>
             </div>
+            <div>
+              <dt className={labelClass}>{t("Social", "Réseaux sociaux")}</dt>
+              <dd className="mt-2 flex flex-col gap-1 font-display text-xl">
+                <a
+                  href="https://www.instagram.com/studioarteboul"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition-colors hover:text-accent"
+                >
+                  Instagram
+                </a>
+                <a
+                  href="https://www.facebook.com/studioarteboul"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition-colors hover:text-accent"
+                >
+                  {t("Facebook Page", "Page Facebook")}
+                </a>
+                <a
+                  href="https://www.facebook.com/herve.teboul.7"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition-colors hover:text-accent"
+                >
+                  {t("Facebook Profile", "Profil Facebook")}
+                </a>
+              </dd>
+            </div>
           </dl>
         </div>
 
