@@ -237,6 +237,8 @@ const caseismeImages = [
   cc8,
   cc9,
   cc10,
+  cc11,
+  cc12,
 ];
 
 const caseisme: Work[] = caseismeImages.map((asset, i) => ({
