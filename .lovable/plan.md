@@ -1,30 +1,24 @@
-# Why the music starts silent, and how to fix it
+# Start the music at page load
 
-## What's happening
+## The honest constraint
 
-The homepage audio is set to start playing on its own with sound on. Browsers (Chrome, Safari, Edge) block that: a page may not play audible sound until the visitor interacts with it. So the player loads, the browser refuses, and the site appears muted until you click or scroll.
+No browser will let a page play audible sound before the visitor interacts with it. That rule is enforced by Chrome, Safari, Edge and Firefox, and no code can bypass it. The one thing that is always allowed is **muted autoplay**.
 
-There is no code bug to fix — this is a browser policy. There are only two honest ways around it.
+So the closest possible behaviour to "music starts on load" is: the track starts playing the instant the page loads, silently, and becomes audible on the visitor's very first interaction — with a clear control so they know sound is there.
 
-## Option A (recommended): muted autoplay + obvious "sound on" control
+## What will change
 
-- Start the track muted and playing. Muted autoplay is always allowed.
-- Show the header speaker icon in a clearly "sound off" state with a small, tasteful "Sound on" label or subtle pulse the first time a visitor lands.
-- One click unmutes instantly — the track is already running, so music begins without a load delay.
-- Remember the choice for the session, so navigating pages doesn't re-prompt.
+- The track starts playing muted the moment the homepage loads, so it is already running and buffered.
+- The header speaker icon shows a "sound off" state on arrival, with a small, understated "Sound on" label the first time a visitor lands, so the music is discoverable rather than hidden.
+- The first click, tap, scroll or key press anywhere unmutes it automatically — no delay, no restart, the music simply becomes audible mid-track.
+- The visitor's choice is remembered for the session: if they mute it, it stays muted while they browse; navigating between pages does not restart or re-prompt.
+- Music remains homepage-only and loops continuously.
 
-## Option B: keep trying to play on first interaction
-
-- Keep the current behaviour but make it more reliable: attempt playback on the first click, scroll, key press, or touch anywhere on the page.
-- Result: music starts a moment after the visitor does anything at all, with no visible prompt.
-- Downside: a visitor who reads the page without interacting hears nothing, and it can feel unexpected when sound suddenly starts.
-
-## Also worth checking
-
-The live site may not yet include the most recent audio changes. Whichever option is chosen, the site should be published afterwards so herveteboul visitors get the updated behaviour.
+The practical result: for nearly every visitor, sound arrives within the first second, and it never restarts from the beginning when it does.
 
 ## Technical notes
 
-- `src/lib/audio.tsx` — adjust the initial state: for Option A, mount the element with `muted` and autoplay, and have `toggle()` set `muted = false` plus `play()` on first use; persist the preference in `sessionStorage`.
-- `src/components/SiteHeader.tsx` — drive the icon from a combined `isPlaying && !muted` state, and add the first-visit hint affordance for Option A.
-- `src/routes/index.tsx` — no change to the GitHub-hosted audio URL.
+- `src/lib/audio.tsx` — mount the audio element with `muted` and `autoPlay` so playback begins immediately; on the first gesture (`pointerdown`, `keydown`, `touchstart`, `scroll`) set `muted = false` rather than calling `play()`, unless the visitor already chose silence. Track `muted` alongside `isPlaying` in context and persist the preference to `sessionStorage`.
+- `src/components/SiteHeader.tsx` — drive the icon from `isPlaying && !muted`; show the first-visit "Sound on" hint until the visitor interacts with the control.
+- `src/routes/index.tsx` — unchanged; keeps the GitHub-hosted audio URL.
+- Publish afterwards so the live site picks up the new behaviour.
