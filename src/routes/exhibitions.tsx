@@ -24,7 +24,7 @@ export const Route = createFileRoute("/exhibitions")({
   component: Exhibitions,
 });
 
-type Entry = { year: string; en: string; fr: string; place: string; photos?: string[] };
+type Entry = { year: string; en: string; fr: string; place: string; placeFr?: string; photos?: string[] };
 
 const louvrePhotos = Array.from({ length: 10 }, (_, i) => `/louvre${i + 1}.jpg`);
 const meamPhotos = Array.from({ length: 9 }, (_, i) => `/meam${i + 1}.jpg`);
@@ -35,6 +35,7 @@ const exhibitions: Entry[] = [
     en: "Museum MEAM Barcelona with Artio Gallery",
     fr: "Musée MEAM Barcelone avec Artio Gallery",
     place: "Barcelona, Spain",
+    placeFr: "Barcelone, Espagne",
     photos: meamPhotos,
   },
   {
@@ -202,7 +203,7 @@ function Row({ entry }: { entry: Entry }) {
         <span className="font-display text-xl md:text-2xl">{label}</span>
       )}
       <span className="col-start-2 text-xs uppercase tracking-[0.2em] text-muted-foreground md:col-start-3 md:text-right">
-        {entry.place}
+        {t(entry.place, entry.placeFr || entry.place)}
       </span>
 
       {photos && open && (
