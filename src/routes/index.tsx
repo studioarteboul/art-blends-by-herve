@@ -15,6 +15,11 @@ import cc9 from "@/assets/cc9.jpg.asset.json";
 import cc10 from "@/assets/cc10.jpg.asset.json";
 import cc11 from "@/assets/cc11.jpg.asset.json";
 import cc12 from "@/assets/cc12.jpg.asset.json";
+import ir1 from "@/assets/ir1.jpg.asset.json";
+import ir2 from "@/assets/ir2.jpg.asset.json";
+import ir3 from "@/assets/ir3.jpg.asset.json";
+import ir4 from "@/assets/ir4.jpg.asset.json";
+import ir5 from "@/assets/ir5.jpg.asset.json";
 
 const AUDIO_URL =
   "https://raw.githubusercontent.com/studioarteboul/art-blends-by-herve/fc0048e069226aca210dc750cb846853e7481ec5/public/Cielo%20Ardent%20-%20Oia%20at%20Sunset%201.mp3";
@@ -251,6 +256,16 @@ const caseisme: Work[] = caseismeImages.map((asset, i) => ({
   dimensions: "",
 }));
 
+const impressionism: Work[] = [ir1, ir2, ir3, ir4, ir5].map((asset, i) => ({
+  image: asset.url,
+  titleEn: `IR${i + 1}`,
+  titleFr: `IR${i + 1}`,
+  year: "",
+  mediumEn: "Oil on canvas",
+  mediumFr: "Huile sur toile",
+  dimensions: "",
+}));
+
 
 function HeroCarousel() {
   const { t } = useLang();
@@ -455,6 +470,15 @@ function Works() {
             "Une mosaïque de touches épaisses au couteau : chaque petit bloc de couleur est posé entier, et l'image se compose par accumulation.",
           )}
           works={caseisme}
+        />
+        <Series
+          index="V"
+          title={t("Impressionism Revisited", "Impressionnisme Revisité")}
+          description={t(
+            "Gardens, water and shifting light revisited through a contemporary lens: dense impasto touches that dissolve the motif into pure colour and vibration.",
+            "Jardins, eau et lumière changeante revisités par un regard contemporain : des touches épaisses en impasto qui dissolvent le motif en couleur et vibration pures.",
+          )}
+          works={impressionism}
         />
 
 
