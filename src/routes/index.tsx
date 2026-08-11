@@ -256,6 +256,16 @@ const caseisme: Work[] = caseismeImages.map((asset, i) => ({
   dimensions: "",
 }));
 
+const impressionism: Work[] = [ir1, ir2, ir3, ir4, ir5].map((asset, i) => ({
+  image: asset.url,
+  titleEn: `IR${i + 1}`,
+  titleFr: `IR${i + 1}`,
+  year: "",
+  mediumEn: "Oil on canvas",
+  mediumFr: "Huile sur toile",
+  dimensions: "",
+}));
+
 
 function HeroCarousel() {
   const { t } = useLang();
