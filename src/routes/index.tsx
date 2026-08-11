@@ -288,7 +288,9 @@ function WorkCard({ work }: { work: Work }) {
 
       <figcaption className="pointer-events-none absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-primary/85 via-primary/25 to-transparent p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
         <p className="font-display text-2xl text-primary-foreground">
-          {t(work.titleEn, work.titleFr)}, {work.year}
+          {t(work.titleEn, work.titleFr)}
+          {work.year ? `, ${work.year}` : ""}
+
         </p>
         <p className="mt-2 text-xs uppercase tracking-[0.18em] text-primary-foreground/80">
           {t(work.mediumEn, work.mediumFr)}
