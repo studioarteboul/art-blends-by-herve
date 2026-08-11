@@ -3,8 +3,10 @@ import { useCallback, useEffect, useState } from "react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { AudioPlayer } from "@/lib/audio";
-import { AudioPlayerBar } from "@/components/AudioPlayerBar";
-import audioAsset from "@/assets/cielo-ardent-oia-at-sunset-1-2.mp3.asset.json";
+
+const AUDIO_URL =
+  "https://raw.githubusercontent.com/studioarteboul/art-blends-by-herve/fc0048e069226aca210dc750cb846853e7481ec5/public/Cielo%20Ardent%20-%20Oia%20at%20Sunset%201.mp3";
+
 
 const heroSlides = [
   {
@@ -342,7 +344,7 @@ function Works() {
 
   return (
     <>
-      <AudioPlayer src={audioAsset.url} />
+      <AudioPlayer src={AUDIO_URL} />
       <section className="relative h-[68vh] md:h-[82vh]">
         <HeroCarousel />
         <div className="absolute inset-0 flex items-end bg-gradient-to-t from-primary/70 to-transparent">
@@ -363,11 +365,8 @@ function Works() {
       </section>
 
       <Container>
-        <div className="pt-10">
-          <AudioPlayerBar title="Cielo Ardent — Oia at Sunset" />
-        </div>
-
         <Series
+
           index="I"
           title={t(
             "Brilliance & Symbolism",

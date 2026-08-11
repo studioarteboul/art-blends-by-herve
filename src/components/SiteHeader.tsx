@@ -9,7 +9,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const router = useRouter();
   const isHome = router.state.location.pathname === "/";
-  const { muted, toggleMuted, isPlaying } = useAudio();
+  const { isPlaying, toggle } = useAudio();
 
   const links = [
     { to: "/", label: t("Works", "Œuvres") },
@@ -48,16 +48,16 @@ export function SiteHeader() {
           {isHome && (
             <button
               type="button"
-              onClick={toggleMuted}
+              onClick={toggle}
               aria-label={
-                muted
-                  ? t("Turn music on", "Activer la musique")
-                  : t("Turn music off", "Couper la musique")
+                isPlaying
+                  ? t("Turn music off", "Couper la musique")
+                  : t("Turn music on", "Activer la musique")
               }
               className="flex items-center justify-center text-muted-foreground transition-colors hover:text-foreground"
             >
-              {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
-              {!muted && isPlaying && (
+              {isPlaying ? <Volume2 size={18} /> : <VolumeX size={18} />}
+              {isPlaying && (
                 <span className="ml-2 hidden text-[0.65rem] uppercase tracking-[0.2em] md:inline">
                   {t("Playing", "Lecture")}
                 </span>
