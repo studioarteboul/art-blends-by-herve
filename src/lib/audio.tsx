@@ -6,10 +6,12 @@ import {
   useRef,
   useState,
   type ReactNode,
+  type RefObject,
 } from "react";
 
 type AudioContextValue = {
   setAudioEl: (el: HTMLAudioElement | null) => void;
+  userPausedRef: RefObject<boolean>;
   isPlaying: boolean;
   play: () => void;
   pause: () => void;
@@ -22,6 +24,7 @@ export function AudioProvider({ children }: { children: ReactNode }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [audioEl, setAudioElState] = useState<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const userPausedRef = useRef(false);
 
   const setAudioEl = useCallback((el: HTMLAudioElement | null) => {
     audioRef.current = el;
@@ -64,19 +67,25 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     audio.pause();
   }, []);
 
+  const pauseByUser = useCallback(() => {
+    userPausedRef.current = true;
+    pause();
+  }, [pause]);
+
   const toggle = useCallback(() => {
     const audio = audioRef.current;
     if (!audio) return;
     if (audio.paused) {
+      userPausedRef.current = false;
       play();
     } else {
-      pause();
+      pauseByUser();
     }
-  }, [play, pause]);
+  }, [play, pauseByUser]);
 
   return (
     <AudioContext.Provider
-      value={{ setAudioEl, isPlaying, play, pause, toggle }}
+      value={{ setAudioEl, userPausedRef, isPlaying, play, pause: pauseByUser, toggle }}
     >
       {children}
     </AudioContext.Provider>
@@ -92,14 +101,56 @@ export function useAudio() {
 }
 
 export function AudioPlayer({ src }: { src: string }) {
-  const { setAudioEl } = useAudio();
+  const { setAudioEl, play, userPausedRef } = useAudio();
+  const [el, setEl] = useState<HTMLAudioElement | null>(null);
+
+  const attachRef = useCallback(
+    (node: HTMLAudioElement | null) => {
+      setAudioEl(node);
+      setEl(node);
+    },
+    [setAudioEl],
+  );
+
+  useEffect(() => {
+    if (!el) return;
+
+    let done = false;
+    const tryPlay = () => {
+      if (done || userPausedRef.current) return;
+      const p = el.play();
+      if (p && typeof p.then === "function") {
+        p.then(() => {
+          done = true;
+          cleanup();
+        }).catch(() => {
+          /* wait for a user gesture */
+        });
+      }
+    };
+
+    const events = ["pointerdown", "keydown", "touchstart", "scroll"] as const;
+    const cleanup = () => {
+      events.forEach((e) =>
+        window.removeEventListener(e, tryPlay, { capture: true } as never),
+      );
+    };
+
+    tryPlay();
+    events.forEach((e) =>
+      window.addEventListener(e, tryPlay, { capture: true, passive: true }),
+    );
+
+    return cleanup;
+  }, [el, play, userPausedRef]);
 
   return (
     <audio
-      ref={setAudioEl}
+      ref={attachRef}
       src={src}
       loop
       playsInline
+      autoPlay
       preload="auto"
       className="hidden"
       aria-label="Background music"
