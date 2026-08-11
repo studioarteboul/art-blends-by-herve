@@ -12,7 +12,7 @@ On the Exhibitions & Collections page, the entry **Le Louvre Paris with Artio Ga
 - Bilingual labels: "Photos" / "Photos", "Close" / "Fermer".
 
 ### 2. Images served locally
-The 10 photos are saved into `/public` with simple lowercase names — `meam1.jpg` through `meam10.jpg` — and referenced as plain paths (`/meam1.jpg`), no cloud URLs.
+The 10 photos are saved into `/public` with simple lowercase names — `louvre1.jpg` through `louvre10.jpg` — and referenced as plain paths (`/louvre1.jpg`), no cloud URLs.
 
 All artwork on the Works page already loads from `/public` with lowercase names (`/supercar.jpg`, `/cc1.jpg`, `/ir1.jpg`, `/pr1.jpg`, …) and no CDN pointer files remain in `src/assets`, so nothing there needs changing.
 
