@@ -341,6 +341,7 @@ function Works() {
 
   return (
     <>
+      <AudioPlayer src={audioAsset.url} />
       <section className="relative h-[68vh] md:h-[82vh]">
         <HeroCarousel />
         <div className="absolute inset-0 flex items-end bg-gradient-to-t from-primary/70 to-transparent">
