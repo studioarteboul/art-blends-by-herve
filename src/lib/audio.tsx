@@ -10,17 +10,16 @@ import {
 
 type AudioContextValue = {
   audioRef: RefObject<HTMLAudioElement | null>;
-  muted: boolean;
-  setMuted: (muted: boolean) => void;
-  toggleMuted: () => void;
   isPlaying: boolean;
+  play: () => void;
+  pause: () => void;
+  toggle: () => void;
 };
 
 const AudioContext = createContext<AudioContextValue | null>(null);
 
 export function AudioProvider({ children }: { children: ReactNode }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [muted, setMuted] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
@@ -42,18 +41,30 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     };
   }, [audioRef.current]);
 
-  useEffect(() => {
+  const play = () => {
     const audio = audioRef.current;
     if (!audio) return;
-    audio.muted = muted;
-  }, [muted]);
+    void audio.play().catch(() => {
+      // Autoplay or browser restriction prevented playback; remain in stopped state.
+    });
+  };
 
-  const toggleMuted = () => setMuted((m) => !m);
+  const pause = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.pause();
+  };
+
+  const toggle = () => {
+    if (isPlaying) {
+      pause();
+    } else {
+      play();
+    }
+  };
 
   return (
-    <AudioContext.Provider
-      value={{ audioRef, muted, setMuted, toggleMuted, isPlaying }}
-    >
+    <AudioContext.Provider value={{ audioRef, isPlaying, play, pause, toggle }}>
       {children}
     </AudioContext.Provider>
   );
@@ -74,8 +85,6 @@ export function AudioPlayer({ src }: { src: string }) {
     <audio
       ref={audioRef}
       src={src}
-      autoPlay
-      muted
       loop
       playsInline
       preload="metadata"
