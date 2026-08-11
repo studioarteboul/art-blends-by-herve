@@ -1,15 +1,15 @@
 import {
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useRef,
   useState,
   type ReactNode,
-  type RefObject,
 } from "react";
 
 type AudioContextValue = {
-  audioRef: RefObject<HTMLAudioElement | null>;
+  setAudioEl: (el: HTMLAudioElement | null) => void;
   isPlaying: boolean;
   play: () => void;
   pause: () => void;
@@ -20,51 +20,64 @@ const AudioContext = createContext<AudioContextValue | null>(null);
 
 export function AudioProvider({ children }: { children: ReactNode }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [audioEl, setAudioElState] = useState<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
+  const setAudioEl = useCallback((el: HTMLAudioElement | null) => {
+    audioRef.current = el;
+    setAudioElState(el);
+  }, []);
+
   useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
+    if (!audioEl) return;
 
     const handlePlay = () => setIsPlaying(true);
     const handlePause = () => setIsPlaying(false);
     const handleEnded = () => setIsPlaying(false);
 
-    audio.addEventListener("play", handlePlay);
-    audio.addEventListener("pause", handlePause);
-    audio.addEventListener("ended", handleEnded);
+    audioEl.addEventListener("play", handlePlay);
+    audioEl.addEventListener("pause", handlePause);
+    audioEl.addEventListener("ended", handleEnded);
+    setIsPlaying(!audioEl.paused);
 
     return () => {
-      audio.removeEventListener("play", handlePlay);
-      audio.removeEventListener("pause", handlePause);
-      audio.removeEventListener("ended", handleEnded);
+      audioEl.removeEventListener("play", handlePlay);
+      audioEl.removeEventListener("pause", handlePause);
+      audioEl.removeEventListener("ended", handleEnded);
     };
-  }, [audioRef.current]);
+  }, [audioEl]);
 
-  const play = () => {
+  const play = useCallback(() => {
     const audio = audioRef.current;
     if (!audio) return;
-    void audio.play().catch(() => {
-      // Autoplay or browser restriction prevented playback; remain in stopped state.
-    });
-  };
+    audio.muted = false;
+    audio.volume = 1;
+    const p = audio.play();
+    if (p && typeof p.catch === "function") {
+      p.catch(() => setIsPlaying(false));
+    }
+  }, []);
 
-  const pause = () => {
+  const pause = useCallback(() => {
     const audio = audioRef.current;
     if (!audio) return;
     audio.pause();
-  };
+  }, []);
 
-  const toggle = () => {
-    if (isPlaying) {
-      pause();
-    } else {
+  const toggle = useCallback(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (audio.paused) {
       play();
+    } else {
+      pause();
     }
-  };
+  }, [play, pause]);
 
   return (
-    <AudioContext.Provider value={{ audioRef, isPlaying, play, pause, toggle }}>
+    <AudioContext.Provider
+      value={{ setAudioEl, isPlaying, play, pause, toggle }}
+    >
       {children}
     </AudioContext.Provider>
   );
@@ -79,15 +92,15 @@ export function useAudio() {
 }
 
 export function AudioPlayer({ src }: { src: string }) {
-  const { audioRef } = useAudio();
+  const { setAudioEl } = useAudio();
 
   return (
     <audio
-      ref={audioRef}
+      ref={setAudioEl}
       src={src}
       loop
       playsInline
-      preload="metadata"
+      preload="auto"
       className="hidden"
       aria-label="Background music"
     />
