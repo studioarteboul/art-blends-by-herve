@@ -14,15 +14,16 @@ export function SiteFooter() {
               "Studio ARTeboul — Montréal, Québec. Visites sur rendez-vous.",
             )}
           </p>
-          <ul className="mt-4 flex flex-wrap gap-4 text-sm">
+          <ul className="mt-4 flex flex-wrap gap-4">
             <li>
               <a
                 href="https://www.instagram.com/studioarteboul"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Instagram"
                 className="text-muted-foreground transition-colors hover:text-foreground"
               >
-                Instagram
+                <Instagram size={20} />
               </a>
             </li>
             <li>
@@ -30,9 +31,10 @@ export function SiteFooter() {
                 href="https://www.facebook.com/studioarteboul"
                 target="_blank"
                 rel="noreferrer"
+                aria-label={t("Facebook Page", "Page Facebook")}
                 className="text-muted-foreground transition-colors hover:text-foreground"
               >
-                {t("Facebook Page", "Page Facebook")}
+                <Facebook size={20} />
               </a>
             </li>
             <li>
@@ -40,9 +42,10 @@ export function SiteFooter() {
                 href="https://www.facebook.com/herve.teboul.7"
                 target="_blank"
                 rel="noreferrer"
+                aria-label={t("Facebook Profile", "Profil Facebook")}
                 className="text-muted-foreground transition-colors hover:text-foreground"
               >
-                {t("Facebook Profile", "Profil Facebook")}
+                <Facebook size={20} />
               </a>
             </li>
           </ul>

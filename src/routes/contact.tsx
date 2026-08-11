@@ -136,30 +136,33 @@ function Contact() {
             </div>
             <div>
               <dt className={labelClass}>{t("Social", "Réseaux sociaux")}</dt>
-              <dd className="mt-2 flex flex-col gap-1 font-display text-xl">
+              <dd className="mt-2 flex items-center gap-4">
                 <a
                   href="https://www.instagram.com/studioarteboul"
                   target="_blank"
                   rel="noreferrer"
-                  className="transition-colors hover:text-accent"
+                  aria-label="Instagram"
+                  className="text-muted-foreground transition-colors hover:text-accent"
                 >
-                  Instagram
+                  <Instagram size={20} />
                 </a>
                 <a
                   href="https://www.facebook.com/studioarteboul"
                   target="_blank"
                   rel="noreferrer"
-                  className="transition-colors hover:text-accent"
+                  aria-label={t("Facebook Page", "Page Facebook")}
+                  className="text-muted-foreground transition-colors hover:text-accent"
                 >
-                  {t("Facebook Page", "Page Facebook")}
+                  <Facebook size={20} />
                 </a>
                 <a
                   href="https://www.facebook.com/herve.teboul.7"
                   target="_blank"
                   rel="noreferrer"
-                  className="transition-colors hover:text-accent"
+                  aria-label={t("Facebook Profile", "Profil Facebook")}
+                  className="text-muted-foreground transition-colors hover:text-accent"
                 >
-                  {t("Facebook Profile", "Profil Facebook")}
+                  <Facebook size={20} />
                 </a>
               </dd>
             </div>
