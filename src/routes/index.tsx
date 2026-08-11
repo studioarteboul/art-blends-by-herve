@@ -15,6 +15,11 @@ import cc9 from "@/assets/cc9.jpg.asset.json";
 import cc10 from "@/assets/cc10.jpg.asset.json";
 import cc11 from "@/assets/cc11.jpg.asset.json";
 import cc12 from "@/assets/cc12.jpg.asset.json";
+import ir1 from "@/assets/ir1.jpg.asset.json";
+import ir2 from "@/assets/ir2.jpg.asset.json";
+import ir3 from "@/assets/ir3.jpg.asset.json";
+import ir4 from "@/assets/ir4.jpg.asset.json";
+import ir5 from "@/assets/ir5.jpg.asset.json";
 
 const AUDIO_URL =
   "https://raw.githubusercontent.com/studioarteboul/art-blends-by-herve/fc0048e069226aca210dc750cb846853e7481ec5/public/Cielo%20Ardent%20-%20Oia%20at%20Sunset%201.mp3";
