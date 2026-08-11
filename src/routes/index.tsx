@@ -3,6 +3,16 @@ import { useCallback, useEffect, useState } from "react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { AudioPlayer } from "@/lib/audio";
+import cc1 from "@/assets/cc1.jpg.asset.json";
+import cc2 from "@/assets/cc2.jpg.asset.json";
+import cc3 from "@/assets/cc3.jpg.asset.json";
+import cc4 from "@/assets/cc4.jpg.asset.json";
+import cc5 from "@/assets/cc5.jpg.asset.json";
+import cc6 from "@/assets/cc6.jpg.asset.json";
+import cc7 from "@/assets/cc7.jpg.asset.json";
+import cc8 from "@/assets/cc8.jpg.asset.json";
+import cc9 from "@/assets/cc9.jpg.asset.json";
+import cc10 from "@/assets/cc10.jpg.asset.json";
 
 const AUDIO_URL =
   "https://raw.githubusercontent.com/studioarteboul/art-blends-by-herve/fc0048e069226aca210dc750cb846853e7481ec5/public/Cielo%20Ardent%20-%20Oia%20at%20Sunset%201.mp3";
@@ -214,6 +224,30 @@ const japon: Work[] = Array.from({ length: 7 }, (_, i) => ({
   dimensions: "",
 }));
 
+const caseismeImages = [
+  cc1,
+  cc2,
+  cc3,
+  cc4,
+  cc5,
+  cc6,
+  cc7,
+  cc8,
+  cc9,
+  cc10,
+];
+
+const caseisme: Work[] = caseismeImages.map((asset, i) => ({
+  image: asset.url,
+  titleEn: `CC${i + 1}`,
+  titleFr: `CC${i + 1}`,
+  year: "",
+  mediumEn: "Oil on canvas",
+  mediumFr: "Huile sur toile",
+  dimensions: "",
+}));
+
+
 function HeroCarousel() {
   const { t } = useLang();
   const [index, setIndex] = useState(0);
@@ -288,7 +322,9 @@ function WorkCard({ work }: { work: Work }) {
 
       <figcaption className="pointer-events-none absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-primary/85 via-primary/25 to-transparent p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
         <p className="font-display text-2xl text-primary-foreground">
-          {t(work.titleEn, work.titleFr)}, {work.year}
+          {t(work.titleEn, work.titleFr)}
+          {work.year ? `, ${work.year}` : ""}
+
         </p>
         <p className="mt-2 text-xs uppercase tracking-[0.18em] text-primary-foreground/80">
           {t(work.mediumEn, work.mediumFr)}
@@ -407,6 +443,17 @@ function Works() {
           )}
           works={japon}
         />
+        <Series
+          index="IV"
+          title={t("Caseisme Collection", "Caseisme Collection")}
+          description={t(
+            "A mosaic of thick palette-knife strokes: each small block of colour is laid down whole, and the image assembles itself from the accumulation.",
+            "Une mosaïque de touches épaisses au couteau : chaque petit bloc de couleur est posé entier, et l'image se compose par accumulation.",
+          )}
+          works={caseisme}
+        />
+
+
 
         <section className="border-t border-border py-20 text-center">
           <p className="mx-auto max-w-2xl font-display text-3xl leading-snug md:text-4xl">
