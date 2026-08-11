@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { AudioPlayer } from "@/lib/audio";
-import audioAsset from "@/assets/cielo-ardent-oia-at-sunset.mp3.asset.json";
+import audioAsset from "@/assets/cielo-ardent-oia-at-sunset-1-2.mp3.asset.json";
 
 const heroSlides = [
   {
