@@ -6,18 +6,6 @@ import { Row, Block, type Entry } from "@/components/ExhibitionParts";
 const publications: Entry[] = [
   {
     year: "2026",
-    en: "Artio Gallery Exhibition Catalog — April — Paris Le Louvre",
-    fr: "Catalogue d'exposition Artio Gallery — Avril — Paris Le Louvre",
-    place: "Artio Gallery",
-    photos: [
-      "/artiocat2026-1.jpg",
-      "/artiocat2026-2.jpg",
-      "/artiocat2026-3.jpg",
-      "/artiocat2026-4.jpg",
-    ],
-  },
-  {
-    year: "2026",
     en: "Artio Magazine — July — Issue 15",
     fr: "Artio Magazine — Juillet — Numéro 15",
     place: "Artio Gallery",
@@ -29,6 +17,18 @@ const publications: Entry[] = [
     fr: "Artio Magazine — Avril — Numéro 12",
     place: "Artio Gallery",
     photos: ["/artio12-1.jpg", "/artio12-2.jpg", "/artio12-3.jpg"],
+  },
+  {
+    year: "2026",
+    en: "Artio Gallery Exhibition Catalog — April — Paris Le Louvre",
+    fr: "Catalogue d'exposition Artio Gallery — Avril — Paris Le Louvre",
+    place: "Artio Gallery",
+    photos: [
+      "/artiocat2026-1.jpg",
+      "/artiocat2026-2.jpg",
+      "/artiocat2026-3.jpg",
+      "/artiocat2026-4.jpg",
+    ],
   },
   {
     year: "2025",
