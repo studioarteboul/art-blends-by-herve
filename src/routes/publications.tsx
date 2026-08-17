@@ -5,6 +5,7 @@ import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { Block } from "@/components/ExhibitionParts";
 import parisCover from "@/assets/paris-cover.jpg.asset.json";
+import meamCover from "@/assets/meam-book-cover.jpg.asset.json";
 
 type Publication = {
   year: string;
