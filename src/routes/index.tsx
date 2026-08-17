@@ -281,7 +281,7 @@ function HeroCarousel() {
 
   useEffect(() => {
     if (reducedMotion || paused) return;
-    const id = setInterval(next, 8000);
+    const id = setInterval(next, 3000);
     return () => clearInterval(id);
   }, [reducedMotion, paused, next]);
 
