@@ -97,8 +97,8 @@ function Contact() {
           <h1 className="mt-6 font-display text-4xl leading-tight md:text-6xl">Studio ARTeboul</h1>
           <p className="mt-8 max-w-md text-lg leading-relaxed text-muted-foreground">
             {t(
-              "Studio visits are available by appointment in Montreal, where the practice has kept its creative roots. Active inventory is also listed on Arte Laguna World and Artio Gallery.",
-              "Les visites d'atelier se font sur rendez-vous à Montréal, où la démarche conserve ses racines créatives. L'inventaire actif est également présenté sur Arte Laguna World et Artio Gallery.",
+              "Studio visits are available by appointment in Montreal, where the practice has kept its creative roots. Active inventory is also listed on Arte Laguna World, Artio Gallery, and Artsy.",
+              "Les visites d'atelier se font sur rendez-vous à Montréal, où la démarche conserve ses racines créatives. L'inventaire actif est également présenté sur Arte Laguna World, Artio Gallery et Artsy.",
             )}
           </p>
 
@@ -131,6 +131,14 @@ function Contact() {
                   className="transition-colors hover:text-accent"
                 >
                   Artio Gallery
+                </a>
+                <a
+                  href="https://www.artsy.net/artist/herve-teboul"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition-colors hover:text-accent"
+                >
+                  Artsy Gallery
                 </a>
               </dd>
             </div>
