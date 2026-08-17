@@ -242,7 +242,7 @@ function Publications() {
                 />
                 <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/0 opacity-0 transition-all duration-300 group-hover:bg-background/20 group-hover:opacity-100">
                   <span className="flex items-center gap-2 rounded-full bg-background/90 px-4 py-2 text-xs uppercase tracking-[0.2em]">
-                    {t("View online", "Voir en ligne")}
+                    {t("Open photo book", "Ouvrir le livre photo")}
                     <ExternalLink className="h-3.5 w-3.5" />
                   </span>
                 </div>
@@ -255,7 +255,7 @@ function Publications() {
               </p>
               <div className="mt-4 flex justify-center">
                 <span className="inline-flex items-center gap-2 border border-border px-4 py-2 text-xs uppercase tracking-[0.2em] text-muted-foreground transition-colors group-hover:border-foreground group-hover:text-foreground">
-                  {t("View online", "Voir en ligne")}
+                  {t("Open photo book", "Ouvrir le livre photo")}
                   <ExternalLink className="h-3.5 w-3.5" />
                 </span>
               </div>
@@ -279,7 +279,7 @@ function Publications() {
                 />
                 <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/0 opacity-0 transition-all duration-300 group-hover:bg-background/20 group-hover:opacity-100">
                   <span className="flex items-center gap-2 rounded-full bg-background/90 px-4 py-2 text-xs uppercase tracking-[0.2em]">
-                    {t("View online", "Voir en ligne")}
+                    {t("Open photo book", "Ouvrir le livre photo")}
                     <ExternalLink className="h-3.5 w-3.5" />
                   </span>
                 </div>
@@ -292,7 +292,7 @@ function Publications() {
               </p>
               <div className="mt-4 flex justify-center">
                 <span className="inline-flex items-center gap-2 border border-border px-4 py-2 text-xs uppercase tracking-[0.2em] text-muted-foreground transition-colors group-hover:border-foreground group-hover:text-foreground">
-                  {t("View online", "Voir en ligne")}
+                  {t("Open photo book", "Ouvrir le livre photo")}
                   <ExternalLink className="h-3.5 w-3.5" />
                 </span>
               </div>
