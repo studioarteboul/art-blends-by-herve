@@ -550,7 +550,11 @@ function Works() {
             "Une série inspirée de l'imaginaire japonais : danseuses, samouraïs et floraisons, peints à l'acrylique dans une palette retenue et contemplative.",
           )}
           works={japon}
+          video="/inspiration-japon.mp4"
+          videoPoster="/inspiration-japon-poster.jpg"
+          videoCaption={t("Studio film — Japan Inspired", "Film d'atelier — Inspiration Japon")}
         />
+
         <Series
           index="IV"
           title={t("Caseisme Collection", "Collection Caseisme")}
