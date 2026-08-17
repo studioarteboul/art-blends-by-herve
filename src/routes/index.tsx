@@ -63,6 +63,8 @@ const heroSlides: HeroSlide[] = [
   },
   {
     images: [goldLeafAsset.url, silverLeafAsset.url, roseGoldAsset.url],
+    labelsEn: ["Gold Leaf", "Silver Leaf", "Rose Gold Leaf"],
+    labelsFr: ["Feuille d'or", "Feuille d'argent", "Feuille d'or rose"],
     altEn: "Gold, silver and rose gold leaf textures",
     altFr: "Textures à la feuille d'or, d'argent et d'or rose",
   },
