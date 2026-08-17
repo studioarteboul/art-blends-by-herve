@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as BiographyRouteImport } from './routes/biography'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ExhibitionsRouteImport } from './routes/exhibitions'
+import { Route as PublicationsRouteImport } from './routes/publications'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -34,18 +35,25 @@ const ExhibitionsRoute = ExhibitionsRouteImport.update({
   path: '/exhibitions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PublicationsRoute = PublicationsRouteImport.update({
+  id: '/publications',
+  path: '/publications',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/biography': typeof BiographyRoute
   '/contact': typeof ContactRoute
   '/exhibitions': typeof ExhibitionsRoute
+  '/publications': typeof PublicationsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/biography': typeof BiographyRoute
   '/contact': typeof ContactRoute
   '/exhibitions': typeof ExhibitionsRoute
+  '/publications': typeof PublicationsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,20 @@ export interface FileRoutesById {
   '/biography': typeof BiographyRoute
   '/contact': typeof ContactRoute
   '/exhibitions': typeof ExhibitionsRoute
+  '/publications': typeof PublicationsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/biography' | '/contact' | '/exhibitions'
+  fullPaths: '/' | '/biography' | '/contact' | '/exhibitions' | '/publications'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/biography' | '/contact' | '/exhibitions'
-  id: '__root__' | '/' | '/biography' | '/contact' | '/exhibitions'
+  to: '/' | '/biography' | '/contact' | '/exhibitions' | '/publications'
+  id:
+    | '__root__'
+    | '/'
+    | '/biography'
+    | '/contact'
+    | '/exhibitions'
+    | '/publications'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +82,7 @@ export interface RootRouteChildren {
   BiographyRoute: typeof BiographyRoute
   ContactRoute: typeof ContactRoute
   ExhibitionsRoute: typeof ExhibitionsRoute
+  PublicationsRoute: typeof PublicationsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +115,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ExhibitionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/publications': {
+      id: '/publications'
+      path: '/publications'
+      fullPath: '/publications'
+      preLoaderRoute: typeof PublicationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +130,7 @@ const rootRouteChildren: RootRouteChildren = {
   BiographyRoute: BiographyRoute,
   ContactRoute: ContactRoute,
   ExhibitionsRoute: ExhibitionsRoute,
+  PublicationsRoute: PublicationsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
