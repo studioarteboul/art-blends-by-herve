@@ -3,12 +3,22 @@ import { useCallback, useEffect, useState } from "react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { AudioPlayer } from "@/lib/audio";
+import goldLeafAsset from "@/assets/gold-leaf.jpg.asset.json";
+import silverLeafAsset from "@/assets/silver-leaf.jpg.asset.json";
+import roseGoldAsset from "@/assets/rose-gold.png.asset.json";
 
 const AUDIO_URL =
   "https://raw.githubusercontent.com/studioarteboul/art-blends-by-herve/fc0048e069226aca210dc750cb846853e7481ec5/public/Cielo%20Ardent%20-%20Oia%20at%20Sunset%201.mp3";
 
 
-const heroSlides = [
+type HeroSlide = {
+  image?: string;
+  images?: string[];
+  altEn: string;
+  altFr: string;
+};
+
+const heroSlides: HeroSlide[] = [
   {
     image: "/lumiere-de-soie.jpg",
     altEn: "Lumière de Soie — contemporary mixed media painting",
