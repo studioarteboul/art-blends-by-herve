@@ -14,6 +14,8 @@ const AUDIO_URL =
 type HeroSlide = {
   image?: string;
   images?: string[];
+  labelsEn?: string[];
+  labelsFr?: string[];
   altEn: string;
   altFr: string;
 };
