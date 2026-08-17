@@ -291,22 +291,41 @@ function HeroCarousel() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {heroSlides.map((slide, i) => (
-        <img
-          key={slide.image}
-          src={slide.image}
-          alt={t(slide.altEn, slide.altFr)}
-          fetchPriority={i === 0 ? "high" : undefined}
-          loading={i === 0 ? "eager" : "lazy"}
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[3000ms] ease-in-out ${
-            i === index ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      ))}
+      {heroSlides.map((slide, i) => {
+        const layer = `absolute inset-0 h-full w-full transition-opacity duration-[3000ms] ease-in-out ${
+          i === index ? "opacity-100" : "opacity-0"
+        }`;
+        const alt = t(slide.altEn, slide.altFr);
+        if (slide.images) {
+          return (
+            <div key={slide.altEn} className={`${layer} grid grid-cols-3 gap-px`} aria-hidden={i !== index}>
+              {slide.images.map((src, j) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt={j === 0 ? alt : ""}
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+              ))}
+            </div>
+          );
+        }
+        return (
+          <img
+            key={slide.image}
+            src={slide.image}
+            alt={alt}
+            fetchPriority={i === 0 ? "high" : undefined}
+            loading={i === 0 ? "eager" : "lazy"}
+            className={`${layer} object-cover`}
+          />
+        );
+      })}
       <div className="absolute bottom-6 right-6 z-20 flex gap-2">
         {heroSlides.map((slide, i) => (
           <button
-            key={slide.image}
+            key={slide.image ?? slide.altEn}
             type="button"
             aria-label={`${t("Go to slide", "Aller à la diapositive")} ${i + 1}`}
             onClick={() => setIndex(i)}
