@@ -26,7 +26,7 @@ export const Route = createFileRoute("/exhibitions")({
 
 type Entry = { year: string; en: string; fr: string; place: string; placeFr?: string; photos?: string[] };
 
-const louvrePhotos = Array.from({ length: 10 }, (_, i) => `/louvre${i + 1}.jpg`);
+const louvrePhotos = Array.from({ length: 9 }, (_, i) => `/louvre${i + 2}.jpg`);
 const meamPhotos = Array.from({ length: 9 }, (_, i) => `/meam${i + 1}.jpg`);
 
 const exhibitions: Entry[] = [
