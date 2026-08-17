@@ -18,6 +18,7 @@ export function SiteHeader() {
       to: "/exhibitions",
       label: t("Exhibitions", "Expositions"),
     },
+    { to: "/publications", label: t("Publications", "Publications") },
     { to: "/contact", label: t("Contact", "Contact") },
   ];
 
