@@ -386,12 +386,18 @@ function Series({
   subtitle,
   description,
   works,
+  video,
+  videoPoster,
+  videoCaption,
 }: {
   index: string;
   title: string;
   subtitle?: string;
   description: string;
   works: Work[];
+  video?: string;
+  videoPoster?: string;
+  videoCaption?: string;
 }) {
   return (
     <section className="py-20">
@@ -407,11 +413,29 @@ function Series({
         </div>
         <p className="max-w-md text-sm leading-relaxed text-muted-foreground">{description}</p>
       </div>
+      {video && (
+        <figure className="mb-12">
+          <video
+            src={video}
+            poster={videoPoster}
+            controls
+            playsInline
+            preload="metadata"
+            className="mx-auto max-h-[80vh] w-full max-w-3xl bg-card object-contain"
+          />
+          {videoCaption && (
+            <figcaption className="mt-3 text-center text-[0.7rem] uppercase tracking-[0.22em] text-muted-foreground">
+              {videoCaption}
+            </figcaption>
+          )}
+        </figure>
+      )}
       <div className="grid items-start gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {works.map((w) => (
           <WorkCard key={w.titleEn + w.year} work={w} />
         ))}
       </div>
+
     </section>
   );
 }
