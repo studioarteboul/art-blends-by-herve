@@ -482,6 +482,10 @@ function Works() {
             "Acryliques avec feuilles d'or et d'argent et finitions époxy — des surfaces à fort contraste où la lumière se déplace avec le regard.",
           )}
           works={contemporary}
+          video="/brillance-symbolisme.mp4"
+          videoPoster="/brillance-symbolisme-poster.jpg"
+          videoCaption={t("Studio film — Brilliance & Symbolism", "Film d'atelier — Brillance et symbolisme")}
+
         />
         <Series
           index="II"
