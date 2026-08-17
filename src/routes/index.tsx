@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useCallback, useEffect, useState } from "react";
+import { Play } from "lucide-react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { AudioPlayer } from "@/lib/audio";
@@ -386,8 +387,8 @@ function VideoCard({
   caption,
 }: {
   src: string;
-  poster?: string;
-  caption?: string;
+  poster?: string | undefined;
+  caption?: string | undefined;
 }) {
   const [playing, setPlaying] = useState(false);
   return (
