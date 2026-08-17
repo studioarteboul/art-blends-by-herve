@@ -20,7 +20,7 @@ const publications: Entry[] = [
   },
   {
     year: "2025",
-    en: "Artio Gallery Exposition Catalog — October — New York",
+    en: "Artio Gallery Exhibition Catalog — October — New York",
     fr: "Catalogue d'exposition Artio Gallery — Octobre — New York",
     place: "Artio Gallery",
     photos: ["/artiocat2025-1.jpg", "/artiocat2025-2.jpg"],
