@@ -61,8 +61,8 @@ export const exhibitions: Entry[] = [
   },
   {
     year: "2001",
-    en: "Centre Saidye Bronfman",
-    fr: "Centre Saidye Bronfman",
+    en: "Centre Saidye Bronfman — The Segal Centre",
+    fr: "Centre Saidye Bronfman — The Segal Centre",
     place: "Montréal, Canada",
   },
   {
