@@ -38,7 +38,7 @@ export const exhibitions: Entry[] = [
   {
     year: "2019",
     en: "Group Exhibition — Contemporary Mixed Media",
-    fr: "Exposition collective — Techniques mixtes contemporaines",
+    fr: "Exposition Solo — Techniques mixtes contemporaines",
     place: "Montréal, Canada",
   },
   {
