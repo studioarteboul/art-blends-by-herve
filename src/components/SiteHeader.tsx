@@ -16,7 +16,7 @@ export function SiteHeader() {
     { to: "/biography", label: t("Biography", "Biographie") },
     {
       to: "/exhibitions",
-      label: t("Exhibitions & Collections", "Expositions et Collections"),
+      label: t("Exhibitions", "Expositions"),
     },
     { to: "/contact", label: t("Contact", "Contact") },
   ];

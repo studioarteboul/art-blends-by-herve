@@ -7,13 +7,13 @@ import { Container } from "@/components/Section";
 export const Route = createFileRoute("/exhibitions")({
   head: () => ({
     meta: [
-      { title: "Exhibitions & Collections — Hervé Teboul" },
+      { title: "Exhibitions — Hervé Teboul" },
       {
         name: "description",
         content:
           "Chronological record of exhibitions, distinctions and collections for painter Hervé Teboul, including Art Shopping at the Carrousel du Louvre, Paris.",
       },
-      { property: "og:title", content: "Exhibitions & Collections — Hervé Teboul" },
+      { property: "og:title", content: "Exhibitions — Hervé Teboul" },
       {
         property: "og:description",
         content:
@@ -260,7 +260,7 @@ function Exhibitions() {
           {t("Curriculum", "Parcours")}
         </p>
         <h1 className="mt-6 font-display text-4xl leading-tight md:text-6xl">
-          {t("Exhibitions & Collections", "Expositions et Collections")}
+          {t("Exhibitions", "Expositions")}
         </h1>
 
         <Block
