@@ -239,7 +239,61 @@ function Row({ entry }: { entry: Entry }) {
   );
 }
 
+const prizePhotos = ["/prize1.jpg", "/prize2.jpg", "/prize3.jpg"];
+
+function PrizeItem() {
+  const { t } = useLang();
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState<number | null>(null);
+  const label = t(
+    "2nd prize winner of the INTERNATIONAL ART TALENT 2025 competition",
+    "2e prix du concours INTERNATIONAL ART TALENT 2025",
+  );
+
+  return (
+    <li className="py-6">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="text-left font-display text-xl transition-colors hover:text-accent md:text-2xl"
+      >
+        {label}
+        <span className="ml-3 align-middle text-[0.6rem] uppercase tracking-[0.24em] text-muted-foreground">
+          {t("Photos", "Photos")}
+        </span>
+      </button>
+
+      {open && (
+        <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
+          {prizePhotos.map((src, i) => (
+            <button key={src} type="button" onClick={() => setActive(i)} className="block overflow-hidden">
+              <img
+                src={src}
+                alt={`${label} — ${t("photo", "photo")} ${i + 1}`}
+                loading="lazy"
+                className="max-w-full h-auto object-contain transition-opacity hover:opacity-80"
+              />
+            </button>
+          ))}
+        </div>
+      )}
+
+      {active !== null && (
+        <Lightbox
+          photos={prizePhotos}
+          index={active}
+          label={label}
+          onClose={() => setActive(null)}
+          onChange={setActive}
+        />
+      )}
+    </li>
+  );
+}
+
 function Block({ title, children }: { title: string; children: ReactNode }) {
+
   return (
     <section className="py-14">
       <h2 className="mb-8 text-[0.7rem] uppercase tracking-[0.3em] text-muted-foreground">
