@@ -67,6 +67,12 @@ export const exhibitions: Entry[] = [
   },
   {
     year: "2001",
+    en: "Centre Saidye Bronfman",
+    fr: "Centre Saidye Bronfman",
+    place: "Montréal, Canada",
+  },
+  {
+    year: "2001",
     en: "Solo Exhibition — Aux Couleurs de Provence",
     fr: "Exposition individuelle — Aux Couleurs de Provence",
     place: "Montréal, Canada",
