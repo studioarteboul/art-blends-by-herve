@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
-import { exhibitions, Row, PrizeItem, Block } from "@/components/ExhibitionParts";
+import { exhibitions, Row, Block } from "@/components/ExhibitionParts";
 
 export const Route = createFileRoute("/exhibitions")({
   head: () => ({
@@ -43,28 +43,6 @@ function Exhibitions() {
             {exhibitions.map((e) => (
               <Row key={e.year + e.en} entry={e} />
             ))}
-          </ul>
-        </Block>
-
-        <Block title={t("Distinctions", "Reconnaissances")}>
-          <ul className="divide-y divide-border">
-            <PrizeItem />
-
-            <li className="py-6">
-              <p className="font-display text-xl md:text-2xl">
-                {t(
-                  "Listed since 2001 in several art dictionaries:",
-                  "Répertorié depuis 2001 dans plusieurs dictionnaires d'art :",
-                )}
-              </p>
-              <ul className="mt-4 list-disc space-y-2 pl-5 text-foreground/85">
-                <li>
-                  DROUOT internationale cotation des artistes modernes et contemporains, LAROUSSE
-                </li>
-                <li>Guide de Roussan, Marché de l'art au Québec</li>
-                <li>REPERTOIRE BIENNAL des artistes Canadiens en galeries, MAGAZIN'art</li>
-              </ul>
-            </li>
           </ul>
         </Block>
 

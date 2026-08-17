@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
+import { PrizeItem } from "@/components/ExhibitionParts";
 const portrait = "/herve-teboul-portrait.jpg";
 
 export const Route = createFileRoute("/biography")({
@@ -104,6 +105,31 @@ Expositions et collections privées à l'international.`;
           </p>
         </div>
       </div>
+
+      <section className="border-t border-border py-14">
+        <h2 className="mb-8 text-[0.7rem] uppercase tracking-[0.3em] text-muted-foreground">
+          {t("Distinctions", "Reconnaissances")}
+        </h2>
+        <ul className="divide-y divide-border">
+          <PrizeItem />
+
+          <li className="py-6">
+            <p className="font-display text-xl md:text-2xl">
+              {t(
+                "Listed since 2001 in several art dictionaries:",
+                "Répertorié depuis 2001 dans plusieurs dictionnaires d'art :",
+              )}
+            </p>
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-foreground/85">
+              <li>
+                DROUOT internationale cotation des artistes modernes et contemporains, LAROUSSE
+              </li>
+              <li>Guide de Roussan, Marché de l'art au Québec</li>
+              <li>REPERTOIRE BIENNAL des artistes Canadiens en galeries, MAGAZIN'art</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
     </Container>
   );
 }
