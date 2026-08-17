@@ -223,36 +223,69 @@ function Publications() {
             {t("Exhibition Souvenirs", "Souvenirs d'exposition")}
           </h2>
 
-          <a
-            href="https://share.popsa.com/FMij/22db9222-42c9-45d6-98af-9bf6b60d378e"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group mt-10 block"
-          >
-            <div className="relative overflow-hidden">
-              <img
-                src={parisCover.url}
-                alt={t(
-                  "Exhibition Souvenir Book — Paris Le Louvre",
-                  "Livret souvenir d'exposition — Paris Le Louvre"
-                )}
-                loading="lazy"
-                className="max-w-full h-auto w-full object-contain transition-opacity duration-300 group-hover:opacity-85"
-              />
-              <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/0 opacity-0 transition-all duration-300 group-hover:bg-background/20 group-hover:opacity-100">
-                <span className="flex items-center gap-2 rounded-full bg-background/90 px-4 py-2 text-xs uppercase tracking-[0.2em]">
-                  {t("View online", "Voir en ligne")}
-                  <ExternalLink className="h-3.5 w-3.5" />
-                </span>
+          <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
+            <a
+              href="https://share.popsa.com/FMij/22db9222-42c9-45d6-98af-9bf6b60d378e"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <div className="relative overflow-hidden">
+                <img
+                  src={parisCover.url}
+                  alt={t(
+                    "Exhibition Souvenir Book — Paris Le Louvre",
+                    "Livret souvenir d'exposition — Paris Le Louvre"
+                  )}
+                  loading="lazy"
+                  className="max-w-full h-auto w-full object-contain transition-opacity duration-300 group-hover:opacity-85"
+                />
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/0 opacity-0 transition-all duration-300 group-hover:bg-background/20 group-hover:opacity-100">
+                  <span className="flex items-center gap-2 rounded-full bg-background/90 px-4 py-2 text-xs uppercase tracking-[0.2em]">
+                    {t("View online", "Voir en ligne")}
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </span>
+                </div>
               </div>
-            </div>
-            <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
-              {t(
-                "Exhibition Souvenir Book — Paris Le Louvre 2026",
-                "Livret souvenir d'exposition — Paris Le Louvre 2026"
-              )}
-            </p>
-          </a>
+              <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                {t(
+                  "Exhibition Souvenir Book — Paris Le Louvre 2026",
+                  "Livret souvenir d'exposition — Paris Le Louvre 2026"
+                )}
+              </p>
+            </a>
+
+            <a
+              href="https://share.popsa.com/FMij/4872dc01-9e14-4338-803b-83fa2f010fcf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <div className="relative overflow-hidden">
+                <img
+                  src={meamCover.url}
+                  alt={t(
+                    "Exhibition Souvenir Book — MEAM Barcelona",
+                    "Livret souvenir d'exposition — MEAM Barcelone"
+                  )}
+                  loading="lazy"
+                  className="max-w-full h-auto w-full object-contain transition-opacity duration-300 group-hover:opacity-85"
+                />
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/0 opacity-0 transition-all duration-300 group-hover:bg-background/20 group-hover:opacity-100">
+                  <span className="flex items-center gap-2 rounded-full bg-background/90 px-4 py-2 text-xs uppercase tracking-[0.2em]">
+                    {t("View online", "Voir en ligne")}
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </span>
+                </div>
+              </div>
+              <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                {t(
+                  "Exhibition Souvenir Book — MEAM Barcelona 2026",
+                  "Livret souvenir d'exposition — MEAM Barcelone 2026"
+                )}
+              </p>
+            </a>
+          </div>
         </section>
       </div>
     </Container>
