@@ -48,12 +48,6 @@ export const exhibitions: Entry[] = [
     place: "Montréal, Canada",
   },
   {
-    year: "2012",
-    en: "Solo Exhibition — Metallic Surfaces",
-    fr: "Exposition individuelle — Surfaces métalliques",
-    place: "Outremont, Montréal",
-  },
-  {
     year: "2006",
     en: "Art Expo — Javits Center",
     fr: "Art Expo — Javits Center",
