@@ -1,9 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
-import { Row, Block, type Entry } from "@/components/ExhibitionParts";
+import { Block } from "@/components/ExhibitionParts";
 
-const publications: Entry[] = [
+type Publication = {
+  year: string;
+  en: string;
+  fr: string;
+  place: string;
+  photos: string[];
+};
+
+const publications: Publication[] = [
   {
     year: "2026",
     en: "Artio Magazine — July — Issue 15",
@@ -58,6 +68,65 @@ const publications: Entry[] = [
   },
 ];
 
+function Lightbox({
+  photos,
+  index,
+  onClose,
+  onChange,
+  label,
+}: {
+  photos: string[];
+  index: number;
+  onClose: () => void;
+  onChange: (i: number) => void;
+  label: string;
+}) {
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 p-6 backdrop-blur"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+    >
+      <button
+        type="button"
+        onClick={onClose}
+        aria-label="Close"
+        className="absolute right-6 top-6 text-muted-foreground transition-colors hover:text-foreground"
+      >
+        <X className="h-6 w-6" />
+      </button>
+      <button
+        type="button"
+        aria-label="Previous"
+        onClick={(e) => {
+          e.stopPropagation();
+          onChange((index - 1 + photos.length) % photos.length);
+        }}
+        className="absolute left-4 text-muted-foreground transition-colors hover:text-foreground md:left-10"
+      >
+        <ChevronLeft className="h-8 w-8" />
+      </button>
+      <img
+        src={photos[index]}
+        alt={`${label} — ${index + 1}`}
+        onClick={(e) => e.stopPropagation()}
+        className="max-h-[85vh] max-w-full object-contain"
+      />
+      <button
+        type="button"
+        aria-label="Next"
+        onClick={(e) => {
+          e.stopPropagation();
+          onChange((index + 1) % photos.length);
+        }}
+        className="absolute right-4 text-muted-foreground transition-colors hover:text-foreground md:right-10"
+      >
+        <ChevronRight className="h-8 w-8" />
+      </button>
+    </div>
+  );
+}
 
 export const Route = createFileRoute("/publications")({
   head: () => ({
@@ -80,6 +149,52 @@ export const Route = createFileRoute("/publications")({
   component: Publications,
 });
 
+function PublicationRow({ entry }: { entry: Publication }) {
+  const { t } = useLang();
+  const [active, setActive] = useState<number | null>(null);
+  const label = t(entry.en, entry.fr);
+
+  return (
+    <li className="border-b border-border py-10">
+      <div className="grid grid-cols-[4rem_1fr] gap-6 md:grid-cols-[6rem_1fr_16rem]">
+        <span className="text-[0.7rem] uppercase tracking-[0.24em] text-accent">{entry.year}</span>
+        <span className="font-display text-xl md:text-2xl">{label}</span>
+        <span className="col-start-2 text-xs uppercase tracking-[0.2em] text-muted-foreground md:col-start-3 md:text-right">
+          {entry.place}
+        </span>
+      </div>
+
+      <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
+        {entry.photos.map((src, i) => (
+          <button
+            key={src}
+            type="button"
+            onClick={() => setActive(i)}
+            className="block overflow-hidden"
+          >
+            <img
+              src={src}
+              alt={`${label} — ${t("photo", "photo")} ${i + 1}`}
+              loading="lazy"
+              className="max-w-full h-auto object-contain transition-opacity hover:opacity-80"
+            />
+          </button>
+        ))}
+      </div>
+
+      {active !== null && (
+        <Lightbox
+          photos={entry.photos}
+          index={active}
+          label={label}
+          onClose={() => setActive(null)}
+          onChange={setActive}
+        />
+      )}
+    </li>
+  );
+}
+
 function Publications() {
   const { t } = useLang();
 
@@ -96,7 +211,7 @@ function Publications() {
         <Block title={t("Magazines & Features", "Magazines et articles")}>
           <ul>
             {publications.map((p) => (
-              <Row key={p.year + p.en} entry={p} />
+              <PublicationRow key={p.year + p.en} entry={p} />
             ))}
           </ul>
         </Block>
