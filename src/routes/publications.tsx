@@ -20,6 +20,18 @@ const publications: Entry[] = [
   },
   {
     year: "2026",
+    en: "Artio Gallery Exhibition Catalog — April — MEAM Barcelona",
+    fr: "Catalogue d'exposition Artio Gallery — Avril — MEAM Barcelone",
+    place: "Artio Gallery",
+    photos: [
+      "/artiocatmeam2026-1.jpg",
+      "/artiocatmeam2026-2.webp",
+      "/artiocatmeam2026-3.webp",
+      "/artiocatmeam2026-4.webp",
+    ],
+  },
+  {
+    year: "2026",
     en: "Artio Gallery Exhibition Catalog — April — Paris Le Louvre",
     fr: "Catalogue d'exposition Artio Gallery — Avril — Paris Le Louvre",
     place: "Artio Gallery",
