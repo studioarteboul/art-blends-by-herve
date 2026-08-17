@@ -220,7 +220,7 @@ function Publications() {
 
         <section className="py-14">
           <h2 className="mt-6 font-display text-4xl leading-tight md:text-6xl">
-            {t("Exhibition Souvenirs", "Souvenirs d'exposition")}
+            {t("Exhibition Souvenirs", "Souvenirs d'Expositions")}
           </h2>
 
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
