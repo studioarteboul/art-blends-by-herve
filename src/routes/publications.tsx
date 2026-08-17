@@ -27,7 +27,7 @@ export const Route = createFileRoute("/publications")({
       {
         name: "description",
         content:
-          "Magazine features and press publications about painter Hervé Teboul, including ArtioGallery Magazine Issue 12.",
+          "Magazine features and press publications about painter Hervé Teboul, including Artio Magazine Issue 12.",
       },
       { property: "og:title", content: "Publications — Hervé Teboul" },
       {
