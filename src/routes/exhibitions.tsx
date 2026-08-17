@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
-import { exhibitions, Row, PrizeItem, Block } from "@/components/ExhibitionParts";
+import { exhibitions, Row, Block } from "@/components/ExhibitionParts";
 
 export const Route = createFileRoute("/exhibitions")({
   head: () => ({
