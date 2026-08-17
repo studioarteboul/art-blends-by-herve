@@ -1,29 +1,22 @@
-# Leaf-finish swatches in the hero
+# Add the leaf textures as their own hero slides
 
 ## Goal
 
-Show the three metal-leaf textures as squares side by side in the hero, sitting above the hero text, and tie them to the slideshow rotation.
+The three metal-leaf textures (gold, silver, rose gold) become slides in the hero slideshow, shown full-bleed on their own, in the same rotation as the paintings.
 
 ## What you'll see
 
-- Three small squares (gold leaf, silver leaf, rose gold) in a row, placed directly above the "Contemporary Painter — Montreal" line and the headline.
-- Each square is about 64px (56px on mobile), with a thin light border and rounded corners.
-- As the slideshow rotates, the square matching the current painting's leaf finish is highlighted: full opacity with a bright ring; the other two dim to about 40%.
-- A small bilingual caption under the row names the active finish: Gold leaf / Feuille d'or, Silver leaf / Feuille d'argent, Rose gold leaf / Feuille d'or rose.
-- Clicking a square jumps to the next hero painting using that finish.
-- The existing navigation dots at the bottom right stay as they are.
+- The hero rotation grows from 8 to 11 slides: the eight paintings plus one slide each for gold leaf, silver leaf and rose gold.
+- The textures are spaced through the rotation rather than grouped, so a leaf close-up appears every few slides.
+- Each texture slide fills the hero band the same way the paintings do (cropped to the band), with the same 5-second hold and 3-second cross-fade, the same dark gradient, and the same eyebrow and headline on top.
+- The navigation dots at the bottom right pick up three extra dots so a visitor can jump to any texture slide.
 
-## Which painting uses which finish
+## Slide order
 
-- Gold: Lumiere de Soie, Chic Soiree, Tresor Cote d'Azur, Balcon en Mediterranee, Promenade au bord de l'eau
-- Silver: Elegance de Nuit, Rocky - Victory in Silence
-- Rose gold: Rose Gala
+Lumiere de Soie, Gold leaf, Chic Soiree, Elegance de Nuit, Silver leaf, Rose Gala, Rose gold leaf, Rocky - Victory in Silence, Tresor Cote d'Azur, Balcon en Mediterranee, Promenade au bord de l'eau.
 
 ## Technical detail
 
 - Upload the three uploaded textures as CDN assets with `lovable-assets create` from `/mnt/user-uploads/`, writing `src/assets/gold-leaf.jpg.asset.json`, `src/assets/silver-leaf.jpg.asset.json`, `src/assets/rose-gold.png.asset.json`.
-- In `src/routes/index.tsx`: add a `leaf: "gold" | "silver" | "rose"` field to each `heroSlides` entry and a `leafSwatches` array of `{ key, url, labelEn, labelFr }`.
-- Lift the carousel index state so the hero text block can read the active slide: move `index`/`setIndex` into `Works` (or a shared `useHeroCarousel` hook in the same file) and pass them to `HeroCarousel`.
-- Render the swatch row inside the existing `Container` overlay, above the eyebrow paragraph, using `opacity`/`ring` classes driven by `heroSlides[index].leaf`, with a 700ms transition.
-- Squares are buttons with `aria-label`s; clicking sets the index to the next slide using that finish.
-- No changes to route metadata, gallery data, or other pages.
+- In `src/routes/index.tsx`, import those three pointer JSONs and insert entries into the existing `heroSlides` array at the positions above, using each pointer's `url` for `image` and bilingual alt text such as "Gold leaf texture detail" / "Detail de texture a la feuille d'or".
+- No other changes: `HeroCarousel`, timings, dots, gradient and route metadata all stay as they are (the dots already map over `heroSlides`).
