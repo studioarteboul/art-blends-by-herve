@@ -19,8 +19,6 @@ Below the title, the cover appears with a "Read the magazine" / "Lire le magazin
 - Two-page spread on desktop, single page on mobile.
 - Page-turn animation, arrow buttons, keyboard arrows, swipe on touch, click a page edge to turn.
 - Page counter (e.g. 7 / 24) and a close button.
-- Lazy loading so only nearby pages download.
-- A discreet "Order a printed copy" link to your Popsa URL, so the original link stays available.
 
 ## What I need from you
 
