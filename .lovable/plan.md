@@ -1,37 +1,30 @@
-# Add a self-published digital magazine with an on-site flipbook viewer
+# Plan: Make Exhibition Souvenir Books Clearly Clickable
 
-Popsa does not allow its viewer to be shown inside another website (it blocks embedding), so the magazine will live directly on your site as a page-turning reader, similar to the Issuu reader Artio uses.
+## Goal
+Add an obvious button-style indicator under each souvenir book cover in the Publications page so visitors immediately understand that both the Paris Le Louvre and MEAM Barcelona books are clickable links.
 
-## What gets added
+## Proposed Changes
 
-A new Publications entry:
+1. **Persistent button-style labels**
+   - Add a small, outlined button directly beneath each book cover caption in the `EXHIBITIONS SOUVENIRS` section of `src/routes/publications.tsx`.
+   - Text (bilingual):
+     - English: **"View online"**
+     - French: **"Voir en ligne"**
+   - The button uses the existing `ExternalLink` icon from `lucide-react` to reinforce the "opens away" action.
 
-- Year: 2026
-- English: Exhibition Souvenir Booklet — Paris Le Louvre
-- French: Livret souvenir d'exposition — Paris Le Louvre
-- Credit line: Self-published / Auto-publié
+2. **Keep the existing hover overlay**
+   - The current centered "View online / Voir en ligne" hover overlay remains as a secondary cue on desktop.
 
-Below the title, the cover appears with a "Read the magazine" / "Lire le magazine" button that opens a full-screen flipbook.
+3. **Visual style**
+   - Use the site's primary button aesthetic (outlined border, uppercase tracking, small text) to match the existing minimal design language.
+   - Ensure the button is centered under each cover, with comfortable spacing from the caption.
 
-## The flipbook reader
+4. **No layout changes**
+   - Keep the two-column grid as-is.
+   - No new pages, routes, or dependencies.
 
-- Full-screen overlay on the site's dark minimal background.
-- Two-page spread on desktop, single page on mobile.
-- Page-turn animation, arrow buttons, keyboard arrows, swipe on touch, click a page edge to turn.
-- Page counter (e.g. 7 / 24) and a close button.
-
-## What I need from you
-
-The magazine pages. Either:
-
-- the PDF of the booklet (best — I convert each page to an optimized web image), or
-- the page images exported in order.
-
-Once you send them, I convert them to sequential files in `/public` (`booklet1.jpg`, `booklet2.jpg`, …) and wire them into the entry.
-
-## Technical notes
-
-- New `src/components/Flipbook.tsx`: self-contained viewer (no external flipbook dependency; CSS 3D transforms + React state), reused for future magazines.
-- `src/routes/publications.tsx`: the `Publication` type gains optional `pages: string[]` and `externalUrl`; entries with `pages` render the cover + reader button instead of the plain photo grid. Existing entries are unchanged.
-- Bilingual strings via the existing `useLang` `t()` helper.
-- Images resized to ~1600px wide, JPEG quality ~82, for fast loading.
+## Verification
+- Preview the `/publications` route on desktop and mobile.
+- Confirm both souvenir covers show a clear button below each caption.
+- Click each button to ensure it opens the correct Popsa URL.
+- Confirm the existing hover overlay still works on desktop.
