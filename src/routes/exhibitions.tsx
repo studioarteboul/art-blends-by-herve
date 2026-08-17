@@ -46,29 +46,6 @@ function Exhibitions() {
           </ul>
         </Block>
 
-        <Block title={t("Distinctions", "Reconnaissances")}>
-          <ul className="divide-y divide-border">
-            <PrizeItem />
-
-            <li className="py-6">
-              <p className="font-display text-xl md:text-2xl">
-                {t(
-                  "Listed since 2001 in several art dictionaries:",
-                  "Répertorié depuis 2001 dans plusieurs dictionnaires d'art :",
-                )}
-              </p>
-              <ul className="mt-4 list-disc space-y-2 pl-5 text-foreground/85">
-                <li>
-                  DROUOT internationale cotation des artistes modernes et contemporains, LAROUSSE
-                </li>
-                <li>Guide de Roussan, Marché de l'art au Québec</li>
-                <li>REPERTOIRE BIENNAL des artistes Canadiens en galeries, MAGAZIN'art</li>
-              </ul>
-            </li>
-          </ul>
-        </Block>
-
-        <Block title={t("Quotation", "Cotation")}>
           <p className="border-b border-border pb-6 font-display text-xl md:text-2xl">
             {t(
               "Works range from $5,000 to $25,000 depending on size format. Pricing is shared on request.",

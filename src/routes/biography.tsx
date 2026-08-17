@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
+import { PrizeItem } from "@/components/ExhibitionParts";
 const portrait = "/herve-teboul-portrait.jpg";
 
 export const Route = createFileRoute("/biography")({
