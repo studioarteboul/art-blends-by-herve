@@ -6,8 +6,8 @@ import { Row, Block, type Entry } from "@/components/ExhibitionParts";
 const publications: Entry[] = [
   {
     year: "2026",
-    en: "Artio Magazine — Issue 15",
-    fr: "Artio Magazine — Numéro 15",
+    en: "Artio Magazine — July — Issue 15",
+    fr: "Artio Magazine — Juillet — Numéro 15",
     place: "Artio Gallery",
     photos: ["/artio15-1.jpg", "/artio15-2.jpg", "/artio15-3.jpg"],
   },
