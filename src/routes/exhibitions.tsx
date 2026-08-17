@@ -276,10 +276,10 @@ function Exhibitions() {
         <Block title={t("Distinctions", "Reconnaissances")}>
           <ul className="divide-y divide-border">
             <li className="py-6 font-display text-xl md:text-2xl">
-              {t(
-                "2nd prize winner of the International Art Talent 2025",
-                "2e prix du International Art Talent 2025",
-              )}
+            {t(
+              "2nd prize winner of the INTERNATIONAL ART TALENT 2025 competition",
+              "2e prix du concours INTERNATIONAL ART TALENT 2025",
+            )}
             </li>
             <li className="py-6">
               <p className="font-display text-xl md:text-2xl">
