@@ -305,12 +305,6 @@ function HeroCarousel() {
             <div key={slide.altEn} className={`${layer} grid grid-cols-3 gap-px`} aria-hidden={i !== index}>
               {slide.images.map((src, j) => (
                 <div key={src} className="relative flex flex-col h-full">
-                  <img
-                    src={src}
-                    alt={j === 0 ? alt : ""}
-                    loading="lazy"
-                    className="flex-1 w-full object-cover"
-                  />
                   {slide.labelsEn && slide.labelsFr && (
                     <div className="flex items-center justify-center bg-primary/80 py-3">
                       <span className="text-xs uppercase tracking-[0.2em] text-primary-foreground">
@@ -318,6 +312,12 @@ function HeroCarousel() {
                       </span>
                     </div>
                   )}
+                  <img
+                    src={src}
+                    alt={j === 0 ? alt : ""}
+                    loading="lazy"
+                    className="flex-1 w-full object-cover"
+                  />
                 </div>
               ))}
             </div>
