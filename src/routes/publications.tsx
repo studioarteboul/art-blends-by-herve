@@ -217,12 +217,16 @@ function Publications() {
           </ul>
         </Block>
 
-        <Block title={t("Exhibition Souvenirs", "Souvenirs d'exposition")}>
+        <section className="py-14">
+          <h2 className="mt-6 font-display text-4xl leading-tight md:text-6xl">
+            {t("Exhibition Souvenirs", "Souvenirs d'exposition")}
+          </h2>
+
           <a
             href="https://share.popsa.com/FMij/22db9222-42c9-45d6-98af-9bf6b60d378e"
             target="_blank"
             rel="noopener noreferrer"
-            className="group mt-6 block"
+            className="group mt-10 block"
           >
             <div className="relative overflow-hidden">
               <img
@@ -248,7 +252,7 @@ function Publications() {
               )}
             </p>
           </a>
-        </Block>
+        </section>
       </div>
     </Container>
   );
