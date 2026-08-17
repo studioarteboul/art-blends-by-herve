@@ -49,6 +49,13 @@ const publications: Entry[] = [
     place: "Artio Gallery",
     photos: ["/artiocat2025-1.jpg", "/artiocat2025-2.jpg"],
   },
+  {
+    year: "2025",
+    en: "Artio Gallery Exhibition Catalog — July — New York",
+    fr: "Catalogue d'exposition Artio Gallery — Juillet — New York",
+    place: "Artio Gallery",
+    photos: ["/artiocatjul2025-1.jpg", "/artiocatjul2025-2.jpg"],
+  },
 ];
 
 
