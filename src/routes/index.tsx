@@ -3,12 +3,22 @@ import { useCallback, useEffect, useState } from "react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { AudioPlayer } from "@/lib/audio";
+import goldLeafAsset from "@/assets/gold-leaf.jpg.asset.json";
+import silverLeafAsset from "@/assets/silver-leaf.jpg.asset.json";
+import roseGoldAsset from "@/assets/rose-gold.png.asset.json";
 
 const AUDIO_URL =
   "https://raw.githubusercontent.com/studioarteboul/art-blends-by-herve/fc0048e069226aca210dc750cb846853e7481ec5/public/Cielo%20Ardent%20-%20Oia%20at%20Sunset%201.mp3";
 
 
-const heroSlides = [
+type HeroSlide = {
+  image?: string;
+  images?: string[];
+  altEn: string;
+  altFr: string;
+};
+
+const heroSlides: HeroSlide[] = [
   {
     image: "/lumiere-de-soie.jpg",
     altEn: "Lumière de Soie — contemporary mixed media painting",
@@ -48,6 +58,11 @@ const heroSlides = [
     image: "/promenade-au-bord-de-l-eau.jpg",
     altEn: "Promenade au bord de l'eau — post-impressionist landscape painting",
     altFr: "Promenade au bord de l'eau — peinture de paysage post-impressionniste",
+  },
+  {
+    images: [goldLeafAsset.url, silverLeafAsset.url, roseGoldAsset.url],
+    altEn: "Gold, silver and rose gold leaf textures",
+    altFr: "Textures à la feuille d'or, d'argent et d'or rose",
   },
 ];
 
@@ -276,22 +291,41 @@ function HeroCarousel() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {heroSlides.map((slide, i) => (
-        <img
-          key={slide.image}
-          src={slide.image}
-          alt={t(slide.altEn, slide.altFr)}
-          fetchPriority={i === 0 ? "high" : undefined}
-          loading={i === 0 ? "eager" : "lazy"}
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[3000ms] ease-in-out ${
-            i === index ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      ))}
+      {heroSlides.map((slide, i) => {
+        const layer = `absolute inset-0 h-full w-full transition-opacity duration-[3000ms] ease-in-out ${
+          i === index ? "opacity-100" : "opacity-0"
+        }`;
+        const alt = t(slide.altEn, slide.altFr);
+        if (slide.images) {
+          return (
+            <div key={slide.altEn} className={`${layer} grid grid-cols-3 gap-px`} aria-hidden={i !== index}>
+              {slide.images.map((src, j) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt={j === 0 ? alt : ""}
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+              ))}
+            </div>
+          );
+        }
+        return (
+          <img
+            key={slide.image}
+            src={slide.image}
+            alt={alt}
+            fetchPriority={i === 0 ? "high" : undefined}
+            loading={i === 0 ? "eager" : "lazy"}
+            className={`${layer} object-cover`}
+          />
+        );
+      })}
       <div className="absolute bottom-6 right-6 z-20 flex gap-2">
         {heroSlides.map((slide, i) => (
           <button
-            key={slide.image}
+            key={slide.image ?? slide.altEn}
             type="button"
             aria-label={`${t("Go to slide", "Aller à la diapositive")} ${i + 1}`}
             onClick={() => setIndex(i)}
