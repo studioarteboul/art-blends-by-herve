@@ -18,7 +18,15 @@ const publications: Entry[] = [
     place: "Artio Gallery",
     photos: ["/artio12-1.jpg", "/artio12-2.jpg", "/artio12-3.jpg"],
   },
+  {
+    year: "2025",
+    en: "Artio Gallery Exposition Catalog — New York",
+    fr: "Catalogue d'exposition Artio Gallery — New York",
+    place: "Artio Gallery",
+    photos: ["/artiocat2025-1.jpg", "/artiocat2025-2.jpg"],
+  },
 ];
+
 
 export const Route = createFileRoute("/publications")({
   head: () => ({
