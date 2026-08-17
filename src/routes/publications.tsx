@@ -4,8 +4,6 @@ import { X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { Block } from "@/components/ExhibitionParts";
-import parisCover from "@/assets/paris-cover.jpg.asset.json";
-import meamCover from "@/assets/meam-book-cover.jpg.asset.json";
 
 type Publication = {
   year: string;
@@ -232,7 +230,7 @@ function Publications() {
             >
               <div className="relative overflow-hidden">
                 <img
-                  src={parisCover.url}
+                  src="/paris-cover.jpg"
                   alt={t(
                     "Exhibition Souvenir Book — Paris Le Louvre",
                     "Livret souvenir d'exposition — Paris Le Louvre"
@@ -269,7 +267,7 @@ function Publications() {
             >
               <div className="relative overflow-hidden">
                 <img
-                  src={meamCover.url}
+                  src="/meam-book-cover.jpg"
                   alt={t(
                     "Exhibition Souvenir Book — MEAM Barcelona",
                     "Livret souvenir d'exposition — MEAM Barcelone"
