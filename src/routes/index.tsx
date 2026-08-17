@@ -59,6 +59,11 @@ const heroSlides: HeroSlide[] = [
     altEn: "Promenade au bord de l'eau — post-impressionist landscape painting",
     altFr: "Promenade au bord de l'eau — peinture de paysage post-impressionniste",
   },
+  {
+    images: [goldLeafAsset.url, silverLeafAsset.url, roseGoldAsset.url],
+    altEn: "Gold, silver and rose gold leaf textures",
+    altFr: "Textures à la feuille d'or, d'argent et d'or rose",
+  },
 ];
 
 export const Route = createFileRoute("/")({
