@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useCallback, useEffect, useState } from "react";
+import { Play } from "lucide-react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { AudioPlayer } from "@/lib/audio";
@@ -380,6 +381,57 @@ function WorkCard({ work }: { work: Work }) {
   );
 }
 
+function VideoCard({
+  src,
+  poster,
+  caption,
+}: {
+  src: string;
+  poster?: string | undefined;
+  caption?: string | undefined;
+}) {
+  const [playing, setPlaying] = useState(false);
+  return (
+    <figure className="group relative overflow-hidden bg-card plate">
+      {playing ? (
+        <video
+          src={src}
+          poster={poster}
+          autoPlay
+          controls
+          playsInline
+          className="max-w-full h-auto object-cover w-full"
+        />
+      ) : (
+        <button
+          type="button"
+          onClick={() => setPlaying(true)}
+          aria-label={caption}
+          className="block w-full"
+        >
+          <img
+            src={poster}
+            alt={caption ?? ""}
+            loading="lazy"
+            className="max-w-full h-auto object-cover w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+          />
+          <span className="absolute inset-0 flex items-center justify-center bg-primary/20 transition-colors duration-500 group-hover:bg-primary/30">
+            <span className="flex h-16 w-16 items-center justify-center rounded-full border border-primary-foreground/70 bg-primary/40 backdrop-blur-sm">
+              <Play className="ml-0.5 h-6 w-6 text-primary-foreground" />
+            </span>
+          </span>
+          {caption && (
+            <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/85 to-transparent p-4 text-left text-[0.65rem] uppercase tracking-[0.2em] text-primary-foreground/90">
+              {caption}
+            </figcaption>
+          )}
+        </button>
+      )}
+    </figure>
+  );
+}
+
+
 function Series({
   index,
   title,
@@ -413,28 +465,15 @@ function Series({
         </div>
         <p className="max-w-md text-sm leading-relaxed text-muted-foreground">{description}</p>
       </div>
-      {video && (
-        <figure className="mb-12">
-          <video
-            src={video}
-            poster={videoPoster}
-            controls
-            playsInline
-            preload="metadata"
-            className="mx-auto max-h-[80vh] w-full max-w-3xl bg-card object-contain"
-          />
-          {videoCaption && (
-            <figcaption className="mt-3 text-center text-[0.7rem] uppercase tracking-[0.22em] text-muted-foreground">
-              {videoCaption}
-            </figcaption>
-          )}
-        </figure>
-      )}
       <div className="grid items-start gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {video && (
+          <VideoCard src={video} poster={videoPoster} caption={videoCaption} />
+        )}
         {works.map((w) => (
           <WorkCard key={w.titleEn + w.year} work={w} />
         ))}
       </div>
+
 
     </section>
   );
