@@ -13,8 +13,8 @@ const publications: Entry[] = [
   },
   {
     year: "2026",
-    en: "ArtioGallery Magazine — Issue 12",
-    fr: "ArtioGallery Magazine — Numéro 12",
+    en: "Artio Magazine — Issue 12",
+    fr: "Artio Magazine — Numéro 12",
     place: "Artio Gallery",
     photos: ["/artio12-1.jpg", "/artio12-2.jpg", "/artio12-3.jpg"],
   },
