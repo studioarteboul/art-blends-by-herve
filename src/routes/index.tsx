@@ -469,7 +469,19 @@ function Works() {
           works={provence}
         />
 
-
+        <section className="border-t border-border py-20">
+          <div className="max-w-4xl">
+            <p className="text-[0.7rem] uppercase tracking-[0.3em] text-accent">
+              {t("Quotation", "Cotation")}
+            </p>
+            <p className="mt-6 border-b border-border pb-6 font-display text-xl md:text-2xl">
+              {t(
+                "Works range from $5,000 to $25,000 depending on size format. Pricing is shared on request.",
+                "Les œuvres sont offertes entre 5 000 $ et 25 000 $ selon le format. Les prix sont communiqués sur demande.",
+              )}
+            </p>
+          </div>
+        </section>
 
         <section className="border-t border-border py-20 text-center">
           <p className="mx-auto max-w-2xl font-display text-3xl leading-snug md:text-4xl">
