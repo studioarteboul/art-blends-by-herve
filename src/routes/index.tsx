@@ -380,6 +380,57 @@ function WorkCard({ work }: { work: Work }) {
   );
 }
 
+function VideoCard({
+  src,
+  poster,
+  caption,
+}: {
+  src: string;
+  poster?: string;
+  caption?: string;
+}) {
+  const [playing, setPlaying] = useState(false);
+  return (
+    <figure className="group relative overflow-hidden bg-card plate">
+      {playing ? (
+        <video
+          src={src}
+          poster={poster}
+          autoPlay
+          controls
+          playsInline
+          className="max-w-full h-auto object-cover w-full"
+        />
+      ) : (
+        <button
+          type="button"
+          onClick={() => setPlaying(true)}
+          aria-label={caption}
+          className="block w-full"
+        >
+          <img
+            src={poster}
+            alt={caption ?? ""}
+            loading="lazy"
+            className="max-w-full h-auto object-cover w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+          />
+          <span className="absolute inset-0 flex items-center justify-center bg-primary/20 transition-colors duration-500 group-hover:bg-primary/30">
+            <span className="flex h-16 w-16 items-center justify-center rounded-full border border-primary-foreground/70 bg-primary/40 backdrop-blur-sm">
+              <Play className="ml-0.5 h-6 w-6 text-primary-foreground" />
+            </span>
+          </span>
+          {caption && (
+            <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/85 to-transparent p-4 text-left text-[0.65rem] uppercase tracking-[0.2em] text-primary-foreground/90">
+              {caption}
+            </figcaption>
+          )}
+        </button>
+      )}
+    </figure>
+  );
+}
+
+
 function Series({
   index,
   title,
