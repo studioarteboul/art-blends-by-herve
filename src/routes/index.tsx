@@ -576,6 +576,9 @@ function Works() {
             "Jardins, eau et lumière changeante revisités par un regard contemporain : des touches épaisses en impasto qui dissolvent le motif en couleur et vibration pures.",
           )}
           works={impressionism}
+          video="/impressionnisme-revisite.mp4"
+          videoPoster="/impressionnisme-revisite-poster.jpg"
+          videoCaption={t("Studio film — Impressionism Revisited", "Film d'atelier — Impressionnisme Revisité")}
         />
         <Series
           index="VI"
