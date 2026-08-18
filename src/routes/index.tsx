@@ -598,7 +598,7 @@ function Works() {
             <p className="text-[0.7rem] uppercase tracking-[0.3em] text-accent">
               {t("Quotation", "Cotation")}
             </p>
-            <p className="mt-6 border-b border-border pb-6 font-display text-xl md:text-2xl">
+            <p className="mt-6 font-display text-xl md:text-2xl">
               {t(
                 "Works range from $5,000 to $25,000 depending on size format. Pricing is shared on request.",
                 "Les œuvres sont offertes entre 5 000 $ et 25 000 $ selon le format. Les prix sont communiqués sur demande.",
