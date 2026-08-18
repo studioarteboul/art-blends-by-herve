@@ -563,7 +563,11 @@ function Works() {
             "Une mosaïque de touches épaisses au couteau : chaque petit bloc de couleur est posé entier, et l'image se compose par accumulation.",
           )}
           works={caseisme}
+          video="/caseisme.mp4"
+          videoPoster="/caseisme-poster.jpg"
+          videoCaption={t("Studio film — Caseisme Collection", "Film d'atelier — Collection Caseisme")}
         />
+
         <Series
           index="V"
           title={t("Impressionism Revisited", "Impressionnisme Revisité")}
