@@ -588,6 +588,9 @@ function Works() {
             "Œuvres provençales des débuts : vignes, cours ombragées, volets bleus et jardins fleuris, peints à l'huile dans la lumière chaude du Sud.",
           )}
           works={provence}
+          video="/period-of-provence.mp4"
+          videoPoster="/period-of-provence-poster.jpg"
+          videoCaption={t("Studio film — Period of Provence", "Film d'atelier — Période de Provence")}
         />
 
         <section className="border-t border-border py-20">
