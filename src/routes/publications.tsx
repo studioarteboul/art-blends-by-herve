@@ -230,7 +230,7 @@ function Publications() {
 
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
             <a
-              href="https://share.popsa.com/FMij/22db9222-42c9-45d6-98af-9bf6b60d378e"
+              href="https://popsa.com/shared-print/22db9222-42c9-45d6-98af-9bf6b60d378e/"
               target="_blank"
               rel="noopener noreferrer"
               className="group block"
@@ -267,7 +267,7 @@ function Publications() {
             </a>
 
             <a
-              href="https://share.popsa.com/FMij/4872dc01-9e14-4338-803b-83fa2f010fcf"
+              href="https://popsa.com/shared-print/4872dc01-9e14-4338-803b-83fa2f010fcf/"
               target="_blank"
               rel="noopener noreferrer"
               className="group block"
