@@ -599,9 +599,9 @@ function Works() {
               {t("Quotation", "Cotation")}
             </p>
             <p className="mt-6 font-display text-xl md:text-2xl">
-              {t(
-                "Available works are offered between $7,000 and $28,000 depending on size format. Pricing is shared on request.",
-                "Les œuvres disponibles sont proposées entre 7 000 $ et 28 000 $ selon le format. Les prix sont communiqués sur demande.",
+{t(
+                "Available works are offered between $7,000 and $28,000 depending on their quotation by format. Pricing is shared on request.",
+                "Les œuvres disponibles sont proposées entre 7 000 $ et 28 000 $ selon leur cotation au format. Les prix sont communiqués sur demande.",
               )}
             </p>
           </div>
