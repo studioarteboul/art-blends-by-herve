@@ -68,8 +68,8 @@ const publications: Publication[] = [
   },
   {
     year: "2024",
-    en: "Author of a Book / Novel — “L'été des Génies”",
-    fr: "Auteur d'un livre / Roman — « L'été des Génies »",
+    en: "Author of a Novel — “L'été des Génies”",
+    fr: "Auteur d'un roman — « L'été des Génies »",
     place: "Montréal, Canada",
     photos: ["/lete-des-genies.jpg"],
   },
