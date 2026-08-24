@@ -51,7 +51,7 @@ function Exhibitions() {
           <p className="border-b border-border pb-6 font-display text-xl md:text-2xl">
             {t(
               "Private and public collections across France, Canada, and the United States.",
-              "Collections privées en France, Canada et États-Unis.",
+              "Collections privées en Europe, Canada et États-Unis.",
             )}
           </p>
         </Block>
