@@ -29,6 +29,7 @@ export const exhibitions: Entry[] = [
     en: "Expo New York with Artio Gallery at One Art Space",
     fr: "Expo New York avec Artio Gallery au One Art Space",
     place: "New York, USA",
+    photos: nycPhotos,
   },
   {
     year: "2021",
