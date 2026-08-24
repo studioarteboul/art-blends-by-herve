@@ -66,6 +66,13 @@ const publications: Publication[] = [
     place: "Artio Gallery",
     photos: ["/artiocatjul2025-1.jpg", "/artiocatjul2025-2.jpg"],
   },
+  {
+    year: "2024",
+    en: "Author of a Book / Novel — “L'été des Génies”",
+    fr: "Auteur d'un livre / Roman — « L'été des Génies »",
+    place: "Montréal, Canada",
+    photos: ["/lete-des-genies.jpg"],
+  },
 ];
 
 function Lightbox({
