@@ -66,10 +66,10 @@ const publications: Publication[] = [
     place: "Artio Gallery",
     photos: ["/artiocatjul2025-1.jpg", "/artiocatjul2025-2.jpg"],
   },
-  {
+{
     year: "2024",
-    en: "Author of a Novel — “L'été des Génies”",
-    fr: "Auteur d'un roman — « L'été des Génies »",
+    en: "Author of a Novel — L'été des Génies — Editions du Panthéon & Amazon",
+    fr: "Auteur d'un roman — L'été des Génies — Éditions du Panthéon & Amazon",
     place: "Montréal, Canada",
     photos: ["/lete-des-genies.jpg"],
   },
