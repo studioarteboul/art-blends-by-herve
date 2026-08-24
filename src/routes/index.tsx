@@ -600,8 +600,8 @@ function Works() {
             </p>
             <p className="mt-6 font-display text-xl md:text-2xl">
               {t(
-                "Works range from $5,000 to $25,000 depending on size format. Pricing is shared on request.",
-                "Les œuvres sont offertes entre 5 000 $ et 25 000 $ selon le format. Les prix sont communiqués sur demande.",
+                "Available works are offered between $7,000 and $28,000 depending on size format. Pricing is shared on request.",
+                "Les œuvres disponibles sont proposées entre 7 000 $ et 28 000 $ selon le format. Les prix sont communiqués sur demande.",
               )}
             </p>
           </div>
