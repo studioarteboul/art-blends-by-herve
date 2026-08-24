@@ -6,6 +6,7 @@ export type Entry = { year: string; en: string; fr: string; place: string; place
 
 const louvrePhotos = Array.from({ length: 9 }, (_, i) => `/louvre${i + 2}.jpg`);
 const meamPhotos = Array.from({ length: 9 }, (_, i) => `/meam${i + 1}.jpg`);
+const nycPhotos = Array.from({ length: 8 }, (_, i) => `/nyc${i + 1}.jpg`);
 
 export const exhibitions: Entry[] = [
   {
@@ -28,6 +29,7 @@ export const exhibitions: Entry[] = [
     en: "Expo New York with Artio Gallery at One Art Space",
     fr: "Expo New York avec Artio Gallery au One Art Space",
     place: "New York, USA",
+    photos: nycPhotos,
   },
   {
     year: "2021",
