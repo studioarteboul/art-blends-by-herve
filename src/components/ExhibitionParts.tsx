@@ -46,7 +46,7 @@ export const exhibitions: Entry[] = [
   {
     year: "2016",
     en: "Inaugural Exhibition, Studio Gallery ARTeboul",
-    fr: "Exposition inaugurale, Studio Gallery ARTeboul",
+    fr: "Exposition inaugurale, Studio Galerie ARTeboul",
     place: "Montréal, Canada",
   },
   {
