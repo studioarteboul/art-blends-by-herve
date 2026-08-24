@@ -11,7 +11,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Contact Studio ARTeboul in Montreal for appointments, artwork pricing inquiries, and available inventory via Arte Laguna World.",
+          "Contact Studio Privé ARTeboul in Montreal for appointments, artwork pricing inquiries, and available inventory via Arte Laguna World.",
       },
       { property: "og:title", content: "Contact & Studio — Hervé Teboul" },
       {
@@ -94,7 +94,7 @@ function Contact() {
           <p className="text-[0.7rem] uppercase tracking-[0.3em] text-accent">
             {t("Contact & Studio", "Contact et Atelier")}
           </p>
-          <h1 className="mt-6 font-display text-4xl leading-tight md:text-6xl">Studio ARTeboul</h1>
+          <h1 className="mt-6 font-display text-4xl leading-tight md:text-6xl">Studio Privé ARTeboul</h1>
           <p className="mt-8 max-w-md text-lg leading-relaxed text-muted-foreground">
             {t(
               "Studio visits are available by appointment in Montreal, where the practice has kept its creative roots. Active inventory is also listed on Arte Laguna World, Artio Gallery, and Artsy.",
@@ -106,7 +106,7 @@ function Contact() {
             <div>
               <dt className={labelClass}>{t("Studio", "Atelier")}</dt>
               <dd className="mt-2 font-display text-xl">
-                Studio ARTeboul — Montréal, QC
+                Studio Privé ARTeboul — Montréal, QC
               </dd>
             </div>
             <div>
