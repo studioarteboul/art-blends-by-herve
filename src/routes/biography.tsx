@@ -128,10 +128,10 @@ Expositions et collections privées à l'international.`;
               <li>REPERTOIRE BIENNAL des artistes Canadiens en galeries, MAGAZIN'art</li>
             </ul>
             <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
-              {[
-                { src: "/dict-drouot.webp", alt: t("Dictionnaire Drouot Cotation, Larousse", "Dictionnaire Drouot Cotation, Larousse") },
+{[
                 { src: "/dict-roussan.webp", alt: t("Guide de Roussan, Marché de l'art au Québec", "Guide de Roussan, Marché de l'art au Québec") },
                 { src: "/dict-magazinart.webp", alt: t("Répertoire biennal des artistes canadiens en galeries, Magazin'art", "Répertoire biennal des artistes canadiens en galeries, Magazin'art") },
+                { src: "/dict-drouot.webp", alt: t("Dictionnaire Drouot Cotation, Larousse", "Dictionnaire Drouot Cotation, Larousse") },
               ].map((img) => (
                 <img
                   key={img.src}
