@@ -554,8 +554,23 @@ function Works() {
 
       <Container>
         <Series
-
           index="I"
+          title={t(
+            "French Riviera — Côte d’Azur",
+            "French Riviera — Côte d’Azur",
+          )}
+          subtitle={t(
+            "Contemporary & Mixed Media",
+            "Art contemporain et techniques mixtes",
+          )}
+          description={t(
+            "A tribute to early influences: the Mediterranean, Provence landscapes and the vivid light of Southern France that still governs today's palette.",
+            "Un hommage aux influences des débuts : la Méditerranée, les paysages de Provence et la lumière vive du sud de la France qui gouverne encore la palette d'aujourd'hui.",
+          )}
+          works={mediterranean}
+        />
+        <Series
+          index="II"
           title={t(
             "Brilliance & Symbolism",
             "Brillance et symbolisme",
@@ -572,23 +587,6 @@ function Works() {
           video="/brillance-symbolisme.mp4"
           videoPoster="/brillance-symbolisme-poster.jpg"
           videoCaption={t("Studio film — Brilliance & Symbolism", "Film d'atelier — Brillance et symbolisme")}
-
-        />
-        <Series
-          index="II"
-          title={t(
-            "French Riviera — Côte d’Azur",
-            "French Riviera — Côte d’Azur",
-          )}
-          subtitle={t(
-            "Contemporary & Mixed Media",
-            "Art contemporain et techniques mixtes",
-          )}
-          description={t(
-            "A tribute to early influences: the Mediterranean, Provence landscapes and the vivid light of Southern France that still governs today's palette.",
-            "Un hommage aux influences des débuts : la Méditerranée, les paysages de Provence et la lumière vive du sud de la France qui gouverne encore la palette d'aujourd'hui.",
-          )}
-          works={mediterranean}
         />
         <Series
           index="III"
