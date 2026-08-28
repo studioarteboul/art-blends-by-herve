@@ -556,8 +556,8 @@ function Works() {
         <Series
           index="I"
           title={t(
-            "French Riviera — Côte d’Azur",
-            "French Riviera — Côte d’Azur",
+            "French Riviera — Côte d’Azur, 2026",
+            "French Riviera — Côte d’Azur, 2026",
           )}
           subtitle={t(
             "Contemporary & Mixed Media",
