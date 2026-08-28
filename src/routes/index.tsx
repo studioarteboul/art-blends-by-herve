@@ -223,7 +223,7 @@ const contemporary: Work[] = [
     year: "2025",
     mediumEn: "Acrylic, gold leaf and epoxy",
     mediumFr: "Acrylique, feuille d'or et époxy",
-    dimensions: "92 × 122 cm",
+    dimensions: "91 × 92 cm",
   },
   {
     image: "/ambiance-jazzy.jpg",
