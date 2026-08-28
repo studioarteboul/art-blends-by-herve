@@ -505,15 +505,15 @@ function Series({
     <section className="py-20">
       <div className="mb-12 flex flex-col gap-4 border-t border-border pt-8 md:flex-row md:items-start md:justify-between">
         <div className="flex flex-col gap-1">
+          {note && (
+            <p className="text-sm italic text-muted-foreground/80 md:text-base">{note}</p>
+          )}
           <div className="flex items-baseline gap-6">
             <span className="text-[0.7rem] uppercase tracking-[0.3em] text-accent">{index}</span>
             <h2 className="font-display text-3xl leading-tight md:text-4xl">{title}</h2>
           </div>
           {subtitle && (
             <p className="ml-[2.4rem] text-sm text-muted-foreground md:text-base">{subtitle}</p>
-          )}
-          {note && (
-            <p className="ml-[2.4rem] text-xs italic text-muted-foreground/80 md:text-sm">{note}</p>
           )}
         </div>
         <p className="max-w-md text-sm leading-relaxed text-muted-foreground">{description}</p>
