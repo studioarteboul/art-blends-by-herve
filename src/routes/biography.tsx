@@ -49,7 +49,7 @@ Après différentes périodes, il peint désormais dans un style contemporain su
 
 Expositions et collections privées à l'international.
 
-Cours particuliers et coaching pour étudiants et artistes de tous niveaux.`;
+Cours privés et coaching pour étudiants et artistes de tous niveaux.`;
 
   const facts = [
     { k: t("Born", "Naissance"), v: t("France", "France") },
