@@ -294,7 +294,7 @@ const contemporary: Work[] = [
     titleFr: "Quand les Vagues Dansent",
     year: "2024",
     mediumEn: "Acrylic, silver pearl and epoxy",
-    mediumFr: "Acrylique, perle d'argent et époxy",
+    mediumFr: "Acrylique, perles d'argent et époxy",
     dimensions: "51 × 51 cm",
   },
 ];
