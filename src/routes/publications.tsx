@@ -1,9 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import {
+  X,
+  ChevronLeft,
+  ChevronRight,
+  ExternalLink,
+  Play,
+  Pause,
+  Music,
+} from "lucide-react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { Block } from "@/components/ExhibitionParts";
+import { useAudio } from "@/lib/audio";
 import retrospectiveVideo from "@/assets/parcours-dartiste-720p.mp4.asset.json";
 
 type Publication = {
@@ -67,21 +76,6 @@ const publications: Publication[] = [
     fr: "Catalogue d'exposition Artio Gallery — Juillet — New York",
     place: "Artio Gallery",
     photos: ["/artiocatjul2025-1.jpg", "/artiocatjul2025-2.jpg"],
-  },
-  {
-    year: "2026",
-    en: "2026 Retrospective video — Yesterday to Today!",
-    fr: "Vidéo rétrospective 2026 — D'hier à aujourd'hui !",
-    place: "Studio ARTeboul",
-    photos: [],
-    video: retrospectiveVideo.url,
-  },
-  {
-    year: "2024",
-    en: "Author of a Novel — L'été des Génies — Editions du Panthéon & Amazon",
-    fr: "Auteur d'un roman — L'été des Génies — Éditions du Panthéon & Amazon",
-    place: "Montréal, Canada",
-    photos: ["/lete-des-genies.jpg"],
   },
 ];
 
@@ -328,7 +322,130 @@ function Publications() {
             </a>
           </div>
         </section>
+
+        <VideoMusicLiterature />
       </div>
     </Container>
+  );
+}
+
+function VideoMusicLiterature() {
+  const { t } = useLang();
+  const { isPlaying, toggle } = useAudio();
+
+  return (
+    <section className="py-14">
+      <h2 className="mt-6 font-display text-4xl leading-tight md:text-6xl">
+        {t("Video, Music & Literature", "Vidéo, Musique et Littérature")}
+      </h2>
+
+      <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
+        {/* Video */}
+        <div className="group block">
+          <div className="relative overflow-hidden">
+            <video
+              src={retrospectiveVideo.url}
+              controls
+              playsInline
+              preload="metadata"
+              className="max-w-full h-auto w-full object-contain"
+            >
+              {t(
+                "Your browser does not support the video tag.",
+                "Votre navigateur ne prend pas en charge la balise vidéo."
+              )}
+            </video>
+          </div>
+          <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            {t(
+              "2026 Retrospective video — Yesterday to Today!",
+              "Vidéo rétrospective 2026 — D'hier à aujourd'hui !"
+            )}
+          </p>
+          <div className="mt-4 flex justify-center">
+            <span className="inline-flex items-center gap-2 border border-border px-4 py-2 text-xs uppercase tracking-[0.2em] text-muted-foreground transition-colors group-hover:border-foreground group-hover:text-foreground">
+              {t("Watch video", "Regarder la vidéo")}
+            </span>
+          </div>
+        </div>
+
+        {/* Music */}
+        <button
+          type="button"
+          onClick={toggle}
+          className="group block w-full text-left"
+        >
+          <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-muted">
+            <Music className="h-16 w-16 text-muted-foreground transition-colors group-hover:text-foreground" />
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/0 opacity-0 transition-all duration-300 group-hover:bg-background/20 group-hover:opacity-100">
+              <span className="flex items-center gap-2 rounded-full bg-background/90 px-4 py-2 text-xs uppercase tracking-[0.2em]">
+                {isPlaying ? t("Pause", "Pause") : t("Listen", "Écouter")}
+                {isPlaying ? (
+                  <Pause className="h-3.5 w-3.5" />
+                ) : (
+                  <Play className="h-3.5 w-3.5" />
+                )}
+              </span>
+            </div>
+          </div>
+          <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            {t(
+              "Music — Original exhibition soundtrack",
+              "Musique — Bande sonore originale de l'exposition"
+            )}
+          </p>
+          <div className="mt-4 flex justify-center">
+            <span className="inline-flex items-center gap-2 border border-border px-4 py-2 text-xs uppercase tracking-[0.2em] text-muted-foreground transition-colors group-hover:border-foreground group-hover:text-foreground">
+              {isPlaying
+                ? t("Pause soundtrack", "Arrêter la musique")
+                : t("Play soundtrack", "Lire la musique")}
+              {isPlaying ? (
+                <Pause className="h-3.5 w-3.5" />
+              ) : (
+                <Play className="h-3.5 w-3.5" />
+              )}
+            </span>
+          </div>
+        </button>
+
+        {/* Literature */}
+        <a
+          href="https://www.placedeslibraires.fr/livre/9782754769082-l-ete-des-genies-herve-teboul/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group block"
+        >
+          <div className="relative overflow-hidden">
+            <img
+              src="/lete-des-genies.jpg"
+              alt={t(
+                "Book cover — L'été des Génies",
+                "Couverture — L'été des Génies"
+              )}
+              loading="lazy"
+              className="max-w-full h-auto w-full object-contain transition-opacity duration-300 group-hover:opacity-85"
+            />
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/0 opacity-0 transition-all duration-300 group-hover:bg-background/20 group-hover:opacity-100">
+              <span className="flex items-center gap-2 rounded-full bg-background/90 px-4 py-2 text-xs uppercase tracking-[0.2em]">
+                {t("View book", "Voir le livre")}
+                <ExternalLink className="h-3.5 w-3.5" />
+              </span>
+            </div>
+          </div>
+          <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            {t(
+              "Author of a Novel — L'été des Génies — Editions du Panthéon",
+              "Auteur d'un roman — L'été des Génies — Éditions du Panthéon"
+            )}
+          </p>
+          <div className="mt-4 flex justify-center">
+            <span className="inline-flex items-center gap-2 border border-border px-4 py-2 text-xs uppercase tracking-[0.2em] text-muted-foreground transition-colors group-hover:border-foreground group-hover:text-foreground">
+              {t("View book", "Voir le livre")}
+              <ExternalLink className="h-3.5 w-3.5" />
+            </span>
+          </div>
+        </a>
+      </div>
+    </section>
   );
 }
