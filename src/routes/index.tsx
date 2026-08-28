@@ -160,7 +160,7 @@ const contemporary: Work[] = [
     year: "2025",
     mediumEn: "Acrylic, gold leaf and epoxy",
     mediumFr: "Acrylique, feuille d'or et époxy",
-    dimensions: "122 × 91 cm",
+    dimensions: "92 × 92 cm",
   },
   {
     image: "/metamorphose.jpg",
