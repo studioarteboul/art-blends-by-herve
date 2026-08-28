@@ -207,6 +207,15 @@ const contemporary: Work[] = [
     mediumFr: "Acrylique, feuille d'or rose et époxy",
     dimensions: "122 × 91 cm",
   },
+  {
+    image: "/dance-lascive.jpg",
+    titleEn: "Dance Lascive",
+    titleFr: "Dance Lascive",
+    year: "2025",
+    mediumEn: "Acrylic, silver leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'argent et époxy",
+    dimensions: "122 × 91 cm",
+  },
 ];
 
 const mediterranean: Work[] = [
