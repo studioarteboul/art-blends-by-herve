@@ -151,7 +151,7 @@ const contemporary: Work[] = [
     year: "2025",
     mediumEn: "Acrylic, silver leaf and epoxy",
     mediumFr: "Acrylique, feuille d'argent et époxy",
-    dimensions: "122 × 91 cm",
+    dimensions: "61 × 91 cm",
   },
   {
     image: "/rouge-delice.jpg",
