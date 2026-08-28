@@ -322,15 +322,14 @@ function Publications() {
 
 function VideoMusicLiterature() {
   const { t } = useLang();
-  const { isPlaying, toggle } = useAudio();
 
   return (
     <section className="py-14">
       <h2 className="mt-6 font-display text-4xl leading-tight md:text-6xl">
-        {t("Video, Music & Literature", "Vidéo, Musique et Littérature")}
+        {t("Video & Literature", "Vidéo et Littérature")}
       </h2>
 
-      <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
+      <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
         {/* Video */}
         <div className="group block">
           <div className="relative overflow-hidden">
@@ -359,45 +358,6 @@ function VideoMusicLiterature() {
             </span>
           </div>
         </div>
-
-        {/* Music */}
-        <button
-          type="button"
-          onClick={toggle}
-          className="group block w-full text-left"
-        >
-          <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-muted">
-            <Music className="h-16 w-16 text-muted-foreground transition-colors group-hover:text-foreground" />
-            <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/0 opacity-0 transition-all duration-300 group-hover:bg-background/20 group-hover:opacity-100">
-              <span className="flex items-center gap-2 rounded-full bg-background/90 px-4 py-2 text-xs uppercase tracking-[0.2em]">
-                {isPlaying ? t("Pause", "Pause") : t("Listen", "Écouter")}
-                {isPlaying ? (
-                  <Pause className="h-3.5 w-3.5" />
-                ) : (
-                  <Play className="h-3.5 w-3.5" />
-                )}
-              </span>
-            </div>
-          </div>
-          <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            {t(
-              "Music — Original exhibition soundtrack",
-              "Musique — Bande sonore originale de l'exposition"
-            )}
-          </p>
-          <div className="mt-4 flex justify-center">
-            <span className="inline-flex items-center gap-2 border border-border px-4 py-2 text-xs uppercase tracking-[0.2em] text-muted-foreground transition-colors group-hover:border-foreground group-hover:text-foreground">
-              {isPlaying
-                ? t("Pause soundtrack", "Arrêter la musique")
-                : t("Play soundtrack", "Lire la musique")}
-              {isPlaying ? (
-                <Pause className="h-3.5 w-3.5" />
-              ) : (
-                <Play className="h-3.5 w-3.5" />
-              )}
-            </span>
-          </div>
-        </button>
 
         {/* Literature */}
         <a
