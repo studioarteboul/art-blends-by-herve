@@ -221,15 +221,22 @@ const mediterranean: Work[] = [
   },
 ];
 
-const japon: Work[] = Array.from({ length: 7 }, (_, i) => ({
-  image: `/ij${i + 1}.jpg`,
-  titleEn: `IJ${i + 1}`,
-  titleFr: `IJ${i + 1}`,
-  year: "2021",
-  mediumEn: "Acrylic on canvas",
-  mediumFr: "Acrylique sur toile",
-  dimensions: "",
-}));
+const japon: Work[] = Array.from({ length: 7 }, (_, i) => {
+  const n = i + 1;
+  let dimensions = "";
+  if (n === 1) dimensions = "122 × 183 cm";
+  else if ([2, 3, 4, 7].includes(n)) dimensions = "92 × 122 cm";
+  else if ([5, 6].includes(n)) dimensions = "92 × 92 cm";
+  return {
+    image: `/ij${n}.jpg`,
+    titleEn: `IJ${n}`,
+    titleFr: `IJ${n}`,
+    year: "2021",
+    mediumEn: "Acrylic on canvas",
+    mediumFr: "Acrylique sur toile",
+    dimensions,
+  };
+});
 
 const caseisme: Work[] = Array.from({ length: 12 }, (_, i) => ({
   image: `/cc${i + 1}.jpg`,
