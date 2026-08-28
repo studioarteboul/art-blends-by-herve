@@ -637,7 +637,7 @@ function Works() {
         />
         <Series
           index="VI"
-          title={t("Period of Provence", "Période de Provence")}
+          title={t("Period of Provence, 2000 - 2012", "Période de Provence, 2000 - 2012")}
           description={t(
             "Early Provençal works: vineyards, shaded courtyards, blue shutters and flowering gardens, painted in oil with a warm Southern light.",
             "Œuvres provençales des débuts : vignes, cours ombragées, volets bleus et jardins fleuris, peints à l'huile dans la lumière chaude du Sud.",
