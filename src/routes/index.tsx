@@ -292,7 +292,7 @@ const contemporary: Work[] = [
     image: "/quand-les-vagues-dansent.jpeg",
     titleEn: "Quand les Vagues Dansent",
     titleFr: "Quand les Vagues Dansent",
-    year: "2025",
+    year: "2024",
     mediumEn: "Acrylic, silver pearl and epoxy",
     mediumFr: "Acrylique, perle d'argent et époxy",
     dimensions: "51 × 51 cm",
