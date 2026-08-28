@@ -264,15 +264,24 @@ const caseisme: Work[] = Array.from({ length: 12 }, (_, i) => {
   };
 });
 
-const impressionism: Work[] = Array.from({ length: 5 }, (_, i) => ({
-  image: `/ir${i + 1}.jpg`,
-  titleEn: `IR${i + 1}`,
-  titleFr: `IR${i + 1}`,
-  year: "",
-  mediumEn: "Oil on canvas",
-  mediumFr: "Huile sur toile",
-  dimensions: "",
-}));
+const impressionism: Work[] = Array.from({ length: 5 }, (_, i) => {
+  const n = i + 1;
+  let dimensions = "";
+  if (n === 1) dimensions = "61 × 92 cm";
+  else if (n === 2) dimensions = "61 × 92 cm";
+  else if (n === 3) dimensions = "76 × 92 cm";
+  else if (n === 4) dimensions = "102 × 102 cm";
+  else if (n === 5) dimensions = "76 × 102 cm";
+  return {
+    image: `/ir${n}.jpg`,
+    titleEn: `IR${n}`,
+    titleFr: `IR${n}`,
+    year: "",
+    mediumEn: "Oil on canvas",
+    mediumFr: "Huile sur toile",
+    dimensions,
+  };
+});
 
 const provence: Work[] = Array.from({ length: 23 }, (_, i) => ({
   image: `/pr${i + 1}.jpg`,
