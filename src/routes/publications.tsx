@@ -1,9 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import {
+  X,
+  ChevronLeft,
+  ChevronRight,
+  ExternalLink,
+  Play,
+  Pause,
+  Music,
+} from "lucide-react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { Block } from "@/components/ExhibitionParts";
+import { useAudio } from "@/lib/audio";
 import retrospectiveVideo from "@/assets/parcours-dartiste-720p.mp4.asset.json";
 
 type Publication = {
