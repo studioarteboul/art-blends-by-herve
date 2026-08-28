@@ -38,7 +38,7 @@ After various periods, he now paints in a contemporary style on a variety of the
 
 Exhibitions and private collections internationally.
 
-Hervé Teboul Art School for 25 years for students and artists of all levels.`;
+Hervé Teboul Art School since 2001 for students and artists of all levels.`;
 
   const bioFr = `Hervé Teboul est un artiste français et professeur d'art qui vit à Montréal, Canada, depuis 2001.
 
@@ -50,7 +50,7 @@ Après différentes périodes, il peint désormais dans un style contemporain su
 
 Expositions et collections privées à l'international.
 
-École d'art Hervé Teboul depuis 25 ans pour étudiants et artistes de tous niveaux.`;
+École d'art Hervé Teboul depuis 2001 pour étudiants et artistes de tous niveaux.`;
 
 
 
