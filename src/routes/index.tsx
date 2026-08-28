@@ -122,8 +122,8 @@ const contemporary: Work[] = [
     titleEn: "La Vie en Rose",
     titleFr: "La Vie en Rose",
     year: "2025",
-    mediumEn: "Acrylic, rose gold leaf and epoxy",
-    mediumFr: "Acrylique, feuille d'or rose et époxy",
+    mediumEn: "Acrylic, gold leaf & epoxy",
+    mediumFr: "Acrylique, feuille d'or & époxy",
     dimensions: "122 × 91 cm",
   },
   {
