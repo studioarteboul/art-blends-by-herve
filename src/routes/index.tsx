@@ -625,7 +625,7 @@ function Works() {
 
         <Series
           index="V"
-          title={t("Impressionism Revisited", "Impressionnisme Revisité")}
+          title={t("Impressionism Revisited, 2022 - 2023", "Impressionnisme Revisité, 2022 - 2023")}
           description={t(
             "Gardens, water and shifting light revisited through a contemporary lens: dense impasto touches that dissolve the motif into pure colour and vibration.",
             "Jardins, eau et lumière changeante revisités par un regard contemporain : des touches épaisses en impasto qui dissolvent le motif en couleur et vibration pures.",
