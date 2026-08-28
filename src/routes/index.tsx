@@ -283,15 +283,31 @@ const impressionism: Work[] = Array.from({ length: 5 }, (_, i) => {
   };
 });
 
-const provence: Work[] = Array.from({ length: 23 }, (_, i) => ({
-  image: `/pr${i + 1}.jpg`,
-  titleEn: `PR${i + 1}`,
-  titleFr: `PR${i + 1}`,
-  year: "",
-  mediumEn: "Oil on canvas",
-  mediumFr: "Huile sur toile",
-  dimensions: "",
-}));
+const provence: Work[] = [
+  { image: "/pr1.jpg", titleEn: "PR1", titleFr: "PR1", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "46 × 56 cm" },
+  { image: "/pr2.jpg", titleEn: "PR2", titleFr: "PR2", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "51 × 61 cm" },
+  { image: "/pr3.jpg", titleEn: "PR3", titleFr: "PR3", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "51 × 61 cm" },
+  { image: "/pr4.jpg", titleEn: "PR4", titleFr: "PR4", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "76 × 92 cm" },
+  { image: "/pr5.jpg", titleEn: "PR5", titleFr: "PR5", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "61 × 76 cm" },
+  { image: "/pr6.jpg", titleEn: "PR6", titleFr: "PR6", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "61 × 76 cm" },
+  { image: "/pr7.jpg", titleEn: "PR7", titleFr: "PR7", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "61 × 76 cm" },
+  { image: "/pr8.jpg", titleEn: "PR8", titleFr: "PR8", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "61 × 76 cm" },
+  { image: "/pr9.jpg", titleEn: "PR9", titleFr: "PR9", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "61 × 76 cm" },
+  { image: "/pr10.jpg", titleEn: "PR10", titleFr: "PR10", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "61 × 76 cm" },
+  { image: "/pr11.jpg", titleEn: "PR11", titleFr: "PR11", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "61 × 76 cm" },
+  { image: "/pr12.jpg", titleEn: "PR12", titleFr: "PR12", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "51 × 61 cm" },
+  { image: "/pr13.jpg", titleEn: "PR13", titleFr: "PR13", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "76 × 92 cm" },
+  { image: "/pr14.jpg", titleEn: "PR14", titleFr: "PR14", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "61 × 76 cm" },
+  { image: "/pr15.jpg", titleEn: "PR15", titleFr: "PR15", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "51 × 61 cm" },
+  { image: "/pr16.jpg", titleEn: "PR16", titleFr: "PR16", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "76 × 92 cm" },
+  { image: "/pr17.jpg", titleEn: "PR17", titleFr: "PR17", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "61 × 76 cm" },
+  { image: "/pr18.jpg", titleEn: "PR18", titleFr: "PR18", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "61 × 76 cm" },
+  { image: "/pr19.jpg", titleEn: "PR19", titleFr: "PR19", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "61 × 76 cm" },
+  { image: "/pr20.jpg", titleEn: "PR20", titleFr: "PR20", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "51 × 61 cm" },
+  { image: "/pr21.jpg", titleEn: "PR21", titleFr: "PR21", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "122 × 122 cm" },
+  { image: "/pr22.jpg", titleEn: "PR22", titleFr: "PR22", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "92 × 92 cm" },
+  { image: "/pr23.jpg", titleEn: "PR23", titleFr: "PR23", year: "", mediumEn: "Oil on canvas", mediumFr: "Huile sur toile", dimensions: "92 × 122 cm" },
+];
 
 
 
