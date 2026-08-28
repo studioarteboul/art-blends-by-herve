@@ -68,7 +68,15 @@ const publications: Publication[] = [
     place: "Artio Gallery",
     photos: ["/artiocatjul2025-1.jpg", "/artiocatjul2025-2.jpg"],
   },
-{
+  {
+    year: "2026",
+    en: "2026 Retrospective video — Yesterday to Today!",
+    fr: "Vidéo rétrospective 2026 — D'hier à aujourd'hui !",
+    place: "Studio ARTeboul",
+    photos: [],
+    video: retrospectiveVideo.url,
+  },
+  {
     year: "2024",
     en: "Author of a Novel — L'été des Génies — Editions du Panthéon & Amazon",
     fr: "Auteur d'un roman — L'été des Génies — Éditions du Panthéon & Amazon",
