@@ -178,7 +178,7 @@ const contemporary: Work[] = [
     year: "2025",
     mediumEn: "Acrylic, silver leaf and epoxy",
     mediumFr: "Acrylique, feuille d'argent et époxy",
-    dimensions: "150 × 90 cm",
+    dimensions: "92 × 152 cm",
   },
   {
     image: "/supercar-maserati.jpg",
@@ -187,7 +187,7 @@ const contemporary: Work[] = [
     year: "2025",
     mediumEn: "Acrylic, silver leaf and epoxy",
     mediumFr: "Acrylique, feuille d'argent et époxy",
-    dimensions: "150 × 90 cm",
+    dimensions: "92 × 152 cm",
   },
   {
     image: "/rondeurs-dorees.webp",
