@@ -36,9 +36,7 @@ Gardens, the countryside, and bodies of water were his main sources of inspirati
 
 After various periods, he now paints in a contemporary style on a variety of themes that interest him, using acrylics, gold or silver leaf, and epoxy.
 
-Exhibitions and private collections internationally.
-
-Hervé Teboul Art School since 2001 for students and artists of all levels.`;
+Exhibitions and private collections internationally.`;
 
   const bioFr = `Hervé Teboul est un artiste français et professeur d'art qui vit à Montréal, Canada, depuis 2001.
 
@@ -48,9 +46,7 @@ Les jardins, la campagne et les plans d'eau ont été ses principales sources d'
 
 Après différentes périodes, il peint désormais dans un style contemporain sur une variété de thèmes qui l'intéressent, en utilisant l'acrylique, les feuilles d'or ou d'argent et l'époxy.
 
-Expositions et collections privées à l'international.
-
-École d'art Hervé Teboul depuis 2001 pour étudiants et artistes de tous niveaux.`;
+Expositions et collections privées à l'international.`;
 
 
 
@@ -96,6 +92,10 @@ Expositions et collections privées à l'international.
             height={768}
             className="mt-14 w-full object-cover plate"
           />
+          <p className="mt-4 text-sm font-medium leading-relaxed text-foreground/85">
+            <strong>{t("Hervé Teboul Art School", "École d'art Hervé Teboul")}</strong>
+            {t(" since 2001 for students and artists of all levels.", " depuis 2001 pour étudiants et artistes de tous niveaux.")}
+          </p>
         </div>
 
         <div className="lg:pt-24">
