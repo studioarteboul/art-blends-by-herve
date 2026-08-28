@@ -81,16 +81,17 @@ Expositions et collections privées à l'international.
               ))}
           </div>
 
-          <dl className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-2">
-            {facts.map((f) => (
-              <div key={f.k} className="bg-background p-6">
-                <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-muted-foreground">
-                  {f.k}
-                </dt>
-                <dd className="mt-2 font-display text-xl">{f.v}</dd>
-              </div>
-            ))}
-          </dl>
+          <img
+            src={artSchoolImage.url}
+            alt={t(
+              "Hervé Teboul Art School — students painting in the studio",
+              "École d'art Hervé Teboul — élèves peignant dans l'atelier",
+            )}
+            loading="lazy"
+            width={1024}
+            height={768}
+            className="mt-14 w-full object-cover plate"
+          />
         </div>
 
         <div className="lg:pt-24">
