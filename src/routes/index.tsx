@@ -189,6 +189,24 @@ const contemporary: Work[] = [
     mediumFr: "Acrylique, feuille d'argent et époxy",
     dimensions: "150 × 90 cm",
   },
+  {
+    image: "/rondeurs-dorees.webp",
+    titleEn: "Rondeurs Dorées",
+    titleFr: "Rondeurs Dorées",
+    year: "2025",
+    mediumEn: "Acrylic, gold leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'or et époxy",
+    dimensions: "122 × 91 cm",
+  },
+  {
+    image: "/rose-gala-2025.webp",
+    titleEn: "Rose Gala",
+    titleFr: "Rose Gala",
+    year: "2025",
+    mediumEn: "Acrylic, rose gold leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'or rose et époxy",
+    dimensions: "122 × 91 cm",
+  },
 ];
 
 const mediterranean: Work[] = [
