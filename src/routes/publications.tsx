@@ -326,8 +326,14 @@ function VideoMusicLiterature() {
   return (
     <section className="py-14">
       <h2 className="mt-6 font-display text-4xl leading-tight md:text-6xl">
-        {t("Video & Literature", "Vidéo et Littérature")}
+        {t("Video, Music & Literature", "Vidéo, Musique et Littérature")}
       </h2>
+      <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+        {t(
+          "2026 Hervé Teboul — Copyright",
+          "2026 Hervé Teboul — Tous droits réservés"
+        )}
+      </p>
 
       <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
         {/* Video */}
