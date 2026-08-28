@@ -4,6 +4,7 @@ import { X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { Block } from "@/components/ExhibitionParts";
+import retrospectiveVideo from "@/assets/parcours-dartiste-720p.mp4.asset.json";
 
 type Publication = {
   year: string;
@@ -11,6 +12,7 @@ type Publication = {
   fr: string;
   place: string;
   photos: string[];
+  video?: string;
 };
 
 const publications: Publication[] = [
@@ -66,7 +68,15 @@ const publications: Publication[] = [
     place: "Artio Gallery",
     photos: ["/artiocatjul2025-1.jpg", "/artiocatjul2025-2.jpg"],
   },
-{
+  {
+    year: "2026",
+    en: "2026 Retrospective video — Yesterday to Today!",
+    fr: "Vidéo rétrospective 2026 — D'hier à aujourd'hui !",
+    place: "Studio ARTeboul",
+    photos: [],
+    video: retrospectiveVideo.url,
+  },
+  {
     year: "2024",
     en: "Author of a Novel — L'été des Génies — Editions du Panthéon & Amazon",
     fr: "Auteur d'un roman — L'été des Génies — Éditions du Panthéon & Amazon",
@@ -170,6 +180,20 @@ function PublicationRow({ entry }: { entry: Publication }) {
           {entry.place}
         </span>
       </div>
+
+      {entry.video && (
+        <div className="mt-8">
+          <video
+            src={entry.video}
+            controls
+            playsInline
+            preload="metadata"
+            className="max-w-full h-auto w-full"
+          >
+            {t("Your browser does not support the video tag.", "Votre navigateur ne prend pas en charge la balise vidéo.")}
+          </video>
+        </div>
+      )}
 
       <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
         {entry.photos.map((src, i) => (
