@@ -581,8 +581,8 @@ function Works() {
         <Series
           index="II"
           title={t(
-            "Brilliance & Symbolism, 2024 & 2025",
-            "Brillance et symbolisme, 2024 & 2025",
+            "Brilliance — Symbolism, 2024 & 2025",
+            "Brillance — symbolisme, 2024 & 2025",
           )}
           subtitle={t(
             "Contemporary & Mixed Media",
