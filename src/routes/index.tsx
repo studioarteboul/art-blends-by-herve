@@ -167,9 +167,9 @@ const contemporary: Work[] = [
     titleEn: "Métamorphose",
     titleFr: "Métamorphose",
     year: "2025",
-    mediumEn: "Acrylic, gold and silver leaf and epoxy",
-    mediumFr: "Acrylique, feuilles d'or et d'argent et époxy",
-    dimensions: "100 × 100 cm",
+    mediumEn: "Acrylic, silver leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'argent et époxy",
+    dimensions: "122 × 183 cm",
   },
   {
     image: "/supercar.jpg",
