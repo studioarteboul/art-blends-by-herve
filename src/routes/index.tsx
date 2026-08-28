@@ -281,8 +281,8 @@ const contemporary: Work[] = [
   },
   {
     image: "/foret-doree.jpg",
-    titleEn: "Forêt Dorée",
-    titleFr: "Forêt Dorée",
+    titleEn: "Chemin Doré",
+    titleFr: "Chemin Doré",
     year: "2025",
     mediumEn: "Acrylic, gold leaf and epoxy",
     mediumFr: "Acrylique, feuille d'or et époxy",
