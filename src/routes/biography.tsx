@@ -27,7 +27,7 @@ export const Route = createFileRoute("/biography")({
 function Biography() {
   const { t } = useLang();
 
-  const bioEn = `Hervé Teboul is a French artist who has lived in Montreal, Canada, since 2001.
+  const bioEn = `Hervé Teboul is a French artist and art teacher who has lived in Montreal, Canada, since 2001.
 
 Passionate about art since childhood, he attended workshops in Nice around the age of 18, perfecting his technique and exploring painting in the south of France, where he lived until his thirties.
 
@@ -37,7 +37,7 @@ After various periods, he now paints in a contemporary style on a variety of the
 
 Exhibitions and private collections internationally.`;
 
-  const bioFr = `Hervé Teboul est un artiste français qui vit à Montréal, Canada, depuis 2001.
+  const bioFr = `Hervé Teboul est un artiste français et professeur d'art qui vit à Montréal, Canada, depuis 2001.
 
 Passionné par l'art depuis son enfance, il a fréquenté des ateliers à Nice vers l'âge de 18 ans, perfectionnant sa technique et explorant la peinture dans le sud de la France, où il a vécu jusqu'à sa trentaine.
 
