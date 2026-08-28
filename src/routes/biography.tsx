@@ -65,9 +65,24 @@ Expositions et collections privées à l'international.
           <div className="mt-10 space-y-6 text-lg leading-relaxed text-foreground/85">
             {t(bioEn, bioFr)
               .split("\n\n")
-              .map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
+              .map((paragraph, i) => {
+                const enMarker = "Hervé Teboul Art School";
+                const frMarker = "École d'art Hervé Teboul";
+                const marker = paragraph.includes(frMarker)
+                  ? frMarker
+                  : paragraph.includes(enMarker)
+                    ? enMarker
+                    : null;
+                if (!marker) return <p key={i}>{paragraph}</p>;
+                const [before, after] = paragraph.split(marker);
+                return (
+                  <p key={i}>
+                    {before}
+                    <strong>{marker}</strong>
+                    {after}
+                  </p>
+                );
+              })}
           </div>
 
           <img
