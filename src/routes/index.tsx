@@ -140,8 +140,8 @@ const contemporary: Work[] = [
     titleEn: "Chic Soirée",
     titleFr: "Chic Soirée",
     year: "2025",
-    mediumEn: "Acrylic, gold leaf and epoxy",
-    mediumFr: "Acrylique, feuille d'or et époxy",
+    mediumEn: "Acrylic, silver leaf & epoxy",
+    mediumFr: "Acrylique, feuille d'argent & époxy",
     dimensions: "122 × 91 cm",
   },
   {
