@@ -501,6 +501,7 @@ function Series({
   videoPoster?: string;
   videoCaption?: string;
 }) {
+  const { t } = useLang();
   return (
     <section className="py-20">
       <div className="mb-12 flex flex-col gap-4 border-t border-border pt-8 md:flex-row md:items-start md:justify-between">
@@ -516,7 +517,15 @@ function Series({
             <p className="ml-[2.4rem] text-sm text-muted-foreground md:text-base">{subtitle}</p>
           )}
         </div>
-        <p className="max-w-md text-sm leading-relaxed text-muted-foreground">{description}</p>
+        <div className="max-w-md">
+          <p className="text-sm leading-relaxed text-muted-foreground">{description}</p>
+          <p className="mt-3 text-sm font-semibold text-muted-foreground">
+            {t(
+              "Some of the works listed below may no longer be available.",
+              "Certaines œuvres présentées ci-dessous peuvent ne plus être disponibles.",
+            )}
+          </p>
+        </div>
       </div>
       <div className="grid items-start gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {video && (
