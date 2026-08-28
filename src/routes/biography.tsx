@@ -52,18 +52,7 @@ Expositions et collections privées à l'international.
 
 École d'art Hervé Teboul depuis 25 ans pour étudiants et artistes de tous niveaux.`;
 
-  const facts = [
-    { k: t("Born", "Naissance"), v: t("France", "France") },
-    { k: t("Based", "Établi à"), v: t("Montreal, since 2001", "Montréal, depuis 2001") },
-    { k: t("Practice", "Pratique"), v: t("Post-Impressionist since 1998", "Post-impressionniste depuis 1998") },
-    {
-      k: t("Media", "Médiums"),
-      v: t(
-        "Acrylic, gold & silver leaf, epoxy",
-        "Acrylique, feuilles d'or et d'argent, époxy",
-      ),
-    },
-  ];
+
 
   return (
     <Container>
