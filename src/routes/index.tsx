@@ -238,15 +238,31 @@ const japon: Work[] = Array.from({ length: 7 }, (_, i) => {
   };
 });
 
-const caseisme: Work[] = Array.from({ length: 12 }, (_, i) => ({
-  image: `/cc${i + 1}.jpg`,
-  titleEn: `CC${i + 1}`,
-  titleFr: `CC${i + 1}`,
-  year: "",
-  mediumEn: "Oil on canvas",
-  mediumFr: "Huile sur toile",
-  dimensions: "",
-}));
+const caseisme: Work[] = Array.from({ length: 12 }, (_, i) => {
+  const n = i + 1;
+  let dimensions = "";
+  if (n === 1) dimensions = "92 × 92 cm";
+  else if (n === 2) dimensions = "61 × 76 cm";
+  else if (n === 3) dimensions = "92 × 102 cm";
+  else if (n === 4) dimensions = "92 × 92 cm";
+  else if (n === 5) dimensions = "61 × 76 cm";
+  else if (n === 6) dimensions = "76 × 92 cm";
+  else if (n === 7) dimensions = "76 × 92 cm";
+  else if (n === 8) dimensions = "76 × 92 cm";
+  else if (n === 9) dimensions = "92 × 76 cm";
+  else if (n === 10) dimensions = "122 × 152 cm";
+  else if (n === 11) dimensions = "61 × 76 cm";
+  else if (n === 12) dimensions = "76 × 92 cm";
+  return {
+    image: `/cc${n}.jpg`,
+    titleEn: `CC${n}`,
+    titleFr: `CC${n}`,
+    year: "",
+    mediumEn: "Oil on canvas",
+    mediumFr: "Huile sur toile",
+    dimensions,
+  };
+});
 
 const impressionism: Work[] = Array.from({ length: 5 }, (_, i) => ({
   image: `/ir${i + 1}.jpg`,
