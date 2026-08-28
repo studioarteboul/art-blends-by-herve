@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { PrizeItem } from "@/components/ExhibitionParts";
+import artSchoolImage from "@/assets/studio-arteboul-art-school.jpeg.asset.json";
 const portrait = "/herve-teboul-portrait.jpg";
 
 export const Route = createFileRoute("/biography")({
@@ -51,18 +52,7 @@ Expositions et collections privées à l'international.
 
 École d'art Hervé Teboul depuis 25 ans pour étudiants et artistes de tous niveaux.`;
 
-  const facts = [
-    { k: t("Born", "Naissance"), v: t("France", "France") },
-    { k: t("Based", "Établi à"), v: t("Montreal, since 2001", "Montréal, depuis 2001") },
-    { k: t("Practice", "Pratique"), v: t("Post-Impressionist since 1998", "Post-impressionniste depuis 1998") },
-    {
-      k: t("Media", "Médiums"),
-      v: t(
-        "Acrylic, gold & silver leaf, epoxy",
-        "Acrylique, feuilles d'or et d'argent, époxy",
-      ),
-    },
-  ];
+
 
   return (
     <Container>
@@ -80,16 +70,17 @@ Expositions et collections privées à l'international.
               ))}
           </div>
 
-          <dl className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-2">
-            {facts.map((f) => (
-              <div key={f.k} className="bg-background p-6">
-                <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-muted-foreground">
-                  {f.k}
-                </dt>
-                <dd className="mt-2 font-display text-xl">{f.v}</dd>
-              </div>
-            ))}
-          </dl>
+          <img
+            src={artSchoolImage.url}
+            alt={t(
+              "Hervé Teboul Art School — students painting in the studio",
+              "École d'art Hervé Teboul — élèves peignant dans l'atelier",
+            )}
+            loading="lazy"
+            width={1024}
+            height={768}
+            className="mt-14 w-full object-cover plate"
+          />
         </div>
 
         <div className="lg:pt-24">
