@@ -484,6 +484,7 @@ function Series({
   index,
   title,
   subtitle,
+  note,
   description,
   works,
   video,
@@ -493,6 +494,7 @@ function Series({
   index: string;
   title: string;
   subtitle?: string;
+  note?: string;
   description: string;
   works: Work[];
   video?: string;
@@ -509,6 +511,9 @@ function Series({
           </div>
           {subtitle && (
             <p className="ml-[2.4rem] text-sm text-muted-foreground md:text-base">{subtitle}</p>
+          )}
+          {note && (
+            <p className="ml-[2.4rem] text-xs italic text-muted-foreground/80 md:text-sm">{note}</p>
           )}
         </div>
         <p className="max-w-md text-sm leading-relaxed text-muted-foreground">{description}</p>
