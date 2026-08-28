@@ -612,7 +612,7 @@ function Works() {
 
         <Series
           index="IV"
-          title={t("Caseisme Collection", "Collection Caseisme")}
+          title={t("Caseisme Collection, 2016 - 2020", "Collection Caseisme, 2016 - 2020")}
           description={t(
             "A mosaic of thick palette-knife strokes: each small block of colour is laid down whole, and the image assembles itself from the accumulation.",
             "Une mosaïque de touches épaisses au couteau : chaque petit bloc de couleur est posé entier, et l'image se compose par accumulation.",
