@@ -92,6 +92,10 @@ Expositions et collections privées à l'international.`;
             height={768}
             className="mt-14 w-full object-cover plate"
           />
+          <p className="mt-4 text-sm font-medium leading-relaxed text-foreground/85">
+            <strong>{t("Hervé Teboul Art School", "École d'art Hervé Teboul")}</strong>
+            {t(" since 2001 for students and artists of all levels.", " depuis 2001 pour étudiants et artistes de tous niveaux.")}
+          </p>
         </div>
 
         <div className="lg:pt-24">
