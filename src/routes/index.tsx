@@ -599,6 +599,19 @@ function Works() {
         />
         <Series
           index="III"
+          title={t("Impressionism Revisited, 2022 - 2023", "Impressionnisme Revisité, 2022 - 2023")}
+          description={t(
+            "Gardens, water and shifting light revisited through a contemporary lens: dense impasto touches that dissolve the motif into pure colour and vibration.",
+            "Jardins, eau et lumière changeante revisités par un regard contemporain : des touches épaisses en impasto qui dissolvent le motif en couleur et vibration pures.",
+          )}
+          works={impressionism}
+          video="/impressionnisme-revisite.mp4"
+          videoPoster="/impressionnisme-revisite-poster.jpg"
+          videoCaption={t("Studio film — Impressionism Revisited", "Film d'atelier — Impressionnisme Revisité")}
+        />
+
+        <Series
+          index="IV"
           title={t("Japan Inspired, 2021", "Inspiration Japon, 2021")}
           description={t(
             "A series drawn from Japanese imagery: dancers, samurai and blossoms, painted in acrylic with a restrained, contemplative palette.",
@@ -611,7 +624,7 @@ function Works() {
         />
 
         <Series
-          index="IV"
+          index="V"
           title={t("Caseisme Collection, 2016 - 2020", "Collection Caseisme, 2016 - 2020")}
           description={t(
             "A mosaic of thick palette-knife strokes: each small block of colour is laid down whole, and the image assembles itself from the accumulation.",
@@ -621,19 +634,6 @@ function Works() {
           video="/caseisme.mp4"
           videoPoster="/caseisme-poster.jpg"
           videoCaption={t("Studio film — Caseisme Collection", "Film d'atelier — Collection Caseisme")}
-        />
-
-        <Series
-          index="V"
-          title={t("Impressionism Revisited, 2022 - 2023", "Impressionnisme Revisité, 2022 - 2023")}
-          description={t(
-            "Gardens, water and shifting light revisited through a contemporary lens: dense impasto touches that dissolve the motif into pure colour and vibration.",
-            "Jardins, eau et lumière changeante revisités par un regard contemporain : des touches épaisses en impasto qui dissolvent le motif en couleur et vibration pures.",
-          )}
-          works={impressionism}
-          video="/impressionnisme-revisite.mp4"
-          videoPoster="/impressionnisme-revisite-poster.jpg"
-          videoCaption={t("Studio film — Impressionism Revisited", "Film d'atelier — Impressionnisme Revisité")}
         />
         <Series
           index="VI"
