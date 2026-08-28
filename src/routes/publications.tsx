@@ -181,6 +181,20 @@ function PublicationRow({ entry }: { entry: Publication }) {
         </span>
       </div>
 
+      {entry.video && (
+        <div className="mt-8">
+          <video
+            src={entry.video}
+            controls
+            playsInline
+            preload="metadata"
+            className="max-w-full h-auto w-full"
+          >
+            {t("Your browser does not support the video tag.", "Votre navigateur ne prend pas en charge la balise vidéo.")}
+          </video>
+        </div>
+      )}
+
       <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
         {entry.photos.map((src, i) => (
           <button
