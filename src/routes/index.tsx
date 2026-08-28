@@ -279,6 +279,15 @@ const contemporary: Work[] = [
     mediumFr: "Acrylique, feuilles d'argent et d'or et époxy",
     dimensions: "92 × 122 cm",
   },
+  {
+    image: "/foret-doree.jpg",
+    titleEn: "Forêt Dorée",
+    titleFr: "Forêt Dorée",
+    year: "2025",
+    mediumEn: "Acrylic, gold leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'or et époxy",
+    dimensions: "92 × 122 cm",
+  },
 ];
 
 
