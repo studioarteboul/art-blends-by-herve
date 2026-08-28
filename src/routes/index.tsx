@@ -288,6 +288,15 @@ const contemporary: Work[] = [
     mediumFr: "Acrylique, feuille d'or et époxy",
     dimensions: "92 × 122 cm",
   },
+  {
+    image: "/quand-les-vagues-dansent.jpeg",
+    titleEn: "Quand les Vagues Dansent",
+    titleFr: "Quand les Vagues Dansent",
+    year: "2025",
+    mediumEn: "Acrylic, silver pearl and epoxy",
+    mediumFr: "Acrylique, perle d'argent et époxy",
+    dimensions: "51 × 51 cm",
+  },
 ];
 
 
