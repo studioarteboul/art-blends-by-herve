@@ -521,7 +521,7 @@ function HeroCarousel() {
 function WorkCard({ work }: { work: Work }) {
   const { t } = useLang();
   return (
-    <figure className="group relative overflow-hidden bg-card plate">
+    <figure className="group relative mx-auto max-w-sm overflow-hidden bg-card plate sm:mx-0 sm:max-w-none">
       <img
         src={work.image}
         alt={t(work.titleEn, work.titleFr)}
