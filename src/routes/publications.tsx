@@ -233,6 +233,8 @@ function Publications() {
           </ul>
         </Block>
 
+        <VideoMusicLiterature />
+
         <section className="py-14">
           <h2 className="mt-6 font-display text-4xl leading-tight md:text-6xl">
             {t("Exhibition Souvenirs", "Souvenirs d'Expositions")}
@@ -253,7 +255,7 @@ function Publications() {
                     "Livret souvenir d'exposition — Paris Le Louvre"
                   )}
                   loading="lazy"
-                  className="max-w-full h-auto w-full object-contain transition-opacity duration-300 group-hover:opacity-85"
+                  className="mx-auto h-auto w-1/2 object-contain transition-opacity duration-300 group-hover:opacity-85"
                 />
                 <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/0 opacity-0 transition-all duration-300 group-hover:bg-background/20 group-hover:opacity-100">
                   <span className="flex items-center gap-2 rounded-full bg-background/90 px-4 py-2 text-xs uppercase tracking-[0.2em]">
@@ -290,7 +292,7 @@ function Publications() {
                     "Livret souvenir d'exposition — MEAM Barcelone"
                   )}
                   loading="lazy"
-                  className="max-w-full h-auto w-full object-contain transition-opacity duration-300 group-hover:opacity-85"
+                  className="mx-auto h-auto w-1/2 object-contain transition-opacity duration-300 group-hover:opacity-85"
                 />
                 <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/0 opacity-0 transition-all duration-300 group-hover:bg-background/20 group-hover:opacity-100">
                   <span className="flex items-center gap-2 rounded-full bg-background/90 px-4 py-2 text-xs uppercase tracking-[0.2em]">
@@ -314,8 +316,6 @@ function Publications() {
             </a>
           </div>
         </section>
-
-        <VideoMusicLiterature />
       </div>
     </Container>
   );
