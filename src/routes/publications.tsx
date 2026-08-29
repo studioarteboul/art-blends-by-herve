@@ -393,7 +393,7 @@ function VideoMusicLiterature() {
           <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
             {t(
               "AUTHOR OF A NOVEL - L'ÉTÉ DES GÉNIES - PANTHEON EDITIONS & AMAZON",
-              "AUTEUR D'UN ROMAN — L'ÉTÉ DES GÉNIES — ÉDITIONS DU PANTHÉON"
+              "AUTEUR D'UN ROMAN — L'ÉTÉ DES GÉNIES — ÉDITIONS DU PANTHÉON & AMAZON"
             )}
           </p>
           <div className="mt-4 flex justify-center">
