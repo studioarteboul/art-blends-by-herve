@@ -266,7 +266,7 @@ function Publications() {
               </div>
               <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
                 {t(
-                  "Exhibition Souvenir Book — Paris Le Louvre 2026",
+              "EXHIBITION SOUVENIR BOOK,\nPARIS LE LOUVRE 2026",
                   "Livret souvenir d'exposition — Paris Le Louvre 2026"
                 )}
               </p>
@@ -303,7 +303,7 @@ function Publications() {
               </div>
               <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
                 {t(
-                  "Exhibition Souvenir Book — MEAM Barcelona 2026",
+              "EXHIBITION SOUVENIR BOOK,\nMEAM BARCELONA 2026",
                   "Livret souvenir d'exposition — MEAM Barcelone 2026"
                 )}
               </p>
@@ -355,7 +355,7 @@ function VideoMusicLiterature() {
           </div>
           <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
             {t(
-              "2026 Retrospective video — Yesterday to Today!",
+              "2026 RETROSPECTIVE VIDEO\nYESTERDAY TO TODAY!",
               "Vidéo rétrospective 2026 — D'hier à aujourd'hui !"
             )}
           </p>
@@ -392,7 +392,7 @@ function VideoMusicLiterature() {
           </div>
           <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
             {t(
-              "Author of a Novel — L'été des Génies — Editions du Panthéon",
+              "AUTHOR OF A NOVEL,\u00a0\nL'ÉTÉ DES GÉNIES,\nEDITIONS DU PANTHÉON",
               "Auteur d'un roman — L'été des Génies — Éditions du Panthéon"
             )}
           </p>
