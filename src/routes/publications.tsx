@@ -303,7 +303,7 @@ function Publications() {
               </div>
               <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
                 {t(
-              "EXHIBITION SOUVENIR BOOK,\u00a0\nMEAM BARCELONA 2026",
+              "EXHIBITION SOUVENIR BOOK\u00a0—\u00a0MEAM BARCELONA 2026",
                   "Livret souvenir d'exposition — MEAM Barcelone 2026"
                 )}
               </p>
@@ -356,7 +356,7 @@ function VideoMusicLiterature() {
           <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
             {t(
               "2026 RETROSPECTIVE VIDEO\u00a0\nYESTERDAY TO TODAY!",
-              "Vidéo rétrospective 2026 — D'hier à aujourd'hui !"
+              "VIDÉO RÉTROSPECTIVE 2026 — D'HIER À AUJOURD'HUI !"
             )}
           </p>
           <div className="mt-4 flex justify-center">
@@ -393,7 +393,7 @@ function VideoMusicLiterature() {
           <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
             {t(
               "AUTHOR OF A NOVEL,\u00a0\u00a0\nL'ÉTÉ DES GÉNIES,\u00a0\nEDITIONS DU PANTHÉON",
-              "Auteur d'un roman — L'été des Génies — Éditions du Panthéon"
+              "AUTEUR D'UN ROMAN — L'ÉTÉ DES GÉNIES — ÉDITIONS DU PANTHÉON"
             )}
           </p>
           <div className="mt-4 flex justify-center">
