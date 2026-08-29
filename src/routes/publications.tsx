@@ -266,7 +266,7 @@ function Publications() {
               </div>
               <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
                 {t(
-              "EXHIBITION SOUVENIR BOOK,\nPARIS LE LOUVRE 2026",
+              "EXHIBITION SOUVENIR BOOK - PARIS LE LOUVRE 2026",
                   "Livret souvenir d'exposition — Paris Le Louvre 2026"
                 )}
               </p>
