@@ -36,9 +36,7 @@ Gardens, the countryside, and bodies of water were his main sources of inspirati
 
 After various periods, he now paints in a contemporary style on a variety of themes that interest him, using acrylics, gold or silver leaf, and epoxy.
 
-Exhibitions and private collections internationally.
-
-Teaching painting and drawing for more than 25 years.`;
+Exhibitions and private collections internationally.`;
 
   const bioFr = `Hervé Teboul est un artiste français et professeur d'art qui vit à Montréal, Canada, depuis 2001.
 
@@ -48,15 +46,21 @@ Les jardins, la campagne et les plans d'eau ont été ses principales sources d'
 
 Après différentes périodes, il peint désormais dans un style contemporain sur une variété de thèmes qui l'intéressent, en utilisant l'acrylique, les feuilles d'or ou d'argent et l'époxy.
 
-Expositions et collections privées à l'international.
+Expositions et collections privées à l'international.`;
 
-Enseignement de la peinture et du dessin depuis plus de 25 ans.`;
+  const teachingEn = "Teaching painting and drawing for more than 25 years.";
+  const teachingFr = "Enseignement de la peinture et du dessin depuis plus de 25 ans.";
 
-
+  const artSchoolCaption = (
+    <>
+      <strong>{t("Hervé Teboul Art School", "École d'art Hervé Teboul")}</strong>
+      {t(" since 2001 for students and artists of all levels.", " depuis 2001 pour étudiants et artistes de tous niveaux.")}
+    </>
+  );
 
   return (
     <Container>
-      <div className="grid gap-16 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:gap-24">
+      <div className="grid gap-16 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-24">
         <div>
           <p className="text-[0.7rem] uppercase tracking-[0.3em] text-accent">
             {t("Biography", "Biographie")}
@@ -84,6 +88,27 @@ Enseignement de la peinture et du dessin depuis plus de 25 ans.`;
                 );
               })}
           </div>
+
+          <p className="mt-6 text-lg leading-relaxed text-foreground/85">
+            {t(teachingEn, teachingFr)}
+          </p>
+
+          <div className="relative mt-10 hidden w-1/2 lg:block">
+            <img
+              src={artSchoolImage}
+              alt={t(
+                "Hervé Teboul Art School — students painting in the studio",
+                "École d'art Hervé Teboul — élèves peignant dans l'atelier",
+              )}
+              loading="lazy"
+              width={1024}
+              height={768}
+              className="w-full object-cover plate"
+            />
+            <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              {artSchoolCaption}
+            </p>
+          </div>
         </div>
 
         <div className="lg:pt-24">
@@ -103,7 +128,7 @@ Enseignement de la peinture et du dessin depuis plus de 25 ans.`;
           </p>
         </div>
 
-        <div className="w-1/2">
+        <div className="w-1/2 lg:hidden">
           <img
             src={artSchoolImage}
             alt={t(
@@ -116,8 +141,7 @@ Enseignement de la peinture et du dessin depuis plus de 25 ans.`;
             className="w-full object-cover plate"
           />
           <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            <strong>{t("Hervé Teboul Art School", "École d'art Hervé Teboul")}</strong>
-            {t(" since 2001 for students and artists of all levels.", " depuis 2001 pour étudiants et artistes de tous niveaux.")}
+            {artSchoolCaption}
           </p>
         </div>
       </div>
