@@ -368,7 +368,7 @@ function VideoMusicLiterature() {
 
         {/* Literature */}
         <a
-          href="https://www.placedeslibraires.fr/livre/9782754769082-l-ete-des-genies-herve-teboul/"
+          href="https://a.co/d/0ioJEzOn"
           target="_blank"
           rel="noopener noreferrer"
           className="group block"
