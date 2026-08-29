@@ -236,7 +236,7 @@ function Publications() {
         <VideoMusicLiterature />
 
         <section className="py-14">
-          <h2 className="mt-6 font-display text-4xl leading-tight md:text-6xl">
+          <h2 className="mt-6 font-display text-2xl leading-tight md:text-3xl">
             {t("Exhibition Souvenirs", "Souvenirs d'Expositions")}
           </h2>
 
@@ -326,7 +326,7 @@ function VideoMusicLiterature() {
 
   return (
     <section className="py-14">
-      <h2 className="mt-6 font-display text-4xl leading-tight md:text-6xl">
+      <h2 className="mt-6 font-display text-2xl leading-tight md:text-3xl">
         {t("Video, Music & Literature", "Vidéo, Musique et Littérature")}
       </h2>
       <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
