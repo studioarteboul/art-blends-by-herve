@@ -106,7 +106,7 @@ Enseignement de la peinture et du dessin depuis plus de 25 ans.`;
           </div>
         </div>
 
-        <div className="lg:pt-24">
+        <div className="w-3/4 lg:pt-24">
           <img
             src={portrait}
             alt={t(
