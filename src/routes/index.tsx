@@ -4,7 +4,7 @@ import { Play } from "lucide-react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { AudioPlayer } from "@/lib/audio";
-import rockyVictoryInSilence from "@/assets/rocky-victory-in-silence.png.asset.json";
+
 
 const AUDIO_URL =
   "https://raw.githubusercontent.com/studioarteboul/art-blends-by-herve/fc0048e069226aca210dc750cb846853e7481ec5/public/Cielo%20Ardent%20-%20Oia%20at%20Sunset%201.mp3";
@@ -41,7 +41,7 @@ const heroSlides: HeroSlide[] = [
     altFr: "Rose Gala — peinture contemporaine en technique mixte",
   },
   {
-    image: "/rocky-victory-in-silence.jpg",
+    image: "/rocky-victory-in-silence.webp",
     altEn: "Rocky, Victory in Silence — contemporary mixed media painting",
     altFr: "Rocky, Victory in Silence — peinture contemporaine en technique mixte",
   },
@@ -137,7 +137,7 @@ const contemporary: Work[] = [
     dimensions: "91 × 91 cm",
   },
   {
-    image: rockyVictoryInSilence.url,
+    image: "/rocky-victory-in-silence.webp",
     titleEn: "Rocky, Victory in Silence",
     titleFr: "Rocky, Victory in Silence",
     year: "2025",
