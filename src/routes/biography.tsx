@@ -87,7 +87,7 @@ Enseignement de la peinture et du dessin depuis plus de 25 ans.`;
 
           <div className="relative mt-14">
             <img
-              src={artSchoolImage.url}
+              src={artSchoolImage}
               alt={t(
                 "Hervé Teboul Art School — students painting in the studio",
                 "École d'art Hervé Teboul — élèves peignant dans l'atelier",
