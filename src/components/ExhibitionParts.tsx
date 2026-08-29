@@ -39,8 +39,8 @@ export const exhibitions: Entry[] = [
   },
   {
     year: "2019",
-    en: "Group Exhibition — Contemporary Mixed Media",
-    fr: "Exposition Solo — Techniques mixtes contemporaines",
+    en: "Expo Solo Studio Arteboul",
+    fr: "Expo Solo Studio Arteboul",
     place: "Montréal, Canada",
   },
   {
