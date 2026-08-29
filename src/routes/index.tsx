@@ -646,7 +646,7 @@ function Series({
           </p>
         </div>
       </div>
-      <div className="grid items-start gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid items-start gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">
         {video && (
           <VideoCard src={video} poster={videoPoster} caption={videoCaption} />
         )}
