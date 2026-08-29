@@ -85,7 +85,7 @@ Enseignement de la peinture et du dessin depuis plus de 25 ans.`;
               })}
           </div>
 
-          <div className="relative mt-14">
+          <div className="relative mt-14 w-1/2">
             <img
               src={artSchoolImage}
               alt={t(
