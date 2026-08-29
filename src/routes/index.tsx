@@ -4,6 +4,7 @@ import { Play } from "lucide-react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { AudioPlayer } from "@/lib/audio";
+import rockyVictoryInSilence from "@/assets/rocky-victory-in-silence.png.asset.json";
 
 const AUDIO_URL =
   "https://raw.githubusercontent.com/studioarteboul/art-blends-by-herve/fc0048e069226aca210dc750cb846853e7481ec5/public/Cielo%20Ardent%20-%20Oia%20at%20Sunset%201.mp3";
@@ -134,6 +135,15 @@ const contemporary: Work[] = [
     mediumEn: "Acrylic, silver leaf and epoxy",
     mediumFr: "Acrylique, feuille d'argent et époxy",
     dimensions: "91 × 91 cm",
+  },
+  {
+    image: rockyVictoryInSilence.url,
+    titleEn: "Rocky, Victory in Silence",
+    titleFr: "Rocky, Victory in Silence",
+    year: "2025",
+    mediumEn: "Acrylic, silver leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'argent et époxy",
+    dimensions: "122 × 100 cm",
   },
   {
     image: "/chic-soiree.jpg",
