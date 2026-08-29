@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { PrizeItem } from "@/components/ExhibitionParts";
-import artSchoolImage from "@/assets/studio-arteboul-art-school.jpeg.asset.json";
+const artSchoolImage = "/studio-arteboul-art-school.jpeg";
 const portrait = "/herve-teboul-portrait.jpg";
 
 export const Route = createFileRoute("/biography")({
@@ -87,7 +87,7 @@ Enseignement de la peinture et du dessin depuis plus de 25 ans.`;
 
           <div className="relative mt-14">
             <img
-              src={artSchoolImage.url}
+              src={artSchoolImage}
               alt={t(
                 "Hervé Teboul Art School — students painting in the studio",
                 "École d'art Hervé Teboul — élèves peignant dans l'atelier",
