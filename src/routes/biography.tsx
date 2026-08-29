@@ -103,7 +103,7 @@ Enseignement de la peinture et du dessin depuis plus de 25 ans.`;
           </p>
         </div>
 
-        <div className="relative w-1/2">
+        <div className="w-1/2">
           <img
             src={artSchoolImage}
             alt={t(
@@ -115,12 +115,10 @@ Enseignement de la peinture et du dessin depuis plus de 25 ans.`;
             height={768}
             className="w-full object-cover plate"
           />
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-6 pb-6 pt-16">
-            <p className="text-lg leading-relaxed text-white">
-              <strong>{t("Hervé Teboul Art School", "École d'art Hervé Teboul")}</strong>
-              {t(" since 2001 for students and artists of all levels.", " depuis 2001 pour étudiants et artistes de tous niveaux.")}
-            </p>
-          </div>
+          <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            <strong>{t("Hervé Teboul Art School", "École d'art Hervé Teboul")}</strong>
+            {t(" since 2001 for students and artists of all levels.", " depuis 2001 pour étudiants et artistes de tous niveaux.")}
+          </p>
         </div>
       </div>
 
