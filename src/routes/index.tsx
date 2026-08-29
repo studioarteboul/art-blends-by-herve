@@ -137,6 +137,15 @@ const contemporary: Work[] = [
     dimensions: "91 × 91 cm",
   },
   {
+    image: rockyVictoryInSilence.url,
+    titleEn: "Rocky, Victory in Silence",
+    titleFr: "Rocky, Victory in Silence",
+    year: "2025",
+    mediumEn: "Acrylic, silver leaf and epoxy",
+    mediumFr: "Acrylique, feuille d'argent et époxy",
+    dimensions: "122 × 100 cm",
+  },
+  {
     image: "/chic-soiree.jpg",
     titleEn: "Chic Soirée",
     titleFr: "Chic Soirée",
