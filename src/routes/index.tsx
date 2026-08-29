@@ -707,8 +707,8 @@ function Works() {
             "Art contemporain et techniques mixtes",
           )}
           description={t(
-            "Acrylics built with gold and silver leaf, and epoxy finishes — high-contrast surfaces where light moves with the viewer.",
-            "Acryliques avec feuilles d'or et d'argent et finitions époxy — des surfaces à fort contraste où la lumière se déplace avec le regard.",
+            "Acrylics built with gold and silver leaf, and epoxy finishes — on clean subjects that express the essential at first glance.",
+            "Acryliques avec feuilles d'or et d'argent et finitions époxy — sur des sujets épurés qui expriment l'essentiel au premier regard.",
           )}
           works={contemporary}
           video="/brillance-symbolisme.mp4"
