@@ -4,7 +4,7 @@ import { X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { Block } from "@/components/ExhibitionParts";
-import retrospectiveVideo from "@/assets/parcours-dartiste-720p.mp4.asset.json";
+import retrospectiveVideo from "@/assets/parcours-dartiste-web.mp4.asset.json";
 
 type Publication = {
   year: string;
