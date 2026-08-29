@@ -345,7 +345,7 @@ function VideoMusicLiterature() {
               controls
               playsInline
               preload="auto"
-              className="max-w-full h-auto w-full object-contain"
+              className="mx-auto h-auto w-1/2 object-contain"
             >
               {t(
                 "Your browser does not support the video tag.",
@@ -381,7 +381,7 @@ function VideoMusicLiterature() {
                 "Couverture — L'été des Génies"
               )}
               loading="lazy"
-              className="max-w-full h-auto w-full object-contain transition-opacity duration-300 group-hover:opacity-85"
+              className="mx-auto h-auto w-1/2 object-contain transition-opacity duration-300 group-hover:opacity-85"
             />
             <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/0 opacity-0 transition-all duration-300 group-hover:bg-background/20 group-hover:opacity-100">
               <span className="flex items-center gap-2 rounded-full bg-background/90 px-4 py-2 text-xs uppercase tracking-[0.2em]">
