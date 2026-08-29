@@ -521,7 +521,7 @@ function HeroCarousel() {
 function WorkCard({ work }: { work: Work }) {
   const { t } = useLang();
   return (
-    <figure className="group relative overflow-hidden bg-card plate">
+    <figure className="group relative mx-auto max-w-sm overflow-hidden bg-card plate sm:mx-0 sm:max-w-none">
       <img
         src={work.image}
         alt={t(work.titleEn, work.titleFr)}
@@ -646,7 +646,7 @@ function Series({
           </p>
         </div>
       </div>
-      <div className="grid items-start gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid items-start gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">
         {video && (
           <VideoCard src={video} poster={videoPoster} caption={videoCaption} />
         )}
