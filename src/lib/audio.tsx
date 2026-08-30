@@ -25,6 +25,7 @@ export function AudioProvider({ children }: { children: ReactNode }) {
   const [audioEl, setAudioElState] = useState<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const userPausedRef = useRef(false);
+  const suspendedByVideoRef = useRef(false);
 
   const setAudioEl = useCallback((el: HTMLAudioElement | null) => {
     audioRef.current = el;
@@ -71,6 +72,50 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     userPausedRef.current = true;
     pause();
   }, [pause]);
+
+  // Pause the ambient music while any <video> on the page is playing.
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+
+    const playingVideos = new Set<HTMLVideoElement>();
+
+    const isVideo = (t: EventTarget | null): t is HTMLVideoElement =>
+      t instanceof HTMLVideoElement;
+
+    const handleVideoPlay = (e: Event) => {
+      if (!isVideo(e.target)) return;
+      playingVideos.add(e.target);
+      const audio = audioRef.current;
+      if (!audio || audio.paused) return;
+      suspendedByVideoRef.current = true;
+      audio.pause();
+    };
+
+    const handleVideoStop = (e: Event) => {
+      if (!isVideo(e.target)) return;
+      playingVideos.delete(e.target);
+      if (playingVideos.size > 0) return;
+      if (!suspendedByVideoRef.current) return;
+      suspendedByVideoRef.current = false;
+      if (userPausedRef.current) return;
+      const audio = audioRef.current;
+      if (!audio) return;
+      const p = audio.play();
+      if (p && typeof p.catch === "function") p.catch(() => {});
+    };
+
+    document.addEventListener("play", handleVideoPlay, true);
+    document.addEventListener("pause", handleVideoStop, true);
+    document.addEventListener("ended", handleVideoStop, true);
+    document.addEventListener("emptied", handleVideoStop, true);
+
+    return () => {
+      document.removeEventListener("play", handleVideoPlay, true);
+      document.removeEventListener("pause", handleVideoStop, true);
+      document.removeEventListener("ended", handleVideoStop, true);
+      document.removeEventListener("emptied", handleVideoStop, true);
+    };
+  }, []);
 
   const toggle = useCallback(() => {
     const audio = audioRef.current;
