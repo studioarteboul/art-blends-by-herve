@@ -15,7 +15,6 @@ import { LangProvider } from "@/lib/lang";
 import { AudioProvider } from "@/lib/audio";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { ConstructionNotice } from "@/components/ConstructionNotice";
 
 
 function NotFoundComponent() {
