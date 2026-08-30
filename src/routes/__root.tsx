@@ -140,7 +140,6 @@ function RootComponent() {
       <LangProvider>
         <AudioProvider>
           <div className="flex min-h-screen flex-col">
-            <ConstructionNotice />
             <SiteHeader />
             <main className="flex-1">
               {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
