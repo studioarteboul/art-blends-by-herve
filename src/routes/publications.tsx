@@ -239,6 +239,12 @@ function Publications() {
           <h2 className="mt-6 font-display text-2xl leading-tight md:text-3xl">
             {t("Exhibition Souvenirs", "Souvenirs d'Expositions")}
           </h2>
+          <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            {t(
+              "2026 Hervé Teboul — Copyright",
+              "2026 Hervé Teboul — Tous droits réservés"
+            )}
+          </p>
 
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
             <a
