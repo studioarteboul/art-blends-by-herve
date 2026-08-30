@@ -15,7 +15,6 @@ import { LangProvider } from "@/lib/lang";
 import { AudioProvider } from "@/lib/audio";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { ConstructionNotice } from "@/components/ConstructionNotice";
 
 
 function NotFoundComponent() {
@@ -141,7 +140,6 @@ function RootComponent() {
       <LangProvider>
         <AudioProvider>
           <div className="flex min-h-screen flex-col">
-            <ConstructionNotice />
             <SiteHeader />
             <main className="flex-1">
               {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
