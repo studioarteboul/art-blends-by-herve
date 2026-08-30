@@ -284,8 +284,8 @@ const contemporary: Work[] = [
   },
   {
     image: "/duo-de-mandarine.jpg",
-    titleEn: "Duo de Mandarine",
-    titleFr: "Duo de Mandarine",
+    titleEn: "Duo de Mandarines",
+    titleFr: "Duo de Mandarines",
     year: "2025",
     mediumEn: "Acrylic, gold leaf and epoxy",
     mediumFr: "Acrylique, feuille d'or et époxy",
