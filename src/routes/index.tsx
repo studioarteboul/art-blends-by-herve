@@ -524,8 +524,25 @@ function HeroCarousel() {
 
 function WorkCard({ work }: { work: Work }) {
   const { t } = useLang();
+  const [isRevealed, setIsRevealed] = useState(false);
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      setIsRevealed((v) => !v);
+    }
+  };
+
   return (
-    <figure className="group relative mx-auto max-w-sm overflow-hidden bg-card plate sm:mx-0 sm:max-w-none">
+    <figure
+      role="button"
+      tabIndex={0}
+      aria-pressed={isRevealed}
+      aria-label={t("Tap to view painting details", "Appuyer pour voir les détails de la peinture")}
+      onClick={() => setIsRevealed((v) => !v)}
+      onKeyDown={handleKeyDown}
+      className="group relative mx-auto max-w-sm cursor-pointer overflow-hidden bg-card plate sm:mx-0 sm:max-w-none"
+    >
       <img
         src={work.image}
         alt={t(work.titleEn, work.titleFr)}
@@ -533,7 +550,11 @@ function WorkCard({ work }: { work: Work }) {
         className="max-w-full h-auto object-cover w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]"
       />
 
-      <figcaption className="pointer-events-none absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-primary/85 via-primary/25 to-transparent p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+      <figcaption
+        className={`pointer-events-none absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-primary/85 via-primary/25 to-transparent p-6 transition-opacity duration-500 lg:opacity-0 lg:group-hover:opacity-100 ${
+          isRevealed ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <p className="font-display text-2xl text-primary-foreground">
           {t(work.titleEn, work.titleFr)}
           {work.year ? `, ${work.year}` : ""}
