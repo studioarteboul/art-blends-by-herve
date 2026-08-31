@@ -543,6 +543,14 @@ function WorkCard({ work }: { work: Work }) {
       onKeyDown={handleKeyDown}
       className="group relative mx-auto max-w-sm cursor-pointer overflow-hidden bg-card plate sm:mx-0 sm:max-w-none"
     >
+      <span
+        aria-hidden="true"
+        className={`pointer-events-none absolute right-3 top-3 z-10 flex h-7 w-7 items-center justify-center rounded-full border border-primary-foreground/60 bg-primary/40 text-primary-foreground backdrop-blur-sm transition-opacity duration-500 lg:hidden ${
+          isRevealed ? "opacity-0" : "opacity-100"
+        }`}
+      >
+        <Info className="h-3.5 w-3.5" />
+      </span>
       <img
         src={work.image}
         alt={t(work.titleEn, work.titleFr)}
