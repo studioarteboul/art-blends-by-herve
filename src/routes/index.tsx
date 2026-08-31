@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useCallback, useEffect, useState } from "react";
-import { Play } from "lucide-react";
+import { Info, Play } from "lucide-react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { AudioPlayer } from "@/lib/audio";
