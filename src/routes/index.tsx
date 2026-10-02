@@ -342,6 +342,15 @@ const mediterranean: Work[] = [
     mediumFr: "Acrylique et feuille d'or sur toile",
     dimensions: "91 × 91 cm",
   },
+  {
+    image: "/sweet-september.jpg",
+    titleEn: "Sweet September",
+    titleFr: "Sweet September",
+    year: "2026",
+    mediumEn: "Acrylic and gold leaf on canvas",
+    mediumFr: "Acrylique et feuille d'or sur toile",
+    dimensions: "92 × 92 cm",
+  },
 ];
 
 const japon: Work[] = Array.from({ length: 7 }, (_, i) => {
