@@ -351,6 +351,15 @@ const mediterranean: Work[] = [
     mediumFr: "Acrylique et feuille d'or sur toile",
     dimensions: "92 × 92 cm",
   },
+  {
+    image: "/promenons-nous-dans-les-bois.jpg",
+    titleEn: "Promenons-nous dans les bois...",
+    titleFr: "Promenons-nous dans les bois...",
+    year: "2026",
+    mediumEn: "Acrylic and rose gold leaf on canvas",
+    mediumFr: "Acrylique et feuille d'or rose sur toile",
+    dimensions: "92 × 92 cm",
+  },
 ];
 
 const japon: Work[] = Array.from({ length: 7 }, (_, i) => {
