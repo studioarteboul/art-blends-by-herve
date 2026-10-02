@@ -83,17 +83,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Hervé Teboul — Contemporary Painter" },
+      { title: "Hervé Teboul - Peintre Contemporain" },
       {
         name: "description",
         content:
-          "Contemporary painter Hervé Teboul: mixed media, gold and silver leaf, epoxy, and Mediterranean post-impressionism. Montreal studio.",
+          "Découvrez les œuvres de Hervé Teboul, peintre contemporain. Explorez ses galeries d'art, expositions et créations artistiques uniques.",
       },
       { name: "author", content: "Hervé Teboul" },
-      { property: "og:title", content: "Hervé Teboul — Contemporary Painter" },
+      { property: "og:title", content: "Hervé Teboul - Peintre Contemporain" },
       {
         property: "og:description",
-        content: "Mixed media and Mediterranean post-impressionist paintings. Montreal.",
+        content:
+          "Découvrez les œuvres de Hervé Teboul, peintre contemporain. Explorez ses galeries d'art, expositions et créations artistiques uniques.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -109,7 +110,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Karla:wght@300;400;500&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "shortcut icon", href: "/favicon.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
     ],
   }),
 

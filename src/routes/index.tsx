@@ -72,18 +72,20 @@ const heroSlides: HeroSlide[] = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Hervé Teboul — Works | Œuvres" },
+      { title: "Hervé Teboul - Peintre Contemporain" },
       {
         name: "description",
         content:
-          "Selected works by contemporary painter Hervé Teboul: mixed media with gold and silver leaf, epoxy resin, and Mediterranean post-impressionist landscapes.",
+          "Découvrez les œuvres de Hervé Teboul, peintre contemporain. Explorez ses galeries d'art, expositions et créations artistiques uniques.",
       },
-      { property: "og:title", content: "Hervé Teboul — Works | Œuvres" },
+      { property: "og:title", content: "Hervé Teboul - Peintre Contemporain" },
       {
         property: "og:description",
         content:
-          "Mixed media contemporary painting and Mediterranean post-impressionism. Studio ARTeboul, Montreal.",
+          "Découvrez les œuvres de Hervé Teboul, peintre contemporain. Explorez ses galeries d'art, expositions et créations artistiques uniques.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Works,
