@@ -40,7 +40,8 @@ function Contact() {
     t("Artwork pricing inquiry", "Demande de prix"),
     t("Available inventory", "Inventaire disponible"),
     t("Press or exhibition", "Presse ou exposition"),
-    t("Painting lessons", "Cours de peinture"),
+    t("Studio painting lessons", "Cours de peinture en studio"),
+    t("Online coaching", "Coaching en ligne"),
   ];
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
