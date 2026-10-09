@@ -829,19 +829,6 @@ function Works() {
           videoCaption={t("Studio film — Period of Provence", "Film d'atelier — Période de Provence")}
         />
 
-        <section className="border-t border-border py-20">
-          <div className="max-w-4xl">
-            <p className="text-[0.7rem] uppercase tracking-[0.3em] text-accent">
-              {t("Quotation", "Cotation")}
-            </p>
-            <p className="mt-6 font-display text-xl md:text-2xl">
-{t(
-                "Available works are offered between $7,000 and $28,000 depending on their quotation by format. Pricing is shared on request.",
-                "Les œuvres disponibles sont proposées entre 7 000 $ et 28 000 $ selon leur cotation au format. Les prix sont communiqués sur demande.",
-              )}
-            </p>
-          </div>
-        </section>
 
         <section className="border-t border-border py-20 text-center">
           <p className="mx-auto max-w-2xl font-display text-3xl leading-snug md:text-4xl">
