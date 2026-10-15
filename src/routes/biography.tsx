@@ -110,7 +110,7 @@ Expositions et collections privées à l'international.`;
                 height={768}
                 className="w-full object-cover plate"
               />
-              <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              <p className="mt-4 whitespace-nowrap text-xs uppercase tracking-[0.15em] text-muted-foreground">
                 {artSchoolCaption}
               </p>
             </div>
@@ -148,7 +148,7 @@ Expositions et collections privées à l'international.`;
               height={768}
               className="w-full object-cover plate"
             />
-            <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            <p className="mt-4 text-xs uppercase tracking-[0.15em] text-muted-foreground sm:whitespace-nowrap">
               {artSchoolCaption}
             </p>
           </div>
