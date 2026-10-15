@@ -57,8 +57,7 @@ Expositions et collections privées à l'international.`;
   );
   const artSchoolCaption = (
     <>
-      <strong>{t("Hervé Teboul Art School", "École d'art Hervé Teboul")}</strong>
-      {t(" since 2001.", " depuis 2001.")}
+      <strong>{t("Hervé Teboul Art School since 2001.", "École d'art Hervé Teboul depuis 2001.")}</strong>
     </>
   );
 
