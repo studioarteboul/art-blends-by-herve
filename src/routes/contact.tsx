@@ -101,8 +101,8 @@ function Contact() {
           </h1>
           <p className="mt-8 max-w-md text-lg leading-relaxed text-muted-foreground">
             {t(
-              "Studio visits are available by appointment in Montreal, where the practice has kept its creative roots. Active inventory is also listed on Arte Laguna World, Artio Gallery, and Artsy.",
-              "Les visites d'atelier se font sur rendez-vous à Montréal, où la démarche conserve ses racines créatives. L'inventaire actif est également présenté sur Arte Laguna World, Artio Gallery et Artsy.",
+              "Studio visits are available by appointment, and studio classes in Montreal as well as one-on-one virtual coaching are offered to students and artists of all levels. Select the corresponding subject below, write to us to learn about availability and details, and share your artistic goals with us.",
+              "Les visites au studio se font sur rendez-vous et les cours en atelier à Montréal ainsi qu'un coaching virtuel individuel sont proposés aux élèves et artistes de tous niveaux. Choisissez l'objet correspondant ci-dessous, écrivez-nous pour connaître les disponibilités, modalités et partagez-nous vos objectifs artistiques.",
             )}
           </p>
 
