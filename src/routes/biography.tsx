@@ -98,7 +98,7 @@ Expositions et collections privées à l'international.`;
           </p>
 
           <div className="mt-10 hidden items-start gap-8 lg:flex">
-            <div className="relative w-1/2 shrink-0">
+            <div className="relative w-3/5 shrink-0">
               <img
                 src={artSchoolImage}
                 alt={t(
@@ -110,7 +110,7 @@ Expositions et collections privées à l'international.`;
                 height={768}
                 className="w-full object-cover plate"
               />
-              <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              <p className="mt-4 whitespace-nowrap text-xs uppercase tracking-[0.15em] text-muted-foreground">
                 {artSchoolCaption}
               </p>
             </div>
@@ -136,7 +136,7 @@ Expositions et collections privées à l'international.`;
         </div>
 
         <div className="flex items-start gap-6 lg:hidden">
-          <div className="w-1/2 shrink-0">
+          <div className="w-3/5 shrink-0">
             <img
               src={artSchoolImage}
               alt={t(
@@ -148,7 +148,7 @@ Expositions et collections privées à l'international.`;
               height={768}
               className="w-full object-cover plate"
             />
-            <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            <p className="mt-4 text-xs uppercase tracking-[0.15em] text-muted-foreground sm:whitespace-nowrap">
               {artSchoolCaption}
             </p>
           </div>
