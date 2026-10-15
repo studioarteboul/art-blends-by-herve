@@ -98,7 +98,7 @@ Expositions et collections privées à l'international.`;
           </p>
 
           <div className="mt-10 hidden items-start gap-8 lg:flex">
-            <div className="relative w-1/2 shrink-0">
+            <div className="relative w-3/5 shrink-0">
               <img
                 src={artSchoolImage}
                 alt={t(
@@ -136,7 +136,7 @@ Expositions et collections privées à l'international.`;
         </div>
 
         <div className="flex items-start gap-6 lg:hidden">
-          <div className="w-1/2 shrink-0">
+          <div className="w-3/5 shrink-0">
             <img
               src={artSchoolImage}
               alt={t(
