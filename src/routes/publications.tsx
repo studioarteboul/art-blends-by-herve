@@ -14,6 +14,7 @@ type Publication = {
   place: string;
   photos: string[];
   video?: string;
+  wide?: boolean;
 };
 
 const publications: Publication[] = [
@@ -23,6 +24,7 @@ const publications: Publication[] = [
     fr: "Artist Closeup Magazine — Octobre — Numéro 47",
     place: "Artist Closeup",
     photos: ["/artist-closeup-47-1.jpg"],
+    wide: true,
   },
   {
     year: "2026",
@@ -194,13 +196,13 @@ function PublicationRow({ entry }: { entry: Publication }) {
             key={src}
             type="button"
             onClick={() => setActive(i)}
-            className="block overflow-hidden"
+            className={`block overflow-hidden ${entry.wide ? "col-span-2" : ""}`}
           >
             <img
               src={src}
               alt={`${label} — ${t("photo", "photo")} ${i + 1}`}
               loading="lazy"
-              className="max-w-full h-auto object-contain transition-opacity hover:opacity-80"
+              className={`max-w-full h-auto object-contain transition-opacity hover:opacity-80 ${entry.wide ? "w-full" : ""}`}
             />
           </button>
         ))}
