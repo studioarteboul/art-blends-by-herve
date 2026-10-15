@@ -51,6 +51,10 @@ Expositions et collections privées à l'international.`;
   const teachingEn = "Teaching painting and drawing for more than 25 years.";
   const teachingFr = "Enseignement de la peinture et du dessin depuis plus de 25 ans.";
 
+  const lessonsText = t(
+    "Studio visits are available by appointment, and studio classes in Montreal as well as one-on-one virtual coaching are offered to students and artists of all levels. Select the corresponding subject, write to us to learn about availability and details, and share your artistic goals with us.",
+    "Les visites au studio se font sur rendez-vous et les cours en atelier à Montréal ainsi qu'un coaching virtuel individuel sont proposés aux élèves et artistes de tous niveaux. Choisissez l'objet correspondant, écrivez-nous pour connaître les disponibilités, modalités et partagez-nous vos objectifs artistiques.",
+  );
   const artSchoolCaption = (
     <>
       <strong>{t("Hervé Teboul Art School", "École d'art Hervé Teboul")}</strong>
@@ -93,21 +97,24 @@ Expositions et collections privées à l'international.`;
             {t(teachingEn, teachingFr)}
           </p>
 
-          <div className="relative mt-10 hidden w-1/2 lg:block">
-            <img
-              src={artSchoolImage}
-              alt={t(
-                "Hervé Teboul Art School — students painting in the studio",
-                "École d'art Hervé Teboul — élèves peignant dans l'atelier",
-              )}
-              loading="lazy"
-              width={1024}
-              height={768}
-              className="w-full object-cover plate"
-            />
-            <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-              {artSchoolCaption}
-            </p>
+          <div className="mt-10 hidden items-start gap-8 lg:flex">
+            <div className="relative w-1/2 shrink-0">
+              <img
+                src={artSchoolImage}
+                alt={t(
+                  "Hervé Teboul Art School — students painting in the studio",
+                  "École d'art Hervé Teboul — élèves peignant dans l'atelier",
+                )}
+                loading="lazy"
+                width={1024}
+                height={768}
+                className="w-full object-cover plate"
+              />
+              <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                {artSchoolCaption}
+              </p>
+            </div>
+            <p className="text-base leading-relaxed text-foreground/85">{lessonsText}</p>
           </div>
         </div>
 
@@ -128,21 +135,24 @@ Expositions et collections privées à l'international.`;
           </p>
         </div>
 
-        <div className="w-1/2 lg:hidden">
-          <img
-            src={artSchoolImage}
-            alt={t(
-              "Hervé Teboul Art School — students painting in the studio",
-              "École d'art Hervé Teboul — élèves peignant dans l'atelier",
-            )}
-            loading="lazy"
-            width={1024}
-            height={768}
-            className="w-full object-cover plate"
-          />
-          <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            {artSchoolCaption}
-          </p>
+        <div className="flex items-start gap-6 lg:hidden">
+          <div className="w-1/2 shrink-0">
+            <img
+              src={artSchoolImage}
+              alt={t(
+                "Hervé Teboul Art School — students painting in the studio",
+                "École d'art Hervé Teboul — élèves peignant dans l'atelier",
+              )}
+              loading="lazy"
+              width={1024}
+              height={768}
+              className="w-full object-cover plate"
+            />
+            <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              {artSchoolCaption}
+            </p>
+          </div>
+          <p className="text-sm leading-relaxed text-foreground/85 md:text-base">{lessonsText}</p>
         </div>
       </div>
 
