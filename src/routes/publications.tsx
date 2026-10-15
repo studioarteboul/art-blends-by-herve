@@ -19,6 +19,13 @@ type Publication = {
 const publications: Publication[] = [
   {
     year: "2026",
+    en: "Artist Closeup Magazine — October — Issue 47",
+    fr: "Artist Closeup Magazine — Octobre — Numéro 47",
+    place: "Artist Closeup",
+    photos: ["/artist-closeup-47-1.jpg"],
+  },
+  {
+    year: "2026",
     en: "Artio Magazine — July — Issue 15",
     fr: "Artio Magazine — Juillet — Numéro 15",
     place: "Artio Gallery",
