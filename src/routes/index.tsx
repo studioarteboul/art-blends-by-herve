@@ -358,6 +358,10 @@ const mediterranean: Work[] = [
     mediumEn: "Acrylic and gold leaf on canvas",
     mediumFr: "Acrylique et feuille d'or sur toile",
     dimensions: "92 × 92 cm",
+    descriptionEn:
+      "An ethereal and deeply atmospheric abstract landscape, this artwork beautifully evokes the gentle transition into early autumn. Moving away from distinct representational forms, the piece relies on a rich, textured interplay of color to create a sensory experience of late-summer warmth giving way to the golden tones of September.\n\nA sophisticated palette of soft creams, warm ochres, deep earth tones, and subtle hints of muted grey creates a shifting cloud-like or canopy effect, suggesting a sun-drenched mist filtering through changing foliage. Delicate touches of reflective gold-leaf accents are artfully scattered across the canvas, catching the light like the last bright rays of summer. Calming yet radiant, Sweet September captures the quiet, nostalgic essence of a changing season.",
+    descriptionFr:
+      "Paysage abstrait éthéré et profondément atmosphérique, cette œuvre évoque avec grâce la douce transition vers le début de l'automne. S'éloignant des formes représentatives distinctes, elle repose sur un jeu de couleurs riche et texturé qui offre une expérience sensorielle : la chaleur de la fin de l'été y cède aux tons dorés de septembre.\n\nUne palette sophistiquée de crèmes douces, d'ocres chauds, de terres profondes et de subtiles touches de gris discret crée un effet mouvant de nuages ou de voûte, évoquant une brume baignée de soleil filtrant à travers un feuillage en mutation. De délicates touches de feuille d'or réfléchissante sont semées avec art sur la toile, accrochant la lumière comme les derniers rayons éclatants de l'été. Apaisante et rayonnante, Sweet September saisit l'essence paisible et nostalgique d'une saison qui change.",
   },
   {
     image: "/promenons-nous-dans-les-bois.jpg",
