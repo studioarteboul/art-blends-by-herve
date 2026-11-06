@@ -331,6 +331,10 @@ const mediterranean: Work[] = [
     mediumEn: "Acrylic and gold leaf on canvas",
     mediumFr: "Acrylique et feuille d'or sur toile",
     dimensions: "91 × 122 cm",
+    descriptionEn:
+      "An evocative and luminous landscape, this artwork captures a shimmering coastal vista drenched in Mediterranean light. Through a sophisticated blend of soft pastel hues—glowing corals, warm creams, and delicate pinks—the artist suggests a hillside village cascading toward a sprawling expanse of vibrant turquoise and cerulean waters.\n\nTrue to its name, the painting beautifully balances loose, impressionistic brushwork with rich, reflective gold-leaf accents. These golden highlights mimic the sun’s brilliant glare dancing across the waves and illuminating the distant shoreline like scattered jewels. Infused with a sense of serene warmth and timeless luxury, Trésor Côte d’Azur transforms a classic seascape into a captivating, dreamlike escape.",
+    descriptionFr:
+      "Paysage évocateur et lumineux, cette œuvre saisit une vue côtière scintillante baignée de lumière méditerranéenne. À travers un mélange subtil de teintes pastel — coraux éclatants, crèmes chaudes et roses délicats —, l’artiste suggère un village perché dévalant la colline vers une vaste étendue d’eau turquoise et céuléenne.\n\nFidèle à son nom, la peinture équilibre avec grâce une touche libre et impressionniste et de riches accents de feuille d’or réfléchissante. Ces reflets dorés imitent l’éclat du soleil dansant sur les vagues et illuminant le rivage lointain comme des bijoux dispersés. Imprégnée d’une chaleur sereine et d’un luxe intemporel, Trésor Côte d’Azur transforme un paysage marin classique en une évasion captivante et onirique.",
   },
   {
     image: "/pine-over-the-bay.jpeg",
