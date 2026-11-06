@@ -155,7 +155,9 @@ export const Route = createFileRoute("/publications")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://www.herveteboul.art/publications" },
     ],
+    links: [{ rel: "canonical", href: "https://www.herveteboul.art/publications" }],
   }),
   component: Publications,
 });

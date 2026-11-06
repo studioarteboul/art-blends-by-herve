@@ -20,7 +20,11 @@ export const Route = createFileRoute("/biography")({
         content:
           "From Provençal post-impressionism to contemporary mixed media: gold leaf, silver leaf, acrylic, and epoxy.",
       },
+      { property: "og:url", content: "https://www.herveteboul.art/biography" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://www.herveteboul.art/biography" }],
   }),
   component: Biography,
 });

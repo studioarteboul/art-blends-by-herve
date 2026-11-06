@@ -18,7 +18,11 @@ export const Route = createFileRoute("/exhibitions")({
         content:
           "Solo and group exhibitions, international distinctions, and private and public collections.",
       },
+      { property: "og:url", content: "https://www.herveteboul.art/exhibitions" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://www.herveteboul.art/exhibitions" }],
   }),
   component: Exhibitions,
 });

@@ -86,7 +86,10 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://www.herveteboul.art/" },
     ],
+    links: [{ rel: "canonical", href: "https://www.herveteboul.art/" }],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify({"@context": "https://schema.org", "@type": "Person", "name": "Hervé Teboul", "jobTitle": "Peintre contemporain / Contemporary painter", "url": "https://www.herveteboul.art/", "email": "mailto:studioarteboul@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Montréal", "addressRegion": "QC", "addressCountry": "CA"}, "sameAs": ["https://artelaguna.world/artist/teboul-herve/"]}) }],
   }),
   component: Works,
 });

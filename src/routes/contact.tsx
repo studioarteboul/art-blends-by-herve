@@ -11,14 +11,18 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Contact Private Studio ARTeboul in Montreal for appointments, artwork pricing inquiries, and available inventory via Arte Laguna World.",
+          "Private Studio ARTeboul in Montreal: painting lessons (cours de peinture), one-on-one online coaching, studio visits by appointment and artwork inquiries.",
       },
       { property: "og:title", content: "Contact & Studio — Hervé Teboul" },
       {
         property: "og:description",
-        content: "Studio visits by appointment, pricing inquiries, and available inventory.",
+        content: "Painting lessons in Montreal, online coaching, studio visits and artwork inquiries.",
       },
+      { property: "og:url", content: "https://www.herveteboul.art/contact" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://www.herveteboul.art/contact" }],
   }),
   component: Contact,
 });
