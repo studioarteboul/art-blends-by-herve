@@ -344,6 +344,10 @@ const mediterranean: Work[] = [
     mediumEn: "Acrylic and gold leaf on canvas",
     mediumFr: "Acrylique et feuille d'or sur toile",
     dimensions: "91 × 122 cm",
+    descriptionEn:
+      "A work of great elegance that invites contemplation, capturing the timeless serenity of an afternoon by the sea. The composition is built around a striking contrast between a textured background of vibrant turquoise blue, evoking the depth and brilliance of Mediterranean waters, and sculptural silhouettes rendered entirely in gold leaf.\n\nIn the foreground, a classic stone balustrade and trees with delicate foliage rise majestically, catching the light dynamically depending on the angle of view. The golden metallic reflections lend the scene an atmosphere of quiet luxury and an almost solar warmth. Evocative of calm and escape, Balcon en Méditerranée transforms a traditional architectural view into a poetic and luminous interlude.",
+    descriptionFr:
+      "Une œuvre d'une grande élégance qui invite à la contemplation, capturant la sérénité intemporelle d'un après-midi en bord de mer. La composition s'articule autour d'un contraste saisissant entre un fond texturé d'un bleu turquoise vibrant, évoquant la profondeur et l'éclat des eaux méditerranéennes, et des silhouettes sculpturales entièrement réalisées à la feuille d'or.\n\nAu premier plan, une balustrade classique en pierre et des arbres aux feuillages délicats s'élèvent majestueusement, attrapant la lumière de manière dynamique selon l'angle du regard. Les reflets métalliques dorés confèrent à la scène une atmosphère de luxe discret et une chaleur presque solaire. Évocatrice de calme et d'évasion, Balcon en Méditerranée transforme une vue architecturale traditionnelle en une parenthèse poétique et lumineuse.",
   },
   {
     image: "/promenade-au-bord-de-l-eau.jpg",
