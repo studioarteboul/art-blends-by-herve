@@ -371,6 +371,10 @@ const mediterranean: Work[] = [
     mediumEn: "Acrylic and rose gold leaf on canvas",
     mediumFr: "Acrylique et feuille d'or rose sur toile",
     dimensions: "92 × 92 cm",
+    descriptionEn:
+      "A striking study in contrast and natural majesty, this artwork immerses the viewer in a forest canopy radiant with autumnal warmth. The artist masterfully pairs a rich palette of deep russets, copper tones, and warm ambers with a vibrant, mosaic-like backdrop of cool cerulean and sky blue, creating the sensation of looking up through the trees into a brilliant clear sky.\n\nTextured, impressionistic brushstrokes form a dense network of branches, while brilliant gold-leaf accents are used to represent leaves catching the crisp, direct sunlight. The metallic shimmer lends a dynamic, breathing quality to the piece, perfectly capturing the fleeting, golden peak of autumn. Radiant and deeply atmospheric, Promenons-nous dans les bois transforms a forest landscape into a celebration of light, color, and texture.",
+    descriptionFr:
+      "Étude saisissante de contraste et de majesté naturelle, cette œuvre plonge le spectateur dans une canopée irradiant de la chaleur de l'automne. L'artiste marie avec maîtrise une palette riche de roux profonds, de tons cuivrés et d'ambre chaud à un fond mosaïque de céuléen et de bleus ciel, donnant la sensation de lever les yeux à travers les arbres vers un ciel clair et éclatant.\n\nDes touches impressionnistes et texturées forment un réseau dense de branches, tandis que de brillants accents de feuille d'or évoquent des feuilles saisies par une lumière vive et directe. L'éclat métallique insuffle à l'ensemble une qualité dynamique, presque respirante, qui saisit à la perfection le sommet doré et fugitif de l'automne. Éclatante et profondément atmosphérique, Promenons-nous dans les bois transforme un paysage forestier en célébration de la lumière, de la couleur et de la texture.",
   },
 ];
 
