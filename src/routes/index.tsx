@@ -353,6 +353,10 @@ const mediterranean: Work[] = [
     mediumEn: "Acrylic and gold leaf on canvas",
     mediumFr: "Acrylique et feuille d'or sur toile",
     dimensions: "91 × 91 cm",
+    descriptionEn:
+      "A vibrant and deeply refreshing coastal composition, this artwork offers a stylized glimpse into a sun-soaked tropical paradise. The piece centers on a striking, high-contrast palette, positioning brilliant gold-leaf palm fronds against an expansive, deeply textured background of vivid cerulean and ocean blues.\n\nThe painterly, layered sweeps of the background beautifully capture the movement and depth of open water, while the metallic palm silhouettes rise prominently from the foreground, catching the light dynamically. Hints of lush green peek through the base of the golden structures, adding a layer of organic vitality. Bold yet serene, Promenades au bord de l'eau radiates warmth and leisure, evoking the luxurious calm of a seaside stroll.",
+    descriptionFr:
+      "Composition côtière vibrante et profondément rafraîchissante, cette œuvre offre un regard stylisé sur un paradis tropical baigné de soleil. Elle s'articule autour d'une palette contrastée saisissante, où de brillantes palmes de feuille d'or se détachent sur un fond vaste et profondément texturé de bleus céuléens et océaniques intenses.\n\nLes larges touches picturales et superposées du fond saisissent le mouvement et la profondeur du large, tandis que les silhouettes métalliques des palmiers s'élèvent au premier plan et accrochent la lumière avec éclat. Des touches de vert luxuriant percent à la base des structures dorées, y ajoutant une vitalité organique. Audacieuse et sereine, Promenade au bord de l'eau rayonne de chaleur et de détente, évoquant le calme luxueux d'une promenade au bord de la mer.",
   },
   {
     image: "/sweet-september.jpg",
