@@ -4,6 +4,7 @@ import { Info, Play } from "lucide-react";
 import { useLang } from "@/lib/lang";
 import { Container } from "@/components/Section";
 import { AudioPlayer } from "@/lib/audio";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 
 const AUDIO_URL =
@@ -102,6 +103,8 @@ type Work = {
   mediumEn: string;
   mediumFr: string;
   dimensions: string;
+  descriptionEn?: string;
+  descriptionFr?: string;
 };
 
 const contemporary: Work[] = [
@@ -545,24 +548,81 @@ function HeroCarousel() {
   );
 }
 
-function WorkCard({ work }: { work: Work }) {
+function WorkDetail({
+  work,
+  open,
+  onOpenChange,
+}: {
+  work: Work;
+  open: boolean;
+  onOpenChange: (v: boolean) => void;
+}) {
+  const { t } = useLang();
+  const description = t(work.descriptionEn ?? "", work.descriptionFr ?? "");
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="max-h-[92vh] w-[95vw] max-w-6xl overflow-y-auto border-border bg-background p-0 sm:rounded-none">
+        <div className="grid gap-0 md:grid-cols-[3fr_2fr]">
+          <div className="flex items-center justify-center bg-muted p-4 md:p-8">
+            <img
+              src={work.image}
+              alt={t(work.titleEn, work.titleFr)}
+              className="max-h-[60vh] w-auto max-w-full object-contain md:max-h-[80vh]"
+            />
+          </div>
+          <div className="flex flex-col justify-center p-8 md:p-12">
+            <DialogTitle className="font-display text-3xl font-normal leading-tight md:text-4xl">
+              {t(work.titleEn, work.titleFr)}
+            </DialogTitle>
+            {work.year && (
+              <p className="mt-2 text-sm text-muted-foreground">{work.year}</p>
+            )}
+            <div className="mt-6 space-y-1 border-t border-border pt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+              <p>{t(work.mediumEn, work.mediumFr)}</p>
+              {work.dimensions && <p>{work.dimensions}</p>}
+            </div>
+            <DialogDescription asChild>
+              <div className="mt-6 whitespace-pre-line text-base leading-relaxed text-foreground/80">
+                {description ||
+                  t("Description coming soon.", "Description à venir.")}
+              </div>
+            </DialogDescription>
+            <Link
+              to="/contact"
+              className="mt-8 self-start border-b border-foreground pb-1 text-xs uppercase tracking-[0.2em] hover:text-accent"
+            >
+              {t("Inquire about this work", "Se renseigner sur cette œuvre")}
+            </Link>
+          </div>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+}
+
+function WorkCard({ work, detailed = false }: { work: Work; detailed?: boolean }) {
   const { t } = useLang();
   const [isRevealed, setIsRevealed] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const activate = () => (detailed ? setOpen(true) : setIsRevealed((v) => !v));
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
-      setIsRevealed((v) => !v);
+      activate();
     }
   };
 
   return (
+    <>
+    {detailed && <WorkDetail work={work} open={open} onOpenChange={setOpen} />}
     <figure
       role="button"
       tabIndex={0}
-      aria-pressed={isRevealed}
+      aria-pressed={detailed ? undefined : isRevealed}
       aria-label={t("Tap to view painting details", "Appuyer pour voir les détails de la peinture")}
-      onClick={() => setIsRevealed((v) => !v)}
+      onClick={activate}
       onKeyDown={handleKeyDown}
       className="group relative mx-auto max-w-sm cursor-pointer overflow-hidden bg-card plate sm:mx-0 sm:max-w-none"
     >
@@ -601,6 +661,7 @@ function WorkCard({ work }: { work: Work }) {
         )}
       </figcaption>
     </figure>
+    </>
   );
 }
 
@@ -665,6 +726,7 @@ function Series({
   video,
   videoPoster,
   videoCaption,
+  detailed,
 }: {
   index: string;
   title: string;
@@ -675,6 +737,7 @@ function Series({
   video?: string;
   videoPoster?: string;
   videoCaption?: string;
+  detailed?: boolean;
 }) {
   const { t } = useLang();
   return (
@@ -707,7 +770,7 @@ function Series({
           <VideoCard src={video} poster={videoPoster} caption={videoCaption} />
         )}
         {works.map((w) => (
-          <WorkCard key={w.titleEn + w.year} work={w} />
+          <WorkCard key={w.titleEn + w.year} work={w} detailed={detailed} />
         ))}
       </div>
 
@@ -761,6 +824,7 @@ function Works() {
             "Un hommage contemporain aux influences des débuts : la Méditerranée, les paysages de Provence et la lumière vive du sud de la France qui gouverne encore la palette d'aujourd'hui.",
           )}
           works={mediterranean}
+          detailed
         />
         <Series
           index="II"
