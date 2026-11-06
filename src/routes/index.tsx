@@ -770,7 +770,7 @@ function Series({
           <VideoCard src={video} poster={videoPoster} caption={videoCaption} />
         )}
         {works.map((w) => (
-          <WorkCard key={w.titleEn + w.year} work={w} detailed={detailed} />
+          <WorkCard key={w.titleEn + w.year} work={w} detailed={detailed ?? false} />
         ))}
       </div>
 
